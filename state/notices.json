@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-19T15:50:47.165900+00:00",
+  "last_run_timestamp": "2026-10-21T13:18:58.633039+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 3556,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 3559,
+    "last_run_new_notices": 3,
     "last_run_errors": 0,
-    "last_run_extraction_ok": 23,
+    "last_run_extraction_ok": 22,
     "last_run_fetched_ok": 23
   },
   "notices": {
@@ -35569,6 +35569,62 @@
       "fingerprint": "e40ddda7acca84fa8fa28f97d7ae6f8cd7dcc331b90dd6ca455fcb0af8459008",
       "first_seen": "2026-10-19T14:12:25.070421+00:00",
       "delivered": true
+    },
+    "e6cb080634cc2856e7d9529ac96dece8530cee158e76397bcf8e661850efe909": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Directions under Section 35 A read with Section 56 of the Banking Regulation Act, 1949 – Puducherry Co-operative Urban Bank Ltd",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63840",
+      "published_date": null,
+      "fingerprint": "e6cb080634cc2856e7d9529ac96dece8530cee158e76397bcf8e661850efe909",
+      "first_seen": "2026-10-21T13:17:32.170727+00:00",
+      "delivered": true
+    },
+    "e9acb13e0ccde0cb4903a813c2fcc03f4d9c7afa3d7d995a8f779f4bf2b8fd98": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Minutes of the Monetary Policy Committee Meeting, October 5 to 7, 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63839",
+      "published_date": null,
+      "fingerprint": "e9acb13e0ccde0cb4903a813c2fcc03f4d9c7afa3d7d995a8f779f4bf2b8fd98",
+      "first_seen": "2026-10-21T13:17:32.170790+00:00",
+      "delivered": true
+    },
+    "bb07e630d76547b99b52ec83d31cc21d50598796ed6b736242da2432d59bf0e4": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "LATERAL RECRUITMENT OF LOCAL BANK OFFICERS (PHASE III) IN THE BANK ON \r\nREGULAR BASIS PDF file download",
+      "url": "https://punjabandsind.bank.in/system/uploads/recruitment/7932_2026102116165647758.pdf",
+      "published_date": null,
+      "fingerprint": "bb07e630d76547b99b52ec83d31cc21d50598796ed6b736242da2432d59bf0e4",
+      "first_seen": "2026-10-21T13:18:02.216604+00:00",
+      "delivered": true
     }
-  }
+  },
+  "baseline_timestamp": "2026-10-18T00:00:00+00:00",
+  "baselined_websites": [
+    "bank-of-maharashtra",
+    "canara-bank",
+    "central-bank-of-india",
+    "exim-bank",
+    "fci",
+    "gic-re",
+    "ibps",
+    "idbi-bank",
+    "idbi-careers",
+    "indian-bank",
+    "iob",
+    "lic",
+    "nhb",
+    "niacl",
+    "pnb",
+    "punjab-and-sind-bank",
+    "rbi",
+    "rbi-opportunities",
+    "sbi",
+    "sbi-careers",
+    "sebi",
+    "sidbi",
+    "uco-bank"
+  ]
 }
