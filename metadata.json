@@ -1,0 +1,6 @@
+{
+  "name": "Indian Government & Banking Notice Monitor",
+  "description": "Autonomous multi-portal notice scraper monitoring 31 Indian banks, regulators, and government organizations with Telegram alerts and GitHub Actions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,264 @@
+{
+  "websites": [
+    {
+      "id": "ibps",
+      "name": "IBPS",
+      "official_url": "https://www.ibps.in/",
+      "homepage_url": "https://www.ibps.in/",
+      "notice_urls": [
+        "https://www.ibps.in/index.php/crp-po-mt/",
+        "https://www.ibps.in/index.php/crp-rrbs/"
+      ],
+      "category": "Exam Institute",
+      "status": "verified"
+    },
+    {
+      "id": "sbi",
+      "name": "State Bank of India (SBI)",
+      "official_url": "https://sbi.co.in/",
+      "homepage_url": "https://sbi.co.in/",
+      "notice_urls": [
+        "https://sbi.co.in/web/careers/current-openings"
+      ],
+      "category": "Public Sector Bank",
+      "status": "verified"
+    },
+    {
+      "id": "sbi-careers",
+      "name": "SBI Careers",
+      "official_url": "https://sbi.co.in/web/careers",
+      "homepage_url": "https://sbi.co.in/web/careers",
+      "notice_urls": [
+        "https://sbi.co.in/web/careers/post-your-query"
+      ],
+      "category": "Public Sector Bank",
+      "status": "verified"
+    },
+    {
+      "id": "rbi",
+      "name": "Reserve Bank of India (RBI)",
+      "official_url": "https://www.rbi.org.in/",
+      "homepage_url": "https://www.rbi.org.in/",
+      "notice_urls": [
+        "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx",
+        "https://www.rbi.org.in/Scripts/NotificationUser.aspx"
+      ],
+      "category": "Financial Regulator",
+      "status": "verified"
+    },
+    {
+      "id": "rbi-opportunities",
+      "name": "RBI Opportunities",
+      "official_url": "https://opportunities.rbi.org.in/",
+      "homepage_url": "https://opportunities.rbi.org.in/",
+      "notice_urls": [
+        "https://opportunities.rbi.org.in/scripts/vacancies.aspx",
+        "https://opportunities.rbi.org.in/scripts/results.aspx"
+      ],
+      "category": "Financial Regulator",
+      "status": "verified"
+    },
+    {
+      "id": "sidbi",
+      "name": "SIDBI",
+      "official_url": "https://www.sidbi.in/",
+      "homepage_url": "https://www.sidbi.in/",
+      "notice_urls": [
+        "https://www.sidbi.in/en/careers"
+      ],
+      "category": "Development Bank",
+      "status": "verified"
+    },
+    {
+      "id": "nhb",
+      "name": "National Housing Bank (NHB)",
+      "official_url": "https://www.nhb.org.in/",
+      "homepage_url": "https://www.nhb.org.in/",
+      "notice_urls": [
+        "https://www.nhb.org.in/oppurtunitiesnhb/",
+        "https://www.nhb.org.in/regulation_post/circulars/"
+      ],
+      "category": "Development Bank",
+      "status": "verified"
+    },
+    {
+      "id": "pnb",
+      "name": "Punjab National Bank (PNB)",
+      "official_url": "https://www.pnbindia.in/",
+      "homepage_url": "https://www.pnbindia.in/",
+      "notice_urls": [
+        "https://www.pnbindia.in/recruitment.html"
+      ],
+      "category": "Public Sector Bank",
+      "status": "verified"
+    },
+    {
+      "id": "canara-bank",
+      "name": "Canara Bank",
+      "official_url": "https://canarabank.com/",
+      "homepage_url": "https://canarabank.com/",
+      "notice_urls": [
+        "https://canarabank.com/career"
+      ],
+      "category": "Public Sector Bank",
+      "status": "verified"
+    },
+    {
+      "id": "indian-bank",
+      "name": "Indian Bank",
+      "official_url": "https://indianbank.in/",
+      "homepage_url": "https://indianbank.in/",
+      "notice_urls": [
+        "https://indianbank.in/career/"
+      ],
+      "category": "Public Sector Bank",
+      "status": "verified"
+    },
+    {
+      "id": "central-bank-of-india",
+      "name": "Central Bank of India",
+      "official_url": "https://centralbankofindia.co.in/",
+      "homepage_url": "https://centralbankofindia.co.in/",
+      "notice_urls": [
+        "https://centralbankofindia.co.in/en/recruitments"
+      ],
+      "category": "Public Sector Bank",
+      "status": "verified"
+    },
+    {
+      "id": "iob",
+      "name": "Indian Overseas Bank (IOB)",
+      "official_url": "https://www.iob.in/",
+      "homepage_url": "https://www.iob.in/",
+      "notice_urls": [
+        "https://www.iob.in/",
+        "https://www.iob.in/careers"
+      ],
+      "category": "Public Sector Bank",
+      "status": "verified"
+    },
+    {
+      "id": "uco-bank",
+      "name": "UCO Bank",
+      "official_url": "https://www.uco.bank.in/en/careers",
+      "homepage_url": "https://www.uco.bank.in/",
+      "notice_urls": [
+        "https://www.uco.bank.in/en/careers"
+      ],
+      "category": "Public Sector Bank",
+      "status": "verified"
+    },
+    {
+      "id": "bank-of-maharashtra",
+      "name": "Bank of Maharashtra",
+      "official_url": "https://bankofmaharashtra.bank.in/",
+      "homepage_url": "https://bankofmaharashtra.bank.in/",
+      "notice_urls": [
+        "https://bankofmaharashtra.bank.in/current-openings"
+      ],
+      "category": "Public Sector Bank",
+      "status": "verified"
+    },
+    {
+      "id": "punjab-and-sind-bank",
+      "name": "Punjab & Sind Bank",
+      "official_url": "https://punjabandsind.bank.in/",
+      "homepage_url": "https://punjabandsind.bank.in/",
+      "notice_urls": [
+        "https://punjabandsind.bank.in/content/recruitment",
+        "https://punjabandsind.bank.in/content/public-notice"
+      ],
+      "category": "Public Sector Bank",
+      "status": "verified"
+    },
+    {
+      "id": "idbi-bank",
+      "name": "IDBI Bank",
+      "official_url": "https://www.idbi.bank.in/",
+      "homepage_url": "https://www.idbi.bank.in/",
+      "notice_urls": [
+        "https://www.idbi.bank.in/idbi-bank-careers.aspx"
+      ],
+      "category": "Public/Private Banking",
+      "status": "verified"
+    },
+    {
+      "id": "idbi-careers",
+      "name": "IDBI Careers",
+      "official_url": "https://www.idbi.bank.in/idbi-bank-careers-current-openings.aspx",
+      "homepage_url": "https://www.idbi.bank.in/",
+      "notice_urls": [
+        "https://www.idbi.bank.in/idbi-bank-careers-current-openings.aspx",
+        "https://www.idbi.bank.in/rs-instructions-online-application.aspx"
+      ],
+      "category": "Public/Private Banking",
+      "status": "verified"
+    },
+    {
+      "id": "exim-bank",
+      "name": "EXIM Bank",
+      "official_url": "https://www.eximbankindia.in/",
+      "homepage_url": "https://www.eximbankindia.in/",
+      "notice_urls": [
+        "https://www.eximbankindia.in/careers"
+      ],
+      "category": "Development Bank",
+      "status": "verified"
+    },
+    {
+      "id": "niacl",
+      "name": "New India Assurance (NIACL)",
+      "official_url": "https://www.newindia.co.in/",
+      "homepage_url": "https://www.newindia.co.in/",
+      "notice_urls": [
+        "https://www.newindia.co.in/portal/readMore/Recruitment"
+      ],
+      "category": "Public Sector Insurance",
+      "status": "verified"
+    },
+    {
+      "id": "lic",
+      "name": "Life Insurance Corporation (LIC)",
+      "official_url": "https://licindia.in/",
+      "homepage_url": "https://licindia.in/",
+      "notice_urls": [
+        "https://licindia.in/careers"
+      ],
+      "category": "Public Sector Insurance",
+      "status": "verified"
+    },
+    {
+      "id": "gic-re",
+      "name": "General Insurance Corporation (GIC Re)",
+      "official_url": "https://www.gicre.in/",
+      "homepage_url": "https://www.gicre.in/",
+      "notice_urls": [
+        "https://www.gicre.in/en/careers"
+      ],
+      "category": "Public Sector Insurance",
+      "status": "verified"
+    },
+    {
+      "id": "sebi",
+      "name": "Securities and Exchange Board of India (SEBI)",
+      "official_url": "https://www.sebi.gov.in/",
+      "homepage_url": "https://www.sebi.gov.in/",
+      "notice_urls": [
+        "https://www.sebi.gov.in/department/human-resources-department-37/career.html"
+      ],
+      "category": "Financial Regulator",
+      "status": "verified"
+    },
+    {
+      "id": "fci",
+      "name": "Food Corporation of India (FCI)",
+      "official_url": "https://fci.gov.in/",
+      "homepage_url": "https://fci.gov.in/",
+      "notice_urls": [
+        "https://fci.gov.in/current-vacancies.php"
+      ],
+      "category": "Government Public Sector",
+      "status": "verified"
+    }
+  ]
+}
