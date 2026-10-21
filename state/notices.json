@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-21T16:52:39.928202+00:00",
+  "last_run_timestamp": "2026-10-21T17:04:21.221151+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 3556,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 3564,
+    "last_run_new_notices": 5,
     "last_run_errors": 0,
-    "last_run_extraction_ok": 0,
-    "last_run_fetched_ok": 0
+    "last_run_extraction_ok": 22,
+    "last_run_fetched_ok": 23
   },
   "notices": {
     "9da63338791ba82966aef072b71411ccd5f4d258c0187d5f28ba2c5f889934c3": {
@@ -35569,6 +35569,89 @@
       "fingerprint": "e40ddda7acca84fa8fa28f97d7ae6f8cd7dcc331b90dd6ca455fcb0af8459008",
       "first_seen": "2026-10-19T14:12:25.070421+00:00",
       "delivered": true
+    },
+    "e6cb080634cc2856e7d9529ac96dece8530cee158e76397bcf8e661850efe909": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Directions under Section 35 A read with Section 56 of the Banking Regulation Act, 1949 – Puducherry Co-operative Urban Bank Ltd",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63840",
+      "published_date": null,
+      "fingerprint": "e6cb080634cc2856e7d9529ac96dece8530cee158e76397bcf8e661850efe909",
+      "first_seen": "2026-10-21T17:02:50.559288+00:00",
+      "delivered": true
+    },
+    "8742f14ea7aa22c0f43e2079073f0225ae4bd5bbe665afbbfa399a07fd5288ba": {
+      "website_id": "nhb",
+      "org_name": "National Housing Bank (NHB)",
+      "title": "NHB Advisory",
+      "url": "https://www.nhb.org.in/nhb-advisory/",
+      "published_date": null,
+      "fingerprint": "8742f14ea7aa22c0f43e2079073f0225ae4bd5bbe665afbbfa399a07fd5288ba",
+      "first_seen": "2026-10-21T17:03:04.157463+00:00",
+      "delivered": true
+    },
+    "25e35aeec21ce6fd444a715a18a146da8f62bf2c46681ad1fa583af68e3e4181": {
+      "website_id": "iob",
+      "org_name": "Indian Overseas Bank (IOB)",
+      "title": "Advocate Login",
+      "url": "https://crlmsrecoveryadvocate.iob.bank.in:3030/login/",
+      "published_date": null,
+      "fingerprint": "25e35aeec21ce6fd444a715a18a146da8f62bf2c46681ad1fa583af68e3e4181",
+      "first_seen": "2026-10-21T17:03:28.005517+00:00",
+      "delivered": true
+    },
+    "c163c6026686607811df4601af6dfac5e01a083b6c8c821105eb8e56f220f2df": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "(645 KB)",
+      "url": "https://sbi.co.in/documents/77530/57941334/21082026_JA+2026+-+Detailed+Ad+-+Hindi.pdf/935be45b-8796-77d0-0701-eecc6ba02abe?t=1787300674572",
+      "published_date": null,
+      "fingerprint": "c163c6026686607811df4601af6dfac5e01a083b6c8c821105eb8e56f220f2df",
+      "first_seen": "2026-10-21T17:02:48.627040+00:00",
+      "delivered": false,
+      "content": "DOWNLOAD ADVERTISEMENT(HINDI (645 KB)/English) (959 KB)(NEW)"
+    },
+    "d6ce139f2ac5297c474bc56762903c0078c92cdc93791e5d054182cc03f83c67": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "(577 KB)",
+      "url": "https://sbi.co.in/documents/77530/57941334/SBI+-+CRPD-SCO-2026-27_03+-+Hindi.pdf/2e000562-4a57-36cd-d357-21aee993e402?t=1783686869791",
+      "published_date": null,
+      "fingerprint": "d6ce139f2ac5297c474bc56762903c0078c92cdc93791e5d054182cc03f83c67",
+      "first_seen": "2026-10-21T17:02:48.634220+00:00",
+      "delivered": false,
+      "content": "DOWNLOAD ADVERTISEMENT (Hindi (577 KB)/English (1022 KB))(NEW)"
+    },
+    "bb07e630d76547b99b52ec83d31cc21d50598796ed6b736242da2432d59bf0e4": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "LATERAL RECRUITMENT OF LOCAL BANK OFFICERS (PHASE III) IN THE BANK ON \r\nREGULAR BASIS PDF file download",
+      "url": "https://punjabandsind.bank.in/system/uploads/recruitment/7932_2026102116165647758.pdf",
+      "published_date": null,
+      "fingerprint": "bb07e630d76547b99b52ec83d31cc21d50598796ed6b736242da2432d59bf0e4",
+      "first_seen": "2026-10-21T17:03:35.160606+00:00",
+      "delivered": false
+    },
+    "0ba355a835a63d15c67f2c1341fd467f66e71f9cdc485a0e3dfe332730974911": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "Apply Now",
+      "url": "https://ibpsreg.ibps.in/psbrmoct25/",
+      "published_date": null,
+      "fingerprint": "0ba355a835a63d15c67f2c1341fd467f66e71f9cdc485a0e3dfe332730974911",
+      "first_seen": "2026-10-21T17:03:35.180064+00:00",
+      "delivered": false,
+      "content": "LATERAL RECRUITMENT OF MSME RELATIONSHIP MANAGER ON CONTRACTUAL BASIS IN THE BANK Formats for SC-ST, OBC, EWS PwDFormat for Experiance Certificate (Annexure-I)Guidelines for Scanning and Upload of Documents Apply Now"
+    },
+    "d6bfc0f8b37486e028092c7f466c48dd85fceeff65138a26bc68b5d82f7a71fb": {
+      "website_id": "niacl",
+      "org_name": "New India Assurance (NIACL)",
+      "title": "Pet Dog",
+      "url": "https://www.newindia.co.in/rural/insurance-for-dogs",
+      "published_date": null,
+      "fingerprint": "d6bfc0f8b37486e028092c7f466c48dd85fceeff65138a26bc68b5d82f7a71fb",
+      "first_seen": "2026-10-21T17:04:10.043561+00:00",
+      "delivered": false
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
