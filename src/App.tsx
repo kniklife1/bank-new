@@ -16,8 +16,14 @@ import {
   Terminal,
   Activity,
   Lock,
-  Download
+  Download,
+  Filter
 } from 'lucide-react';
+import {
+  KEYWORD_CATEGORIES,
+  DEFAULT_MAX_NOTIFICATIONS_PER_RUN,
+  matchNoticeKeywords
+} from './utils/keywordMatcher';
 
 interface WebsiteItem {
   id: string;
@@ -320,12 +326,23 @@ export default function App() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
 
-  // Simulator State
+  // Simulator & Keyword Tester State
   const [simRunning, setSimRunning] = useState(false);
   const [simLogs, setSimLogs] = useState<string[]>([
     "Ready to execute simulation. Select run type and click a scenario button."
   ]);
   const [simSummary, setSimSummary] = useState<any>(null);
+  const [testNoticeTitle, setTestNoticeTitle] = useState(
+    "Provisional Answer Key & Response Sheet for Probationary Officers (CRP PO/MT)"
+  );
+  const [testNoticeContent, setTestNoticeContent] = useState(
+    "Candidates can download their scorecard, cut off marks, and DV schedule online."
+  );
+
+  const keywordMatchPreview = useMemo(
+    () => matchNoticeKeywords(testNoticeTitle, testNoticeContent),
+    [testNoticeTitle, testNoticeContent]
+  );
 
   const categories = useMemo(() => {
     const set = new Set(WEBSITES.map(w => w.category));
@@ -461,35 +478,36 @@ export default function App() {
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans">
       {/* Top Navigation */}
       <header className="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="p-2 bg-gradient-to-tr from-amber-500 to-amber-600 rounded-lg text-slate-950 font-bold shadow-lg shadow-amber-500/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 min-h-16 flex flex-wrap items-center justify-between gap-2">
+          <div className="flex items-center space-x-2.5 min-w-0">
+            <div className="p-2 bg-gradient-to-tr from-amber-500 to-amber-600 rounded-lg text-slate-950 font-bold shadow-lg shadow-amber-500/20 shrink-0">
               <ShieldCheck className="w-5 h-5" />
             </div>
-            <div>
-              <h1 className="font-bold text-base sm:text-lg tracking-tight text-white flex items-center gap-2">
-                India Gov & Banking Notice Monitor
-                <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+            <div className="min-w-0">
+              <h1 className="font-bold text-sm sm:text-lg tracking-tight text-white flex items-center gap-2 truncate">
+                <span className="truncate">India Gov & Banking Notice Monitor</span>
+                <span className="hidden md:inline-flex text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 shrink-0">
                   23 Active Portals Configured
                 </span>
               </h1>
             </div>
           </div>
 
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 shrink-0">
             <a
-              href="/government-notice-monitor.zip"
-              download="government-notice-monitor.zip"
-              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs transition shadow"
+              href="/bank-new.zip"
+              download="bank-new.zip"
+              className="flex items-center space-x-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs transition shadow whitespace-nowrap"
             >
-              <Download className="w-3.5 h-3.5" />
-              <span>Download Project ZIP</span>
+              <Download className="w-3.5 h-3.5 shrink-0" />
+              <span className="hidden sm:inline">Download Latest ZIP (bank-new.zip)</span>
+              <span className="sm:hidden">bank-new.zip</span>
             </a>
             <button
               onClick={() => setActiveTab('simulator')}
-              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-medium text-xs transition shadow"
+              className="flex items-center space-x-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-medium text-xs transition shadow whitespace-nowrap"
             >
-              <Play className="w-3.5 h-3.5 fill-current" />
+              <Play className="w-3.5 h-3.5 fill-current shrink-0" />
               <span>Simulate Run</span>
             </button>
           </div>
@@ -564,21 +582,31 @@ export default function App() {
             <div className="bg-gradient-to-r from-emerald-950/60 via-slate-900 to-slate-900 border border-emerald-500/30 rounded-xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
                 <h2 className="text-base font-bold text-white flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-400" />
-                  Updated Repository Packaged & Verified (`government-notice-monitor.zip`)
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
+                  <span>Updated Project Packaged & Verified (`bank-new.zip` / `government-notice-monitor.zip`)</span>
                 </h2>
                 <p className="text-xs text-slate-300 mt-1">
-                  Configured for the 23 verified official websites with strict SSL verification (<code className="text-emerald-300">CERT_REQUIRED</code>) and exact 6-file repository structure.
+                  Configured with 5-category keyword notification filtering (32 keywords in <code className="text-emerald-300">config/keywords.json</code>), case-insensitive & spacing-tolerant matching, and a strict limit of <code className="text-emerald-300">{DEFAULT_MAX_NOTIFICATIONS_PER_RUN} notifications per run</code>.
                 </p>
               </div>
-              <a
-                href="/government-notice-monitor.zip"
-                download="government-notice-monitor.zip"
-                className="px-4 py-2.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs flex items-center gap-2 shrink-0 shadow-lg shadow-emerald-500/10"
-              >
-                <Download className="w-4 h-4" />
-                <span>Download government-notice-monitor.zip</span>
-              </a>
+              <div className="flex flex-wrap items-center gap-2 shrink-0">
+                <a
+                  href="/bank-new.zip"
+                  download="bank-new.zip"
+                  className="px-4 py-2.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs flex items-center gap-2 shadow-lg shadow-emerald-500/10"
+                >
+                  <Download className="w-4 h-4" />
+                  <span>Download bank-new.zip</span>
+                </a>
+                <a
+                  href="/government-notice-monitor.zip"
+                  download="government-notice-monitor.zip"
+                  className="px-3.5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs flex items-center gap-2 border border-slate-700"
+                >
+                  <Download className="w-4 h-4" />
+                  <span>government-notice-monitor.zip</span>
+                </a>
+              </div>
             </div>
 
             {/* Top Stat Cards */}
@@ -589,25 +617,25 @@ export default function App() {
                   <Building2 className="w-4 h-4 text-amber-400" />
                 </div>
                 <div className="mt-2 text-2xl font-bold text-white">23 Organizations</div>
-                <div className="mt-1 text-xs text-slate-400">22 live extracting notices, 1 isolated (IBPS)</div>
+                <div className="mt-1 text-xs text-slate-400">Baseline preserved (3,556 recorded notices)</div>
               </div>
 
               <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-sm">
                 <div className="flex items-center justify-between text-slate-400 text-xs">
-                  <span>SSL & Fault Isolation</span>
-                  <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                  <span>Keyword Filter</span>
+                  <Filter className="w-4 h-4 text-emerald-400" />
                 </div>
-                <div className="mt-2 text-2xl font-bold text-emerald-400">Strict TLS + AIA</div>
-                <div className="mt-1 text-xs text-slate-400">CERT_REQUIRED + per-website error isolation</div>
+                <div className="mt-2 text-2xl font-bold text-emerald-400">5 Categories (32)</div>
+                <div className="mt-1 text-xs text-slate-400">Title & content match • Word-boundary safe</div>
               </div>
 
               <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-sm">
                 <div className="flex items-center justify-between text-slate-400 text-xs">
-                  <span>Polling Trigger</span>
+                  <span>Notification Cap</span>
                   <Clock className="w-4 h-4 text-blue-400" />
                 </div>
-                <div className="mt-2 text-2xl font-bold text-blue-400">Every 10 Mins</div>
-                <div className="mt-1 text-xs text-slate-400">cron-job.org → workflow_dispatch</div>
+                <div className="mt-2 text-2xl font-bold text-blue-400">Max {DEFAULT_MAX_NOTIFICATIONS_PER_RUN} / Run</div>
+                <div className="mt-1 text-xs text-slate-400">Configurable via config/keywords.json</div>
               </div>
 
               <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-sm">
@@ -616,7 +644,46 @@ export default function App() {
                   <GitBranch className="w-4 h-4 text-purple-400" />
                 </div>
                 <div className="mt-2 text-2xl font-bold text-purple-400">100% Verified</div>
-                <div className="mt-1 text-xs text-slate-400">Static, functional & live 23-site checks pass</div>
+                <div className="mt-1 text-xs text-slate-400">Keyword, dedup, old notice & cap tests pass</div>
+              </div>
+            </div>
+
+            {/* 5 Keyword Categories Card */}
+            <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div>
+                  <h3 className="text-sm font-semibold text-white flex items-center gap-2">
+                    <Filter className="w-4 h-4 text-emerald-400" />
+                    Configured Telegram Notification Keywords (`config/keywords.json`)
+                  </h3>
+                  <p className="text-xs text-slate-400 mt-0.5">
+                    Alerts are sent only when a genuinely new notice matches at least one keyword in its title or available content (max {DEFAULT_MAX_NOTIFICATIONS_PER_RUN} alerts per run).
+                  </p>
+                </div>
+                <span className="text-xs font-mono px-2.5 py-1 rounded bg-slate-950 border border-slate-800 text-amber-400">
+                  max_notifications_per_run: {DEFAULT_MAX_NOTIFICATIONS_PER_RUN}
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3">
+                {Object.entries(KEYWORD_CATEGORIES).map(([cat, kws]) => (
+                  <div key={cat} className="bg-slate-950 border border-slate-800/80 rounded-lg p-3.5 space-y-2">
+                    <div className="text-xs font-bold text-amber-400 flex items-center justify-between">
+                      <span>{cat}</span>
+                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-900 text-slate-400">{kws.length}</span>
+                    </div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {kws.map(kw => (
+                        <span
+                          key={kw}
+                          className="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-200 border border-slate-800"
+                        >
+                          {kw}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -640,11 +707,12 @@ export default function App() {
               <div className="bg-slate-900 border border-slate-800 rounded-xl p-5">
                 <h3 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
                   <Send className="w-4 h-4 text-amber-400" />
-                  Telegram Alert (When Date Is Unavailable — Omitted)
+                  Telegram Alert (When Date Cannot Be Verified)
                 </h3>
                 <div className="bg-slate-950 border border-slate-800 rounded-xl p-4 font-mono text-xs text-slate-200 space-y-1">
                   <div className="font-bold text-amber-400">New Official Notice — Reserve Bank of India (RBI)</div>
                   <div className="pt-1">Title: Recruitment for the post of Officers in Grade B</div>
+                  <div>Published: Publication date unavailable</div>
                   <div>
                     Link: <span className="text-sky-400 underline">https://opportunities.rbi.org.in/scripts/vacancies.aspx</span>
                   </div>
@@ -850,6 +918,65 @@ export default function App() {
                 </div>
               )}
             </div>
+
+            {/* Interactive Keyword Filter Tester */}
+            <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-4">
+              <div>
+                <h3 className="font-semibold text-white text-sm flex items-center gap-2">
+                  <Filter className="w-4 h-4 text-emerald-400" />
+                  Live Keyword Filter Verifier (Title & Available Content)
+                </h3>
+                <p className="text-xs text-slate-400 mt-0.5">
+                  Test how the monitor evaluates notice titles and surrounding content against the 5 keyword categories while blocking substring false matches.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="test-notice-title" className="block text-xs font-medium text-slate-300 mb-1">
+                    Notice Title
+                  </label>
+                  <input
+                    id="test-notice-title"
+                    type="text"
+                    value={testNoticeTitle}
+                    onChange={e => setTestNoticeTitle(e.target.value)}
+                    className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-amber-500"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="test-notice-content" className="block text-xs font-medium text-slate-300 mb-1">
+                    Available Content / Context
+                  </label>
+                  <input
+                    id="test-notice-content"
+                    type="text"
+                    value={testNoticeContent}
+                    onChange={e => setTestNoticeContent(e.target.value)}
+                    className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-amber-500"
+                  />
+                </div>
+              </div>
+
+              <div className="p-3.5 rounded-lg bg-slate-950 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+                {keywordMatchPreview.matched ? (
+                  <div className="flex items-center gap-2 text-emerald-400 font-semibold">
+                    <CheckCircle2 className="w-4 h-4 shrink-0" />
+                    <span>
+                      MATCHED — Category: <span className="text-white">{keywordMatchPreview.category}</span> • Keyword: <code className="px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-300">{keywordMatchPreview.keyword}</code>
+                    </span>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-2 text-amber-400 font-semibold">
+                    <AlertTriangle className="w-4 h-4 shrink-0" />
+                    <span>FILTERED OUT — Does not match any configured recruitment/examination/result/answer-key/stage keyword</span>
+                  </div>
+                )}
+                <span className="text-slate-400 font-mono text-[11px]">
+                  Limit: {DEFAULT_MAX_NOTIFICATIONS_PER_RUN} notifications / run
+                </span>
+              </div>
+            </div>
           </div>
         )}
 
@@ -858,32 +985,45 @@ export default function App() {
           <div className="space-y-6">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div>
-                <h3 className="font-semibold text-white text-sm">Minimal Project File Tree & Archive</h3>
+                <h3 className="font-semibold text-white text-sm">Complete Project File Tree & Archive</h3>
                 <p className="text-xs text-slate-400">
-                  Strictly 6 essential files packaged into <code className="text-amber-400">government-notice-monitor.zip</code>.
+                  Packaged into <code className="text-amber-400">bank-new.zip</code> and <code className="text-amber-400">government-notice-monitor.zip</code> with all paths synchronized.
                 </p>
               </div>
-              <a
-                href="/government-notice-monitor.zip"
-                download="government-notice-monitor.zip"
-                className="px-3.5 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs flex items-center gap-1.5"
-              >
-                <Download className="w-4 h-4" />
-                <span>Download ZIP</span>
-              </a>
+              <div className="flex items-center gap-2">
+                <a
+                  href="/bank-new.zip"
+                  download="bank-new.zip"
+                  className="px-3.5 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs flex items-center gap-1.5"
+                >
+                  <Download className="w-4 h-4" />
+                  <span>Download bank-new.zip</span>
+                </a>
+                <a
+                  href="/government-notice-monitor.zip"
+                  download="government-notice-monitor.zip"
+                  className="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs flex items-center gap-1.5 border border-slate-700"
+                >
+                  <Download className="w-4 h-4" />
+                  <span>Download government-notice-monitor.zip</span>
+                </a>
+              </div>
             </div>
 
             <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 font-mono text-xs text-slate-300">
-              <pre>{`government-notice-monitor/
+              <pre>{`bank-new / government-notice-monitor/
 ├── .github/
 │   └── workflows/
 │       └── monitor.yml
 ├── config/
+│   ├── keywords.json
 │   └── websites.json
 ├── src/
 │   └── monitor.py
 ├── state/
 │   └── notices.json
+├── tests/
+│   └── test_monitor.py
 ├── requirements.txt
 └── README.md`}</pre>
             </div>

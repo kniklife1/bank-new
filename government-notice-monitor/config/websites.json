@@ -1,4 +1,49 @@
 {
+  "max_notifications_per_run": 10,
+  "keyword_categories": {
+    "Recruitment": [
+      "new vacancy",
+      "recruitment",
+      "notification",
+      "advertisement",
+      "apply online",
+      "application form",
+      "posts"
+    ],
+    "Examination": [
+      "exam date",
+      "examination date",
+      "exam schedule",
+      "admit card",
+      "hall ticket",
+      "city intimation"
+    ],
+    "Results": [
+      "result",
+      "scorecard",
+      "merit list",
+      "cut off",
+      "cutoff",
+      "selection list"
+    ],
+    "Answer Keys": [
+      "answer key",
+      "answerkey",
+      "provisional answer key",
+      "final answer key",
+      "response sheet"
+    ],
+    "Next Stages": [
+      "DV",
+      "document verification",
+      "skill test",
+      "typing test",
+      "interview",
+      "PET",
+      "PST",
+      "medical examination"
+    ]
+  },
   "websites": [
     {
       "id": "ibps",

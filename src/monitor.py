@@ -18,7 +18,7 @@ from __future__ import annotations
 
 import argparse
 import dataclasses
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 import gzip
 import hashlib
 import html
@@ -59,22 +59,75 @@ DEFAULT_USER_AGENT = (
 )
 
 TELEGRAM_MAX_MESSAGE_LENGTH = 4096
+DEFAULT_MAX_NOTIFICATIONS_PER_RUN = 10
 
-# Genuine recruitment, examination, vacancy, and official announcement keywords
-NOTICE_KEYWORDS = [
-    "recruitment", "recruitments", "vacancy", "vacancies",
-    "admit card", "call letter", "hall ticket", "result", "results",
-    "selection list", "merit list", "answer key", "examination", "exam schedule",
-    "interview", "notification", "advt", "advertisement",
-    "current opening", "current openings", "current opportunities",
-    "emp-news", "probationary", "specialist officer", "management trainee",
-    "apprentice", "grade a", "grade b", "corrigendum", "shortlist",
-    "syllabus", "engagement", "deputation", "empanelment", "crp", "po/mt",
-    "clerk", "assistant manager", "medical officer", "security officer",
-    "waitlist", "joining", "marks"
+# Configurable notification keyword categories required for Telegram alert filtering
+DEFAULT_KEYWORD_CATEGORIES: Dict[str, List[str]] = {
+    "Recruitment": [
+        "new vacancy",
+        "recruitment",
+        "notification",
+        "advertisement",
+        "apply online",
+        "application form",
+        "posts",
+    ],
+    "Examination": [
+        "exam date",
+        "examination date",
+        "exam schedule",
+        "admit card",
+        "hall ticket",
+        "city intimation",
+    ],
+    "Results": [
+        "result",
+        "scorecard",
+        "merit list",
+        "cut off",
+        "cutoff",
+        "selection list",
+    ],
+    "Answer Keys": [
+        "answer key",
+        "answerkey",
+        "provisional answer key",
+        "final answer key",
+        "response sheet",
+    ],
+    "Next Stages": [
+        "DV",
+        "document verification",
+        "skill test",
+        "typing test",
+        "interview",
+        "PET",
+        "PST",
+        "medical examination",
+    ],
+}
+
+NOTIFICATION_KEYWORDS: List[str] = [
+    kw for group in DEFAULT_KEYWORD_CATEGORIES.values() for kw in group
 ]
 
-# Routine non-recruitment noise (daily money market operations, vendor RFPs, static menus)
+# Genuine recruitment, examination, vacancy, and official announcement keywords
+NOTICE_KEYWORDS = list(dict.fromkeys(
+    [kw.lower() for kw in NOTIFICATION_KEYWORDS] + [
+        "recruitment", "recruitments", "vacancy", "vacancies",
+        "admit card", "call letter", "hall ticket", "result", "results",
+        "selection list", "merit list", "answer key", "examination", "exam schedule",
+        "interview", "notification", "advt", "advertisement",
+        "current opening", "current openings", "current opportunities",
+        "emp-news", "probationary", "specialist officer", "management trainee",
+        "apprentice", "grade a", "grade b", "corrigendum", "shortlist",
+        "syllabus", "engagement", "deputation", "empanelment", "crp", "po/mt",
+        "clerk", "assistant manager", "medical officer", "security officer",
+        "waitlist", "joining", "marks"
+    ]
+))
+
+# Routine non-recruitment noise (daily money market operations, vendor RFPs, corporate earnings, retail loan promos)
 NON_RECRUITMENT_NOISE_PHRASES = [
     "money market operations",
     "variable rate repo",
@@ -85,6 +138,26 @@ NON_RECRUITMENT_NOISE_PHRASES = [
     "treasury bills auction",
     "state development loans",
     "auction of government of india",
+    "government securities",
+    "underwriting auction",
+    "auction result",
+    "sovereign gold bond",
+    "financial result",
+    "financial results",
+    "unaudited financial",
+    "audited financial",
+    "working results",
+    "fema notification",
+    "foreign exchange management",
+    "master direction",
+    "monetary policy",
+    "sarfaesi",
+    "e-auction",
+    "sale notice",
+    "possession notice",
+    "property for sale",
+    "premises required",
+    "premises on lease",
     "technical bid opening",
     "rfp for selection",
     "rfp for procurement",
@@ -94,6 +167,18 @@ NON_RECRUITMENT_NOISE_PHRASES = [
     "functions of departments / divisions",
     "history in brief",
     "apply online for home loan",
+    "apply online for car loan",
+    "apply online for personal loan",
+    "apply online for gold loan",
+    "apply online for education loan",
+    "apply online for mudra loan",
+    "apply online for msme loan",
+    "apply online for credit card",
+    "apply online for locker",
+    "notice inviting tender",
+    "corrigendum to tender",
+    "tender notification",
+    "e-tender for",
     "leasing-in of",
     "visit uco bank on whatsapp",
 ]
@@ -129,8 +214,58 @@ STRIP_QUERY_PARAMS = {
     "auth", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content",
     "utm_id", "fbclid", "gclid", "msclkid", "dclid", "twclid", "_ga", "_gl",
     "mc_cid", "mc_eid", "ref", "referer", "referrer", "source", "src",
-    "timestamp", "ts", "t", "_", "rnd", "rand", "random", "cache", "cachebust",
-    "nocache", "v", "ver", "version", "lang", "language", "locale", "print"
+    "timestamp", "ts", "t", "_", "_t", "_ts", "cb", "time", "mtime", "modified",
+    "updated", "rev", "revision", "rnd", "rand", "random", "cache", "cachebust",
+    "nocache", "v", "ver", "version", "lang", "language", "locale", "print",
+    "itok", "csrt", "__cf_chl_tk", "cf_chl_tk", "download", "inline",
+    "force_download", "view", "mode"
+}
+
+# Mirror domain mapping so institutional aliases (.bank.in, .co.in, .com, .in, subdomains)
+# resolve to a single canonical host for deduplication
+MIRROR_HOST_MAP: Dict[str, str] = {
+    "sbi.co.in": "sbi.co.in",
+    "bank.sbi": "sbi.co.in",
+    "sbi.bank.in": "sbi.co.in",
+    "rbi.org.in": "rbi.org.in",
+    "opportunities.rbi.org.in": "rbi.org.in",
+    "website.rbi.org.in": "rbi.org.in",
+    "uco.bank.in": "uco.bank.in",
+    "ucobank.com": "uco.bank.in",
+    "ucobank.co.in": "uco.bank.in",
+    "bankofmaharashtra.bank.in": "bankofmaharashtra.bank.in",
+    "bankofmaharashtra.in": "bankofmaharashtra.bank.in",
+    "punjabandsind.bank.in": "punjabandsind.bank.in",
+    "punjabandsindbank.co.in": "punjabandsind.bank.in",
+    "psbindia.com": "punjabandsind.bank.in",
+    "idbi.bank.in": "idbi.bank.in",
+    "idbibank.in": "idbi.bank.in",
+    "idbibank.com": "idbi.bank.in",
+    "pnbindia.in": "pnbindia.in",
+    "pnb.bank.in": "pnbindia.in",
+    "canarabank.com": "canarabank.com",
+    "canarabank.in": "canarabank.com",
+    "canarabank.bank.in": "canarabank.com",
+    "indianbank.in": "indianbank.in",
+    "indianbank.bank.in": "indianbank.in",
+    "indianbank.net.in": "indianbank.in",
+    "centralbankofindia.co.in": "centralbankofindia.co.in",
+    "centralbank.bank.in": "centralbankofindia.co.in",
+    "centralbankofindia.bank.in": "centralbankofindia.co.in",
+    "iob.in": "iob.in",
+    "iob.bank.in": "iob.in",
+    "licindia.in": "licindia.in",
+    "lic.in": "licindia.in",
+    "newindia.co.in": "newindia.co.in",
+    "newindia.in": "newindia.co.in",
+    "gicre.in": "gicre.in",
+    "gicofindia.com": "gicre.in",
+    "ibps.in": "ibps.in",
+    "sidbi.in": "sidbi.in",
+    "nhb.org.in": "nhb.org.in",
+    "eximbankindia.in": "eximbankindia.in",
+    "sebi.gov.in": "sebi.gov.in",
+    "fci.gov.in": "fci.gov.in",
 }
 
 # Query parameters that uniquely identify an official notice or document
@@ -194,9 +329,22 @@ class Notice:
     fingerprint: str
     first_seen: str
     delivered: bool = False
+    content: str = ""
 
     def to_dict(self) -> Dict[str, Any]:
-        return dataclasses.asdict(self)
+        data: Dict[str, Any] = {
+            "website_id": self.website_id,
+            "org_name": self.org_name,
+            "title": self.title,
+            "url": self.url,
+            "published_date": self.published_date,
+            "fingerprint": self.fingerprint,
+            "first_seen": self.first_seen,
+            "delivered": self.delivered,
+        }
+        if self.content:
+            data["content"] = self.content
+        return data
 
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> Notice:
@@ -209,7 +357,172 @@ class Notice:
             fingerprint=str(data.get("fingerprint", "")),
             first_seen=str(data.get("first_seen", datetime.now(timezone.utc).isoformat())),
             delivered=bool(data.get("delivered", False)),
+            content=str(data.get("content") or data.get("description") or data.get("summary") or ""),
         )
+
+
+_COMPOUND_KEYWORD_SPLITS: Dict[str, Tuple[str, str]] = {
+    "scorecard": ("score", "card"),
+    "scorecards": ("score", "card"),
+    "cutoff": ("cut", "off"),
+    "cutoffs": ("cut", "off"),
+    "answerkey": ("answer", "key"),
+    "answerkeys": ("answer", "key"),
+    "admitcard": ("admit", "card"),
+    "admitcards": ("admit", "card"),
+    "hallticket": ("hall", "ticket"),
+    "halltickets": ("hall", "ticket"),
+    "responsesheet": ("response", "sheet"),
+    "responsesheets": ("response", "sheet"),
+    "meritlist": ("merit", "list"),
+    "meritlists": ("merit", "list"),
+    "selectionlist": ("selection", "list"),
+    "selectionlists": ("selection", "list"),
+    "skilltest": ("skill", "test"),
+    "skilltests": ("skill", "test"),
+    "typingtest": ("typing", "test"),
+    "typingtests": ("typing", "test"),
+}
+
+_OPTIONAL_SPACE_PAIRS: Set[Tuple[str, str]] = {
+    ("score", "card"),
+    ("cut", "off"),
+    ("answer", "key"),
+    ("admit", "card"),
+    ("hall", "ticket"),
+    ("response", "sheet"),
+    ("merit", "list"),
+    ("selection", "list"),
+    ("skill", "test"),
+    ("typing", "test"),
+}
+
+_PLURALIZABLE_WORDS: Set[str] = {
+    "recruitment", "notification", "advertisement", "form",
+    "date", "schedule", "card", "ticket", "intimation",
+    "result", "list", "off", "key", "sheet",
+    "verification", "test", "interview", "examination",
+}
+
+
+def compile_keyword_pattern(keyword: str) -> re.Pattern:
+    """Compiles a case-insensitive, word-boundary-aware regular expression for a keyword
+    that handles common spacing, hyphenation, and compound word variations while
+    preventing false substring matches (e.g. 'DV' in 'advt', 'PET' in 'competitive',
+    'posts' in 'postponed')."""
+    raw = (keyword or "").strip()
+    if not raw:
+        return re.compile(r"(?!x)x")
+
+    raw_tokens = [t for t in re.split(r"[\s_-]+", raw.lower()) if t]
+    if not raw_tokens:
+        return re.compile(r"(?!x)x")
+
+    tokens: List[str] = []
+    for tok in raw_tokens:
+        if tok in _COMPOUND_KEYWORD_SPLITS:
+            tokens.extend(_COMPOUND_KEYWORD_SPLITS[tok])
+        else:
+            tokens.append(tok)
+
+    parts: List[str] = []
+    for idx, tok in enumerate(tokens):
+        is_last = idx == len(tokens) - 1
+        if is_last:
+            if tok in {"vacancy", "vacancies"}:
+                tok_pat = r"vacanc(?:y|ies)"
+            elif tok == "posts":
+                tok_pat = r"posts"
+            elif tok in _PLURALIZABLE_WORDS or (
+                len(tok) >= 5 and tok.endswith("s") and tok[:-1] in _PLURALIZABLE_WORDS
+            ):
+                base = tok[:-1] if (tok.endswith("s") and tok[:-1] in _PLURALIZABLE_WORDS) else tok
+                tok_pat = re.escape(base) + r"s?"
+            else:
+                tok_pat = re.escape(tok)
+        else:
+            tok_pat = re.escape(tok)
+
+        parts.append(tok_pat)
+        if not is_last:
+            next_tok = tokens[idx + 1]
+            next_base = (
+                next_tok[:-1]
+                if (next_tok.endswith("s") and next_tok[:-1] in _PLURALIZABLE_WORDS)
+                else next_tok
+            )
+            if (tok, next_base) in _OPTIONAL_SPACE_PAIRS or (tok, next_tok) in _OPTIONAL_SPACE_PAIRS:
+                parts.append(r"[\s_./-]*")
+            else:
+                parts.append(r"[\s_./-]+")
+
+    body = "".join(parts)
+    return re.compile(rf"(?<![A-Za-z0-9])(?:{body})(?![A-Za-z0-9])", re.IGNORECASE)
+
+
+def normalize_keyword_categories(keywords_config: Optional[Any] = None) -> Dict[str, List[str]]:
+    """Normalizes keyword configuration from a category dict, config dict, or flat keyword list."""
+    if keywords_config is None:
+        return {cat: list(kws) for cat, kws in DEFAULT_KEYWORD_CATEGORIES.items()}
+    if isinstance(keywords_config, list):
+        cleaned = [str(k).strip() for k in keywords_config if str(k).strip()]
+        return {"Configured": cleaned}
+    if isinstance(keywords_config, dict):
+        if "categories" in keywords_config and isinstance(keywords_config["categories"], dict):
+            source_dict = keywords_config["categories"]
+        elif "keyword_categories" in keywords_config and isinstance(keywords_config["keyword_categories"], dict):
+            source_dict = keywords_config["keyword_categories"]
+        elif "keywords" in keywords_config and isinstance(keywords_config["keywords"], (dict, list)):
+            return normalize_keyword_categories(keywords_config["keywords"])
+        else:
+            source_dict = keywords_config
+        result: Dict[str, List[str]] = {}
+        for cat, kws in source_dict.items():
+            if isinstance(kws, list):
+                cleaned = [str(k).strip() for k in kws if str(k).strip()]
+                if cleaned:
+                    result[str(cat)] = cleaned
+        return result
+    return {cat: list(kws) for cat, kws in DEFAULT_KEYWORD_CATEGORIES.items()}
+
+
+def match_notice_keywords(
+    title: str,
+    content: str = "",
+    keywords_config: Optional[Any] = None,
+) -> Tuple[bool, Optional[str], Optional[str]]:
+    """Checks if a notice's title or available content matches at least one configured keyword.
+    Returns (matched, category_name, matched_keyword)."""
+    clean_title = html.unescape(title or "").strip()
+    clean_content = html.unescape(content or "").strip()
+    combined = f"{clean_title}\n{clean_content}".strip()
+    if not combined:
+        return False, None, None
+
+    lower_combined = " ".join(combined.lower().split())
+    if any(noise in lower_combined for noise in NON_RECRUITMENT_NOISE_PHRASES):
+        return False, None, None
+
+    categories = normalize_keyword_categories(keywords_config)
+    for category, kw_list in categories.items():
+        # Match longer, more specific phrases first (e.g. 'provisional answer key' before 'answer key')
+        sorted_kws = sorted(kw_list, key=lambda k: len(k.strip()), reverse=True)
+        for kw in sorted_kws:
+            pattern = compile_keyword_pattern(kw)
+            if pattern.search(clean_title) or (clean_content and pattern.search(clean_content)):
+                return True, category, kw
+
+    return False, None, None
+
+
+def matches_keyword_filter(
+    title: str,
+    content: str = "",
+    keywords_config: Optional[Any] = None,
+) -> bool:
+    """Boolean helper returning True if title or content matches at least one configured keyword."""
+    matched, _, _ = match_notice_keywords(title, content, keywords_config)
+    return matched
 
 
 class StdlibLinkParser(HTMLParser):
@@ -219,6 +532,7 @@ class StdlibLinkParser(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.base_url = base_url
         self.links: List[Tuple[str, str, Optional[str]]] = []
+        self.link_contexts: Dict[Tuple[str, str], str] = {}
         self._in_a = False
         self._ignored_depth = 0
         self._current_href: Optional[str] = None
@@ -231,7 +545,7 @@ class StdlibLinkParser(HTMLParser):
         if tag_lower in {"script", "style", "noscript"}:
             self._ignored_depth += 1
             return
-        if tag_lower in {"tr", "li", "article", "section"}:
+        if tag_lower in {"tr", "li", "article", "section", "p", "div"}:
             self._context_buffer = []
         if tag_lower == "a":
             attr_dict = {k.lower(): (v or "") for k, v in attrs if k}
@@ -271,9 +585,11 @@ class StdlibLinkParser(HTMLParser):
                 )
             if raw_href and title:
                 full_url = urllib.parse.urljoin(self.base_url, raw_href)
-                context_str = " ".join(self._context_buffer)
+                context_str = " ".join(self._context_buffer)[:350]
                 pub_date = extract_date(title) or extract_date(context_str)
                 self.links.append((full_url, title, pub_date))
+                if context_str and context_str != title:
+                    self.link_contexts[(full_url, title)] = context_str
             self._current_href = None
             self._current_title_parts = []
             self._current_a_attrs = {}
@@ -309,6 +625,21 @@ def legacy_normalize_url(url: str) -> str:
         return ""
 
 
+def canonicalize_host(host: str) -> str:
+    """Resolves mirror domains (.bank.in, .co.in, .com, .in, bank.sbi, opportunities.rbi.org.in, etc.)
+    to a single canonical institution host for deduplication."""
+    h = (host or "").strip().lower()
+    if h.endswith(":80"):
+        h = h[:-3]
+    elif h.endswith(":443"):
+        h = h[:-4]
+    while h.startswith("www."):
+        h = h[4:]
+    if h in MIRROR_HOST_MAP:
+        return MIRROR_HOST_MAP[h]
+    return h
+
+
 def normalize_url(url: str) -> str:
     """Safely normalizes URL to prevent duplicates from tracking params, session tokens,
     parameter ordering, redundant slashes, or fragments."""
@@ -324,17 +655,29 @@ def normalize_url(url: str) -> str:
         elif netloc.endswith(":443"):
             netloc = netloc[:-4]
 
-        query_params = urllib.parse.parse_qsl(parsed.query, keep_blank_values=False)
-        cleaned_params = [
-            (k, v.strip()) for k, v in query_params
-            if k.lower() not in STRIP_QUERY_PARAMS and not k.lower().startswith("utm_")
-        ]
-        cleaned_params.sort(key=lambda item: (item[0].lower(), item[1]))
-        new_query = urllib.parse.urlencode(cleaned_params)
-
         clean_path = re.sub(r";jsessionid=[^/?#]+", "", parsed.path, flags=re.IGNORECASE)
         clean_path = re.sub(r"/{2,}", "/", clean_path)
         clean_path = clean_path.rstrip("/") or "/"
+        is_static_doc = clean_path.lower().endswith(DOCUMENT_EXTENSIONS)
+
+        query_params = urllib.parse.parse_qsl(parsed.query, keep_blank_values=False)
+        cleaned_params = []
+        for k, v in query_params:
+            kl = k.lower().strip()
+            val = v.strip()
+            if not kl:
+                continue
+            if is_static_doc:
+                # On static document files (.pdf, .doc, .docx, .xls, .xlsx), strip volatile
+                # cache-busters and CMS tokens unless it is an explicit notice/document ID key
+                if kl in NOTICE_ID_QUERY_KEYS and val:
+                    cleaned_params.append((k, val))
+            else:
+                if kl not in STRIP_QUERY_PARAMS and not kl.startswith(("utm_", "cf_", "__cf_")):
+                    cleaned_params.append((k, val))
+
+        cleaned_params.sort(key=lambda item: (item[0].lower(), item[1]))
+        new_query = urllib.parse.urlencode(cleaned_params)
 
         return urllib.parse.urlunsplit((
             parsed.scheme.lower(),
@@ -348,15 +691,14 @@ def normalize_url(url: str) -> str:
 
 
 def canonical_url_key(url: str) -> str:
-    """Scheme- and www-agnostic canonical URL key so http vs https or www. vs non-www
-    variants of the exact same URL never trigger duplicate alerts."""
+    """Scheme-, www-, and mirror-domain-agnostic canonical URL key so http vs https,
+    www. vs non-www, and .bank.in vs .co.in/.com mirror variants of the same notice
+    never trigger duplicate alerts."""
     norm = normalize_url(url)
     if not norm:
         return ""
     parsed = urllib.parse.urlsplit(norm)
-    host = parsed.netloc.lower()
-    if host.startswith("www."):
-        host = host[4:]
+    host = canonicalize_host(parsed.netloc)
     path = urllib.parse.unquote(parsed.path).strip().lower()
     path = re.sub(r"/{2,}", "/", path).rstrip("/") or "/"
     return f"{host}{path}?{parsed.query}" if parsed.query else f"{host}{path}"
@@ -364,20 +706,50 @@ def canonical_url_key(url: str) -> str:
 
 def normalize_title(title: str) -> str:
     """Normalizes title formatting while preserving distinct identifiers (grades, post names,
-    phases, dates, and advertisement numbers) so distinct notices are never merged."""
+    phases, dates, and advertisement numbers) so distinct notices are never merged, while
+    minor editorial/table-row/badge variations of the same notice deduplicate cleanly."""
     if not title:
         return ""
     text = html.unescape(title)
     text = re.sub(r"\s+", " ", text).strip()
-    # Remove transient UI badges and file size suffixes that change over time
-    text = re.sub(r"\b(?:new|latest)\b\s*!?\s*[-:|]*\s*", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"[\(\[]\s*(?:new|latest|pdf)[^\]\)]*[\)\]]", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"[\(\[]\s*\d+(?:\.\d+)?\s*(?:kb|mb|bytes)\s*[\)\]]", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"[\(\[]\s*[\)\]]", "", text)  # remove leftover empty brackets/parens
-    # Normalize dashes and quotes
+    # Normalize dashes, ampersands, and quotes first
     text = text.replace("–", "-").replace("—", "-").replace("’", "'").replace("“", '"').replace("”", '"')
+    text = re.sub(r"\s*&\s*", " and ", text)
+    # Remove leading table serial/row numbers like "1.", "2)", "Sr. No. 1 -", "(1)" when followed by a word (not a month)
+    text = re.sub(
+        r"^(?:(?:sr\.?\s*no\.?|s\.?\s*no\.?|sl\.?\s*no\.?)\s*\d+[\s.):|-]*|\(\d{1,3}\)\s*|\d{1,3}[\s.)]+[-:|]*\s*)"
+        r"(?=(?!(?:jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)\b)[A-Za-z])",
+        "",
+        text,
+        flags=re.IGNORECASE,
+    )
+    # Remove transient UI badges, language tags, and file size annotations in brackets/parentheses
+    text = re.sub(r"\b(?:new|latest|updated)\b\s*!?\s*[-:|]*\s*", "", text, flags=re.IGNORECASE)
+    text = re.sub(
+        r"[\(\[]\s*(?:new|latest|updated|pdf|doc|docx|english|hindi|bilingual|eng|hin|file\s*size)[^\]\)]*[\)\]]",
+        "",
+        text,
+        flags=re.IGNORECASE,
+    )
+    text = re.sub(
+        r"[\(\[]\s*(?:pdf\s*[-:,/]*\s*)?\d+(?:\.\d+)?\s*(?:kb|mb|bytes|gb)\s*[\)\]]",
+        "",
+        text,
+        flags=re.IGNORECASE,
+    )
+    # Remove trailing action boilerplate like "- Click Here", "Click here to download", "Download PDF", "Read More"
+    text = re.sub(
+        r"(?:\s*[-:|(\[]+\s*|\s+)\b(?:click\s+here(?:\s+to\s+(?:view|download|apply(?:\s+online)?|read(?:\s+more)?|check))?"
+        r"|download(?:\s+(?:pdf|notification|advertisement|file|notice))?"
+        r"|read\s+more|view\s+(?:pdf|details|more|notice))\b[\s)\].!:|-]*$",
+        "",
+        text,
+        flags=re.IGNORECASE,
+    )
+    text = re.sub(r"[\(\[]\s*[\)\]]", "", text)  # remove leftover empty brackets/parens
     text = re.sub(r"\s*[-:|]+\s*", " - ", text)
-    text = re.sub(r"\s+", " ", text).strip().lower()
+    text = re.sub(r"(?:^\s*-\s*|\s*-\s*$)", "", text)
+    text = re.sub(r"\s+", " ", text).strip(" .,-:|!").lower()
     return text
 
 
@@ -453,7 +825,17 @@ def parse_publication_date(date_str: Optional[str]) -> Optional[date]:
         except ValueError:
             return None
 
-    # 2. Indian numeric format DD-MM-YYYY or DD/MM/YY
+    # 2. Compact 8-digit YYYYMMDD (e.g. 20230514)
+    m_compact = re.match(r"^(20\d{2})(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])$", cleaned)
+    if m_compact:
+        try:
+            y, m, d = int(m_compact.group(1)), int(m_compact.group(2)), int(m_compact.group(3))
+            if 1995 <= y <= 2100:
+                return date(y, m, d)
+        except ValueError:
+            return None
+
+    # 3. Indian numeric format DD-MM-YYYY or DD/MM/YY
     m_dmy = re.match(r"^(\d{1,2})[-/.](\d{1,2})[-/.](\d{2,4})$", cleaned)
     if m_dmy:
         try:
@@ -465,7 +847,7 @@ def parse_publication_date(date_str: Optional[str]) -> Optional[date]:
         except ValueError:
             return None
 
-    # 3. DD Month YYYY (e.g. 18 October 2026, 16 Oct, 2026, 08-Oct-2026, 10_oct_2026)
+    # 4. DD Month YYYY (e.g. 18 October 2026, 16 Oct, 2026, 08-Oct-2026, 10_oct_2026)
     m_text1 = re.match(r"^(\d{1,2})[\s_,./-]+([A-Za-z]+)[\s_,./-]+(\d{2,4})$", cleaned)
     if m_text1:
         try:
@@ -480,7 +862,7 @@ def parse_publication_date(date_str: Optional[str]) -> Optional[date]:
         except ValueError:
             return None
 
-    # 4. Month DD, YYYY (e.g. October 16, 2026, Oct-16-2026)
+    # 5. Month DD, YYYY (e.g. October 16, 2026, Oct-16-2026)
     m_text2 = re.match(r"^([A-Za-z]+)[\s_,./-]+(\d{1,2})[\s_,./-]+(\d{2,4})$", cleaned)
     if m_text2:
         try:
@@ -498,34 +880,66 @@ def parse_publication_date(date_str: Optional[str]) -> Optional[date]:
     return None
 
 
-def extract_date(text: str) -> Optional[str]:
-    """Extracts first valid calendar date from text if available; otherwise returns None."""
+_DEADLINE_PREFIX_RE = re.compile(
+    r"(?:last\s+date|closing\s+date|apply\s+(?:on\s+or\s+)?before|apply\s+till|"
+    r"valid\s+up\s*to|due\s+date|end\s+date|extended\s+(?:up\s*to|till))[^0-9]{0,25}$",
+    re.IGNORECASE,
+)
+
+
+def is_verified_publication_date(date_str: Optional[str], max_future_days: int = 1) -> bool:
+    """Verifies that a date string parses to a real calendar date that is not in the future
+    (prevents application closing deadlines or future exam dates from being misreported as publication dates)."""
+    parsed = parse_publication_date(date_str)
+    if parsed is None:
+        return False
+    today_utc = datetime.now(timezone.utc).date()
+    return parsed <= (today_utc + timedelta(days=max_future_days))
+
+
+def extract_date(text: str, allow_future: bool = False) -> Optional[str]:
+    """Extracts first verified publication date from text if available; otherwise returns None."""
     if not text:
         return None
     for pattern in DATE_PATTERNS:
         for match in pattern.finditer(text):
             candidate = match.group(1).strip()
-            if len(candidate) >= 6 and parse_publication_date(candidate) is not None:
-                return candidate
+            if len(candidate) < 6:
+                continue
+            parsed = parse_publication_date(candidate)
+            if parsed is None:
+                continue
+            if not allow_future:
+                prefix = text[max(0, match.start() - 40): match.start()]
+                if _DEADLINE_PREFIX_RE.search(prefix):
+                    continue
+                if not is_verified_publication_date(candidate):
+                    continue
+            return candidate
     return None
 
 
 def has_only_historical_years(title: str, url: str, baseline_year: int) -> bool:
     """Checks if a notice without an explicit full date only references past years
-    strictly older than baseline_year (e.g., '/uploads/2023/', 'Recruitment 2022-23', 'Exam 2024')."""
+    strictly older than baseline_year (e.g., '/uploads/2023/', 'recruitment_2023.pdf', 'Exam 2024')."""
     combined = f"{title} {urllib.parse.unquote(url or '')}"
     years_found: Set[int] = set()
-    for m in re.finditer(r"\b(20\d{2})\b", combined):
+    for m in re.finditer(r"(?<![0-9])(20\d{2})(?![0-9])", combined):
         yr = int(m.group(1))
         if 2000 <= yr <= baseline_year + 2:
             years_found.add(yr)
-            # Check for academic/financial year range like 2025-26
-            after = combined[m.end(): m.end() + 4]
-            m_range = re.match(r"^[-/](\d{2})\b", after)
+            # Check for academic/financial year range like 2025-26 or 2025-2026
+            after = combined[m.end(): m.end() + 6]
+            m_range = re.match(r"^[-/_](\d{2}|\d{4})(?![0-9])", after)
             if m_range:
-                sub_yr = 2000 + int(m_range.group(1))
+                raw_sub = m_range.group(1)
+                sub_yr = int(raw_sub) if len(raw_sub) == 4 else (2000 + int(raw_sub))
                 if sub_yr == yr + 1:
                     years_found.add(sub_yr)
+    for m_compact in re.finditer(r"(?<![0-9])(20\d{2})(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])(?![0-9])", combined):
+        yr = int(m_compact.group(1))
+        if 2000 <= yr <= baseline_year + 2:
+            years_found.add(yr)
     if not years_found:
         return False
     return max(years_found) < baseline_year
@@ -533,7 +947,12 @@ def has_only_historical_years(title: str, url: str, baseline_year: int) -> bool:
 
 def format_telegram_message(notice: Notice) -> str:
     """Formats a single notice for Telegram HTML delivery within 4096-character limit.
-    Includes publication date when available and omits it when unavailable."""
+    Every notification includes:
+      - Platform/Organization name
+      - Notice title
+      - Official publication date (or 'Publication date unavailable' if unverified/missing)
+      - Direct official notice/application/PDF link
+    Never invents dates or links."""
     clean_org = html.escape(notice.org_name.strip() or "Official Portal")
     if len(clean_org) > 200:
         clean_org = clean_org[:197] + "..."
@@ -542,15 +961,16 @@ def format_telegram_message(notice: Notice) -> str:
     if len(safe_url) > 1000:
         safe_url = safe_url[:1000]
 
-    pub_line = ""
-    if notice.published_date and parse_publication_date(notice.published_date) is not None:
+    if notice.published_date and is_verified_publication_date(notice.published_date):
         clean_date = html.escape(notice.published_date.strip())[:100]
-        pub_line = f"\nPublished: {clean_date}"
+        pub_line = f"Published: {clean_date}"
+    else:
+        pub_line = "Published: Publication date unavailable"
 
     raw_title = " ".join(notice.title.split()).strip()
     clean_title = html.escape(raw_title)
 
-    overhead = len(f"<b>New Official Notice — {clean_org}</b>\n\nTitle: {pub_line}\nLink: {safe_url}") + 32
+    overhead = len(f"<b>New Official Notice — {clean_org}</b>\n\nTitle: \n{pub_line}\nLink: {safe_url}") + 32
     max_title_len = max(100, min(2500, TELEGRAM_MAX_MESSAGE_LENGTH - overhead))
     if len(clean_title) > max_title_len:
         clean_title = clean_title[: max_title_len - 3] + "..."
@@ -559,10 +979,9 @@ def format_telegram_message(notice: Notice) -> str:
         f"<b>New Official Notice — {clean_org}</b>",
         "",
         f"Title: {clean_title}",
+        pub_line,
+        f"Link: {safe_url}",
     ]
-    if pub_line:
-        lines.append(pub_line.lstrip("\n"))
-    lines.append(f"Link: {safe_url}")
     msg = "\n".join(lines)
     return msg[:TELEGRAM_MAX_MESSAGE_LENGTH]
 
@@ -639,25 +1058,35 @@ def _decode_http_body(raw_bytes: bytes, content_encoding: str = "") -> str:
 
 def merge_state_files(base_state_path: str, other_state_path: str, output_path: str) -> None:
     """Safely merges two state/notices.json files union-wise without losing any recorded
-    notices or downgrading delivered=True back to False."""
+    notices, metadata fields, or downgrading delivered=True back to False."""
     with open(base_state_path, "r", encoding="utf-8") as f1:
         s1 = json.load(f1)
     with open(other_state_path, "r", encoding="utf-8") as f2:
         s2 = json.load(f2)
 
-    merged_notices: Dict[str, Any] = dict(s1.get("notices", {}))
+    merged_notices: Dict[str, Any] = {
+        fp: dict(val) for fp, val in s1.get("notices", {}).items() if isinstance(val, dict)
+    }
     for fp, n_dict in s2.get("notices", {}).items():
+        if not isinstance(n_dict, dict):
+            continue
         if fp not in merged_notices:
-            merged_notices[fp] = n_dict
+            merged_notices[fp] = dict(n_dict)
         else:
             if n_dict.get("delivered") or merged_notices[fp].get("delivered"):
                 merged_notices[fp]["delivered"] = True
+            if not merged_notices[fp].get("published_date") and n_dict.get("published_date"):
+                merged_notices[fp]["published_date"] = n_dict["published_date"]
+            if not merged_notices[fp].get("content") and n_dict.get("content"):
+                merged_notices[fp]["content"] = n_dict["content"]
 
     b1 = s1.get("baselined_websites", [])
     b2 = s2.get("baselined_websites", [])
     merged_baselined = sorted(set(b1) | set(b2))
 
     s1["baseline_completed"] = bool(s1.get("baseline_completed") or s2.get("baseline_completed"))
+    if not s1.get("baseline_timestamp") and s2.get("baseline_timestamp"):
+        s1["baseline_timestamp"] = s2["baseline_timestamp"]
     if merged_baselined:
         s1["baselined_websites"] = merged_baselined
     s1["notices"] = merged_notices
@@ -678,9 +1107,28 @@ class NoticeMonitor:
         timeout: int = 15,
         max_retries: int = 2,
         dry_run: bool = False,
+        keywords_config_path: Optional[str] = None,
+        keywords: Optional[Any] = None,
+        max_notifications_per_run: Optional[int] = None,
     ):
         self.config_path = config_path
         self.state_path = state_path
+        self.keywords_config_path = keywords_config_path
+        self._explicit_keywords = keywords
+        self._explicit_max_notifications = max_notifications_per_run
+
+        env_max = os.environ.get("MAX_NOTIFICATIONS_PER_RUN", "").strip()
+        default_max = int(env_max) if env_max.isdigit() else DEFAULT_MAX_NOTIFICATIONS_PER_RUN
+        self.max_notifications_per_run: int = (
+            max_notifications_per_run if max_notifications_per_run is not None else default_max
+        )
+        self.keyword_categories: Dict[str, List[str]] = normalize_keyword_categories(keywords)
+        self.keywords: List[str] = [
+            kw for group in self.keyword_categories.values() for kw in group
+        ]
+        self._compiled_keyword_entries: List[Tuple[str, str, re.Pattern]] = []
+        self._rebuild_compiled_keywords()
+
         self.telegram_token = (
             telegram_token if telegram_token is not None
             else os.environ.get("TELEGRAM_BOT_TOKEN", "")
@@ -710,6 +1158,7 @@ class NoticeMonitor:
         self.baseline_mode: bool = False
         self.baseline_date: date = datetime.now(timezone.utc).date()
         self._state_dirty: bool = False
+        self._last_link_contexts: Dict[Tuple[str, str], str] = {}
 
         # Multi-layer deduplication lookup sets
         self._seen_fingerprints: Set[str] = set()
@@ -729,11 +1178,77 @@ class NoticeMonitor:
         self.new_notices_found: int = 0
         self.old_notices_suppressed: int = 0
         self.duplicates_suppressed: int = 0
+        self.keyword_filtered_out: int = 0
+        self.notifications_capped: int = 0
         self.telegram_sent: int = 0
         self.telegram_failed: int = 0
         self.state_committed: bool = False
         self.error_details: List[Dict[str, str]] = []
         self.site_results: List[Dict[str, Any]] = []
+
+    def _rebuild_compiled_keywords(self) -> None:
+        """Compiles regex patterns for all active notification keywords."""
+        self.keywords = [kw for group in self.keyword_categories.values() for kw in group]
+        entries: List[Tuple[str, str, re.Pattern]] = []
+        for cat, kw_list in self.keyword_categories.items():
+            sorted_kws = sorted(kw_list, key=lambda k: len(k.strip()), reverse=True)
+            for kw in sorted_kws:
+                entries.append((cat, kw, compile_keyword_pattern(kw)))
+        self._compiled_keyword_entries = entries
+
+    def configure_keywords(
+        self,
+        keywords_config: Any,
+        max_notifications_per_run: Optional[int] = None,
+    ) -> None:
+        """Updates active keyword configuration and optional per-run notification limit."""
+        self.keyword_categories = normalize_keyword_categories(keywords_config)
+        self._rebuild_compiled_keywords()
+        if max_notifications_per_run is not None:
+            self.max_notifications_per_run = int(max_notifications_per_run)
+
+    def get_matched_keyword_info(
+        self,
+        notice_or_title: Any,
+        content: str = "",
+    ) -> Tuple[bool, Optional[str], Optional[str]]:
+        """Checks whether a Notice object or (title, content) pair matches at least one
+        configured notification keyword in its title or available content."""
+        if isinstance(notice_or_title, Notice):
+            title_text = notice_or_title.title or ""
+            content_text = content or notice_or_title.content or ""
+        elif isinstance(notice_or_title, dict):
+            title_text = str(notice_or_title.get("title", "") or "")
+            content_text = content or str(
+                notice_or_title.get("content")
+                or notice_or_title.get("description")
+                or notice_or_title.get("summary")
+                or ""
+            )
+        else:
+            title_text = str(notice_or_title or "")
+            content_text = str(content or "")
+
+        clean_title = html.unescape(title_text).strip()
+        clean_content = html.unescape(content_text).strip()
+        combined = f"{clean_title}\n{clean_content}".strip()
+        if not combined:
+            return False, None, None
+
+        lower_combined = " ".join(combined.lower().split())
+        if any(noise in lower_combined for noise in NON_RECRUITMENT_NOISE_PHRASES):
+            return False, None, None
+
+        for cat, kw, pattern in self._compiled_keyword_entries:
+            if pattern.search(clean_title) or (clean_content and pattern.search(clean_content)):
+                return True, cat, kw
+
+        return False, None, None
+
+    def matches_keywords(self, notice_or_title: Any, content: str = "") -> bool:
+        """Returns True if the notice's title or available content matches at least one configured keyword."""
+        matched, _, _ = self.get_matched_keyword_info(notice_or_title, content)
+        return matched
 
     def _redact(self, text: str) -> str:
         """Redacts any secret values from log strings."""
@@ -759,7 +1274,7 @@ class NoticeMonitor:
         return missing
 
     def load_config(self) -> None:
-        """Loads and validates website configuration."""
+        """Loads and validates website and keyword configurations."""
         if not os.path.exists(self.config_path):
             raise FileNotFoundError(f"Configuration file not found: {self.config_path}")
 
@@ -769,6 +1284,44 @@ class NoticeMonitor:
         websites = data.get("websites", [])
         if not isinstance(websites, list) or not websites:
             raise ValueError(f"Invalid or empty 'websites' list in {self.config_path}")
+
+        # Load keyword configuration and notification limit from config/websites.json or config/keywords.json
+        if self._explicit_keywords is None:
+            if "keyword_categories" in data or "keywords" in data:
+                self.keyword_categories = normalize_keyword_categories(data)
+                self._rebuild_compiled_keywords()
+
+            candidate_kw_paths: List[str] = []
+            if self.keywords_config_path:
+                candidate_kw_paths.append(self.keywords_config_path)
+            else:
+                cfg_dir = os.path.dirname(os.path.abspath(self.config_path))
+                candidate_kw_paths.append(os.path.join(cfg_dir, "keywords.json"))
+
+            for kw_path in candidate_kw_paths:
+                if kw_path and os.path.exists(kw_path):
+                    try:
+                        with open(kw_path, "r", encoding="utf-8") as fk:
+                            kw_data = json.load(fk)
+                        if isinstance(kw_data, dict):
+                            loaded_cats = normalize_keyword_categories(kw_data)
+                            if loaded_cats:
+                                self.keyword_categories = loaded_cats
+                                self._rebuild_compiled_keywords()
+                            if (
+                                self._explicit_max_notifications is None
+                                and isinstance(kw_data.get("max_notifications_per_run"), int)
+                            ):
+                                self.max_notifications_per_run = kw_data["max_notifications_per_run"]
+                        break
+                    except Exception as exc:
+                        logger.warning(f"Failed to load keyword config from {kw_path}: {exc}")
+
+        if (
+            self._explicit_max_notifications is None
+            and isinstance(data.get("max_notifications_per_run"), int)
+        ):
+            self.max_notifications_per_run = data["max_notifications_per_run"]
 
         seen_ids: Set[str] = set()
         hub_urls: Set[str] = set()
@@ -792,7 +1345,11 @@ class NoticeMonitor:
         self.websites = websites
         self.configured_hub_urls = hub_urls
         self.total_configured = len(self.websites)
-        logger.info(f"Loaded {self.total_configured} websites from {self.config_path}")
+        logger.info(
+            f"Loaded {self.total_configured} websites from {self.config_path} "
+            f"({len(self.keywords)} keywords across {len(self.keyword_categories)} categories, "
+            f"max {self.max_notifications_per_run} notifications/run)"
+        )
 
     def _index_notice_for_dedup(self, notice: Notice) -> None:
         """Indexes a delivered/baselined notice across all deduplication keys."""
@@ -881,14 +1438,19 @@ class NoticeMonitor:
                 return True, f"published_date {pub_dt.isoformat()} is older than baseline {self.baseline_date.isoformat()}"
 
         # Also check if the title itself embeds a full parseable date older than baseline
-        title_date_str = extract_date(candidate.title)
+        title_date_str = extract_date(candidate.title, allow_future=True)
         if title_date_str:
             title_dt = parse_publication_date(title_date_str)
             if title_dt is not None and title_dt < self.baseline_date:
                 return True, f"title date {title_dt.isoformat()} is older than baseline {self.baseline_date.isoformat()}"
 
         # Check if the URL filename embeds a full parseable date older than baseline
-        url_date_str = extract_date(urllib.parse.unquote(candidate.url or ""))
+        unquoted_url = urllib.parse.unquote(candidate.url or "")
+        url_date_str = extract_date(unquoted_url, allow_future=True)
+        if not url_date_str:
+            m_compact = re.search(r"(?<![0-9])(20\d{2})(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])(?![0-9])", unquoted_url)
+            if m_compact:
+                url_date_str = m_compact.group(0)
         if url_date_str:
             url_dt = parse_publication_date(url_date_str)
             if url_dt is not None and url_dt < self.baseline_date:
@@ -966,7 +1528,8 @@ class NoticeMonitor:
         self.baseline_date = earliest_dt or datetime.now(timezone.utc).date()
 
         # Populate per-website baseline tracking from state and existing notices
-        saved_baselined = set(self.state.get("baselined_websites", []))
+        raw_saved_baselined = set(self.state.get("baselined_websites", []))
+        saved_baselined = set(raw_saved_baselined)
         groups_with_notices: Set[str] = set()
         for n in self.existing_notices.values():
             if n.website_id:
@@ -979,6 +1542,10 @@ class NoticeMonitor:
                 saved_baselined.add(sid)
 
         self.baselined_websites = saved_baselined
+        if not self.baseline_mode and (
+            not self.state.get("baseline_timestamp") or saved_baselined != raw_saved_baselined
+        ):
+            self._state_dirty = True
 
         # Build deduplication indices for all already-delivered notices
         self._seen_fingerprints.clear()
@@ -1087,9 +1654,10 @@ class NoticeMonitor:
         return text
 
     def parse_links_from_html(self, html_content: str, base_url: str) -> List[Tuple[str, str, Optional[str]]]:
-        """Parses links with titles and dates from HTML.
+        """Parses links with titles and dates from HTML and records immediate item content context.
         Returns list of (full_url, title, published_date)."""
         results: List[Tuple[str, str, Optional[str]]] = []
+        self._last_link_contexts = {}
         if not html_content or not isinstance(html_content, str):
             return results
 
@@ -1117,6 +1685,21 @@ class NoticeMonitor:
                         parent_text = " ".join(parent.get_text().split())[:300]
                     extracted_date = extract_date(title_text) or extract_date(parent_text)
 
+                    # Extract immediate row/item content for keyword matching without leaking whole-page wrappers
+                    item_context = ""
+                    item_container = a_tag.find_parent(["tr", "li", "p", "article", "td", "dd"])
+                    if item_container is not None:
+                        raw_ctx = " ".join(item_container.get_text().split())
+                        if len(raw_ctx) <= 350 and len(item_container.find_all("a")) <= 4:
+                            item_context = raw_ctx
+                    elif parent is not None and parent.name == "div":
+                        raw_ctx = " ".join(parent.get_text().split())
+                        if len(raw_ctx) <= 300 and len(parent.find_all("a")) <= 2:
+                            item_context = raw_ctx
+
+                    if item_context and item_context != title_text:
+                        self._last_link_contexts[(full_url, title_text)] = item_context
+
                     results.append((full_url, title_text, extracted_date))
                 return results
             except Exception as exc:
@@ -1130,20 +1713,32 @@ class NoticeMonitor:
                     continue
                 if not normalize_url(full_url):
                     continue
+                if (full_url, title) in parser.link_contexts:
+                    self._last_link_contexts[(full_url, title)] = parser.link_contexts[(full_url, title)]
                 results.append((full_url, title, extracted_date))
         except Exception as exc:
             logger.warning(f"HTML parsing error on {base_url}: {exc}")
 
         return results
 
-    def is_relevant_notice(self, title: str, url: str, is_dedicated_page: bool) -> bool:
+    def is_relevant_notice(
+        self,
+        title: str,
+        url: str,
+        is_dedicated_page: bool,
+        content: str = "",
+    ) -> bool:
         """Determines if a discovered link is a genuine official notice rather than
         navigation chrome, static hub links, vendor RFPs, or routine liquidity press releases."""
         clean_title = " ".join(title.lower().split())
         norm_title = normalize_title(title)
         clean_url = url.lower()
 
-        if clean_title in IGNORE_PHRASES or norm_title in IGNORE_PHRASES or len(clean_title) < 5:
+        if clean_title in IGNORE_PHRASES or norm_title in IGNORE_PHRASES or len(clean_title) < 2:
+            return False
+
+        # Very short titles (2-4 chars) are only valid if they match an explicit acronym keyword like DV, PET, PST
+        if len(clean_title) < 5 and not self.matches_keywords(title, content):
             return False
 
         if any(phrase in clean_title for phrase in NON_RECRUITMENT_NOISE_PHRASES):
@@ -1157,6 +1752,9 @@ class NoticeMonitor:
         ck = canonical_url_key(url)
         if ck in self.configured_hub_urls:
             return False
+
+        if self.matches_keywords(title, content):
+            return True
 
         if is_dedicated_page:
             if any(parsed_path.endswith(ext) for ext in DOCUMENT_EXTENSIONS):
@@ -1222,13 +1820,15 @@ class NoticeMonitor:
 
                 pages_fetched_ok += 1
                 links = self.parse_links_from_html(html_text, page_url)
+                link_contexts = dict(getattr(self, "_last_link_contexts", {}))
 
                 for full_url, title, pub_date in links:
                     norm_url = normalize_url(full_url)
                     if not norm_url:
                         continue
 
-                    if not self.is_relevant_notice(title, norm_url, is_dedicated):
+                    item_content = link_contexts.get((full_url, title), "")
+                    if not self.is_relevant_notice(title, norm_url, is_dedicated, content=item_content):
                         continue
 
                     # Preserve legacy fingerprint format for backward-compatible state keys
@@ -1245,6 +1845,8 @@ class NoticeMonitor:
                             if normalize_url(prev_n.url) == norm_url or (ck_url and canonical_url_key(prev_n.url) == ck_url):
                                 if not prev_n.published_date and pub_date:
                                     prev_n.published_date = pub_date
+                                if not prev_n.content and item_content:
+                                    prev_n.content = item_content
                                 break
                         continue
                     if fp in seen_in_site_fps:
@@ -1276,6 +1878,7 @@ class NoticeMonitor:
                         fingerprint=fp,
                         first_seen=datetime.now(timezone.utc).isoformat(),
                         delivered=False,
+                        content=item_content,
                     )
                     discovered_notices.append(notice)
             except Exception as exc:
@@ -1432,7 +2035,7 @@ class NoticeMonitor:
         self.load_state()
         self.validate_environment()
 
-        # Collect previously undelivered notices for retry (unless they are now recognized as duplicates or old)
+        # Collect previously undelivered notices for retry (unless they are duplicates, old, or do not match keywords)
         new_candidates: List[Notice] = []
         for n in list(self.existing_notices.values()):
             if not n.delivered:
@@ -1446,6 +2049,12 @@ class NoticeMonitor:
                     self._index_notice_for_dedup(n)
                     self._state_dirty = True
                     continue
+                if not self.matches_keywords(n):
+                    self.keyword_filtered_out += 1
+                    n.delivered = True
+                    self._index_notice_for_dedup(n)
+                    self._state_dirty = True
+                    continue
                 new_candidates.append(n)
 
         # Track candidates queued in the current run so cross-page/cross-site duplicates in the same run are suppressed
@@ -1453,16 +2062,21 @@ class NoticeMonitor:
         batch_notice_ids: Set[str] = set()
         batch_title_keys: Set[Tuple[str, str]] = set()
         batch_doc_urls: Set[str] = set()
+        batch_canonical_urls: Set[Tuple[str, str]] = set()
         for n in new_candidates:
+            grp = site_group_key(n.website_id)
             nid = extract_notice_id(n.url, n.title, n.website_id)
             if nid:
                 batch_notice_ids.add(nid)
             nt = normalize_title(n.title)
             if nt:
-                batch_title_keys.add((site_group_key(n.website_id), nt))
+                batch_title_keys.add((grp, nt))
             ck = canonical_url_key(n.url)
-            if ck and any(n.url.lower().split("?")[0].endswith(ext) for ext in DOCUMENT_EXTENSIONS):
-                batch_doc_urls.add(ck)
+            if ck:
+                if ck not in self.configured_hub_urls:
+                    batch_canonical_urls.add((grp, ck))
+                if any(n.url.lower().split("?")[0].endswith(ext) for ext in DOCUMENT_EXTENSIONS):
+                    batch_doc_urls.add(ck)
 
         for index, site in enumerate(self.websites, start=1):
             self.websites_attempted += 1
@@ -1540,6 +2154,7 @@ class NoticeMonitor:
                             or (nid and nid in batch_notice_ids)
                             or (nt and (grp, nt) in batch_title_keys)
                             or (is_doc and ck in batch_doc_urls)
+                            or (ck and ck not in self.configured_hub_urls and (grp, ck) in batch_canonical_urls)
                         ):
                             self.duplicates_suppressed += 1
                             continue
@@ -1558,15 +2173,36 @@ class NoticeMonitor:
                             self._state_dirty = True
                             continue
 
-                        # Genuinely new notice
+                        # 4. Filter by configured notification keywords in title or available content
+                        matched_kw, kw_cat, kw_term = self.get_matched_keyword_info(n)
+                        if not matched_kw:
+                            self.keyword_filtered_out += 1
+                            logger.info(
+                                f"  [KEYWORD FILTERED] {org_name}: '{n.title[:70]}' did not match configured keywords. "
+                                "Recording in state without Telegram alert."
+                            )
+                            n.delivered = True
+                            self.existing_notices[n.fingerprint] = n
+                            self._index_notice_for_dedup(n)
+                            self._state_dirty = True
+                            continue
+
+                        logger.info(
+                            f"  [MATCHED KEYWORD] {org_name}: '{n.title[:70]}' matched [{kw_cat}: '{kw_term}']"
+                        )
+
+                        # Genuinely new keyword-matching notice
                         new_candidates.append(n)
                         batch_fingerprints.add(n.fingerprint)
                         if nid:
                             batch_notice_ids.add(nid)
                         if nt:
                             batch_title_keys.add((grp, nt))
-                        if is_doc and ck:
-                            batch_doc_urls.add(ck)
+                        if ck:
+                            if ck not in self.configured_hub_urls:
+                                batch_canonical_urls.add((grp, ck))
+                            if is_doc:
+                                batch_doc_urls.add(ck)
 
             except Exception as exc:
                 self.checked_errors += 1
@@ -1594,7 +2230,10 @@ class NoticeMonitor:
             return 0
 
         self.new_notices_found = len(new_candidates)
-        logger.info(f"Discovered {self.new_notices_found} genuinely new/pending notices requiring alerts.")
+        logger.info(
+            f"Discovered {self.new_notices_found} genuinely new keyword-matching notices "
+            f"(max {self.max_notifications_per_run} notifications per run)."
+        )
 
         for n in new_candidates:
             # Double-check deduplication immediately before sending so no duplicate can ever slip through
@@ -1602,6 +2241,18 @@ class NoticeMonitor:
                 n.delivered = True
                 self.existing_notices[n.fingerprint] = n
                 self._index_notice_for_dedup(n)
+                continue
+
+            # Enforce configurable maximum of successful notifications per run (default: 10)
+            if self.max_notifications_per_run > 0 and self.telegram_sent >= self.max_notifications_per_run:
+                self.notifications_capped += 1
+                n.delivered = False
+                self.existing_notices[n.fingerprint] = n
+                self._state_dirty = True
+                logger.info(
+                    f"Per-run notification limit ({self.max_notifications_per_run} successful) reached. "
+                    f"Queueing notice for next run: {n.title[:70]}"
+                )
                 continue
 
             success = self.send_telegram_alert(n)
@@ -1635,8 +2286,10 @@ class NoticeMonitor:
         print(f"Websites fetched with 0 notices      : {self.websites_empty_extraction}")
         print(f"Websites with HTTP/SSL/conn errors   : {self.checked_errors}")
         print(f"Old notices suppressed               : {self.old_notices_suppressed}")
-        print(f"New notices discovered               : {self.new_notices_found}")
-        print(f"Telegram messages sent               : {self.telegram_sent}")
+        print(f"Non-keyword notices filtered out     : {self.keyword_filtered_out}")
+        print(f"New keyword-matching notices         : {self.new_notices_found}")
+        print(f"Telegram messages sent (limit {self.max_notifications_per_run:>2}/run) : {self.telegram_sent}")
+        print(f"Notifications capped / deferred      : {self.notifications_capped}")
         print(f"Notifications failed / pending       : {self.telegram_failed}")
         print(f"State changes committed to disk      : {'Yes' if self.state_committed else 'No'}")
         if self.baseline_mode:
@@ -1657,8 +2310,15 @@ class NoticeMonitor:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Government & Banking Notice Monitor")
     parser.add_argument("--config", default="config/websites.json", help="Path to websites.json")
+    parser.add_argument("--keywords", default=None, help="Optional path to keywords.json")
     parser.add_argument("--state", default="state/notices.json", help="Path to notices.json")
     parser.add_argument("--timeout", type=int, default=15, help="HTTP timeout in seconds")
+    parser.add_argument(
+        "--max-notifications",
+        type=int,
+        default=None,
+        help="Maximum Telegram notifications to send per run (default: 10)",
+    )
     parser.add_argument("--dry-run", action="store_true", help="Simulate Telegram alerts without live API calls")
     parser.add_argument(
         "--merge-state",
@@ -1677,6 +2337,8 @@ def main() -> None:
         state_path=args.state,
         timeout=args.timeout,
         dry_run=args.dry_run,
+        keywords_config_path=args.keywords,
+        max_notifications_per_run=args.max_notifications,
     )
     exit_code = monitor.run()
     sys.exit(exit_code)
@@ -1684,3 +2346,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

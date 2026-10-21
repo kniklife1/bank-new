@@ -45,7 +45,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          python src/monitor.py --config config/websites.json --state state/notices.json
+          python src/monitor.py --config config/websites.json --keywords config/keywords.json --state state/notices.json --max-notifications 10
 
       - name: Commit and Push State Updates Safely
         run: |

@@ -10,14 +10,15 @@ An autonomous, production-grade Python monitoring pipeline that tracks 23 verifi
 - **Execution Engine:** GitHub Actions (`ubuntu-latest`, `workflow_dispatch`).
 - **Scheduler:** `cron-job.org` triggers the GitHub REST API (`workflow_dispatch`) every 10 minutes (`{"ref":"main"}`). No competing cron trigger is defined inside `.github/workflows/monitor.yml`.
 - **State Persistence:** `state/notices.json` is atomically saved and committed back to the repository after each run.
-- **Deduplication:** Deterministic SHA-256 fingerprint generated from normalized URL + normalized title prevents repeat notifications.
-- **Baseline Initialization:** The first run records all existing notices into `state/notices.json` without sending Telegram messages.
+- **Deduplication:** Multi-layer deduplication (Notice/Document IDs, canonical URLs, normalized titles, and SHA-256 fingerprints) prevents repeat notifications.
+- **Keyword-Filtered Notifications (Max 10/Run):** Sends Telegram alerts only when a new notice matches at least one configured keyword in its title or available content across 5 categories (**Recruitment**, **Examination**, **Results**, **Answer Keys**, **Next Stages**), case-insensitively and with spacing/hyphenation variation support, capped at **10 notifications per run**.
+- **Baseline Initialization:** Preserves `state/notices.json` and prevents historical notices from triggering alerts.
 - **Complete Error Isolation:** Per-website exception handling guarantees that a timeout, HTTP 403/404/429/500, SSL error, or HTML parser issue on any website never stops the scraper from processing the remaining organizations.
 - **Strict SSL & Extraction Verification:** Enforces `ssl.CERT_REQUIRED` and `check_hostname = True` (never disables SSL verification) with RFC 5280 AIA intermediate certificate resolution, and separates HTTP 200 fetch status from actual notice link extraction.
 
 ---
 
-## 2. Minimal Project Structure
+## 2. Project Structure
 
 ```text
 government-notice-monitor/
@@ -25,14 +26,24 @@ government-notice-monitor/
 │   └── workflows/
 │       └── monitor.yml       # GitHub Actions workflow_dispatch automation
 ├── config/
+│   ├── keywords.json         # Configurable 5-category keyword filter & 10/run limit
 │   └── websites.json         # All 23 verified active institutions and notice endpoints
 ├── src/
-│   └── monitor.py            # Core scraping, deduplication, and alerting engine
+│   └── monitor.py            # Core scraping, keyword filtering, deduplication & alerting engine
 ├── state/
 │   └── notices.json          # Persistent state and notice fingerprint index
+├── tests/
+│   └── test_monitor.py       # Automated unit & integration test suite
 ├── requirements.txt          # Python dependencies (requests, beautifulsoup4, urllib3)
 └── README.md                 # Deployment, configuration, and verification manual
 ```
+
+### Configured Notification Keywords (`config/keywords.json`)
+- **Recruitment:** `new vacancy`, `recruitment`, `notification`, `advertisement`, `apply online`, `application form`, `posts`
+- **Examination:** `exam date`, `examination date`, `exam schedule`, `admit card`, `hall ticket`, `city intimation`
+- **Results:** `result`, `scorecard`, `merit list`, `cut off`, `cutoff`, `selection list`
+- **Answer Keys:** `answer key`, `answerkey`, `provisional answer key`, `final answer key`, `response sheet`
+- **Next Stages:** `DV`, `document verification`, `skill test`, `typing test`, `interview`, `PET`, `PST`, `medical examination`
 
 ---
 
@@ -81,7 +92,7 @@ Based on live verification, the following 8 organizations have been removed from
 
 ## 4. Telegram Notification Format
 
-When a new notice is detected, the bot sends one concise alert per notice using HTML mode:
+When a new notice is detected, the bot sends one concise alert per notice using HTML mode (up to 10 successful notifications per run, queueing excess eligible notices for subsequent runs):
 
 ```text
 New Official Notice — IBPS
@@ -91,8 +102,9 @@ Published: 18 October 2026
 Link: https://www.ibps.in/example-notice
 ```
 
-- When a publication date is present on the source page, `Published: <date>` is included.
-- When no publication date is available, the `Published:` line is omitted (dates are never invented).
+- Every notification includes the **Platform/Organization name**, **Notice title**, **Official publication date**, and **Direct official notice/application/PDF link**.
+- When a verified publication date is present on the source page, `Published: <date>` is displayed.
+- When a publication date cannot be verified, `Published: Publication date unavailable` is displayed rather than inventing today's date.
 - All text fields are HTML-escaped to prevent formatting errors.
 
 ---
