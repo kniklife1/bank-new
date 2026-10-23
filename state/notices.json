@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-23T14:18:27.152662+00:00",
+  "last_run_timestamp": "2026-10-23T15:13:43.030289+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 3583,
+    "total_recorded_notices": 3584,
     "last_run_new_notices": 8,
     "last_run_errors": 1,
     "last_run_extraction_ok": 21,
@@ -35842,6 +35842,16 @@
       "fingerprint": "fb51854443b04a65c71be9dd44dc6c26f71d11fa05de92c81abdd2a0091d7391",
       "first_seen": "2026-10-23T13:35:07.821632+00:00",
       "delivered": false
+    },
+    "e707be1b100a9277b8a7d32fde45f47dead2d1135a7f9881384d6e3507966c33": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Reserve Bank of India (Commercial Banks – Forthcoming Instructions) Second Amendment Directions, 2026",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13744&Mode=0",
+      "published_date": null,
+      "fingerprint": "e707be1b100a9277b8a7d32fde45f47dead2d1135a7f9881384d6e3507966c33",
+      "first_seen": "2026-10-23T15:12:27.217504+00:00",
+      "delivered": true
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
