@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-23T18:42:03.454425+00:00",
+  "last_run_timestamp": "2026-10-23T18:52:04.172781+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 3584,
+    "total_recorded_notices": 3585,
     "last_run_new_notices": 8,
     "last_run_errors": 1,
     "last_run_extraction_ok": 21,
@@ -35851,6 +35851,16 @@
       "published_date": null,
       "fingerprint": "e707be1b100a9277b8a7d32fde45f47dead2d1135a7f9881384d6e3507966c33",
       "first_seen": "2026-10-23T15:12:27.217504+00:00",
+      "delivered": true
+    },
+    "41edb60bee64b2f4394cd2fa1b2a7198ccda55dfc536abfa6d7f12d18c7a48fa": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "Saving Accounts",
+      "url": "https://punjabandsind.bank.in/content/saving-account",
+      "published_date": null,
+      "fingerprint": "41edb60bee64b2f4394cd2fa1b2a7198ccda55dfc536abfa6d7f12d18c7a48fa",
+      "first_seen": "2026-10-23T18:51:29.505115+00:00",
       "delivered": true
     }
   },
