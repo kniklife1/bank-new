@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-24T02:22:21.560148+00:00",
+  "last_run_timestamp": "2026-10-24T02:35:53.323817+00:00",
   "baseline_completed": true,
   "stats": {
     "total_recorded_notices": 3585,
     "last_run_new_notices": 8,
-    "last_run_errors": 1,
-    "last_run_extraction_ok": 21,
-    "last_run_fetched_ok": 22
+    "last_run_errors": 3,
+    "last_run_extraction_ok": 19,
+    "last_run_fetched_ok": 20
   },
   "notices": {
     "9da63338791ba82966aef072b71411ccd5f4d258c0187d5f28ba2c5f889934c3": {
