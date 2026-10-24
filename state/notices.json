@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-24T06:02:57.977205+00:00",
+  "last_run_timestamp": "2026-10-24T06:12:17.145635+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 3585,
+    "total_recorded_notices": 3586,
     "last_run_new_notices": 8,
     "last_run_errors": 1,
     "last_run_extraction_ok": 21,
@@ -35861,6 +35861,16 @@
       "published_date": null,
       "fingerprint": "41edb60bee64b2f4394cd2fa1b2a7198ccda55dfc536abfa6d7f12d18c7a48fa",
       "first_seen": "2026-10-23T18:51:29.505115+00:00",
+      "delivered": true
+    },
+    "5996a3ca62a82aad4a69a77c199e7a99e7503ed993c7957d3b29a608b2e25164": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "Integrity Pledge",
+      "url": "https://punjabandsind.bank.in/module/Inte-grity",
+      "published_date": null,
+      "fingerprint": "5996a3ca62a82aad4a69a77c199e7a99e7503ed993c7957d3b29a608b2e25164",
+      "first_seen": "2026-10-24T06:11:23.558114+00:00",
       "delivered": true
     }
   },
