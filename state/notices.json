@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-25T14:22:06.481762+00:00",
+  "last_run_timestamp": "2026-10-25T14:32:47.216999+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 3586,
+    "total_recorded_notices": 3587,
     "last_run_new_notices": 8,
     "last_run_errors": 1,
     "last_run_extraction_ok": 21,
@@ -35871,6 +35871,16 @@
       "published_date": null,
       "fingerprint": "5996a3ca62a82aad4a69a77c199e7a99e7503ed993c7957d3b29a608b2e25164",
       "first_seen": "2026-10-24T06:11:23.558114+00:00",
+      "delivered": true
+    },
+    "c6b291480c94073a46dbbf57a6de25c24f005779dcea5c17031f607a4e4c31dc": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Hon’ble Prime Minister of India inaugurates the Reserve Bank of India’s Data Centre and Cybersecurity Training Institute in Bhubaneswar, Odisha",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63862",
+      "published_date": null,
+      "fingerprint": "c6b291480c94073a46dbbf57a6de25c24f005779dcea5c17031f607a4e4c31dc",
+      "first_seen": "2026-10-25T14:31:27.883915+00:00",
       "delivered": true
     }
   },
