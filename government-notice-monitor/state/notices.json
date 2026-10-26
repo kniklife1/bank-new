@@ -35569,6 +35569,379 @@
       "fingerprint": "e40ddda7acca84fa8fa28f97d7ae6f8cd7dcc331b90dd6ca455fcb0af8459008",
       "first_seen": "2026-10-19T14:12:25.070421+00:00",
       "delivered": true
+    },
+    "e6cb080634cc2856e7d9529ac96dece8530cee158e76397bcf8e661850efe909": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Directions under Section 35 A read with Section 56 of the Banking Regulation Act, 1949 – Puducherry Co-operative Urban Bank Ltd",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63840",
+      "published_date": null,
+      "fingerprint": "e6cb080634cc2856e7d9529ac96dece8530cee158e76397bcf8e661850efe909",
+      "first_seen": "2026-10-21T17:02:50.559288+00:00",
+      "delivered": true
+    },
+    "8742f14ea7aa22c0f43e2079073f0225ae4bd5bbe665afbbfa399a07fd5288ba": {
+      "website_id": "nhb",
+      "org_name": "National Housing Bank (NHB)",
+      "title": "NHB Advisory",
+      "url": "https://www.nhb.org.in/nhb-advisory/",
+      "published_date": null,
+      "fingerprint": "8742f14ea7aa22c0f43e2079073f0225ae4bd5bbe665afbbfa399a07fd5288ba",
+      "first_seen": "2026-10-21T17:03:04.157463+00:00",
+      "delivered": true
+    },
+    "25e35aeec21ce6fd444a715a18a146da8f62bf2c46681ad1fa583af68e3e4181": {
+      "website_id": "iob",
+      "org_name": "Indian Overseas Bank (IOB)",
+      "title": "Advocate Login",
+      "url": "https://crlmsrecoveryadvocate.iob.bank.in:3030/login/",
+      "published_date": null,
+      "fingerprint": "25e35aeec21ce6fd444a715a18a146da8f62bf2c46681ad1fa583af68e3e4181",
+      "first_seen": "2026-10-21T17:03:28.005517+00:00",
+      "delivered": true
+    },
+    "c163c6026686607811df4601af6dfac5e01a083b6c8c821105eb8e56f220f2df": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "(645 KB)",
+      "url": "https://sbi.co.in/documents/77530/57941334/21082026_JA+2026+-+Detailed+Ad+-+Hindi.pdf/935be45b-8796-77d0-0701-eecc6ba02abe?t=1787300674572",
+      "published_date": null,
+      "fingerprint": "c163c6026686607811df4601af6dfac5e01a083b6c8c821105eb8e56f220f2df",
+      "first_seen": "2026-10-21T17:02:48.627040+00:00",
+      "delivered": true,
+      "content": "DOWNLOAD ADVERTISEMENT(HINDI (645 KB)/English) (959 KB)(NEW)"
+    },
+    "d6ce139f2ac5297c474bc56762903c0078c92cdc93791e5d054182cc03f83c67": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "(577 KB)",
+      "url": "https://sbi.co.in/documents/77530/57941334/SBI+-+CRPD-SCO-2026-27_03+-+Hindi.pdf/2e000562-4a57-36cd-d357-21aee993e402?t=1783686869791",
+      "published_date": null,
+      "fingerprint": "d6ce139f2ac5297c474bc56762903c0078c92cdc93791e5d054182cc03f83c67",
+      "first_seen": "2026-10-21T17:02:48.634220+00:00",
+      "delivered": true,
+      "content": "DOWNLOAD ADVERTISEMENT (Hindi (577 KB)/English (1022 KB))(NEW)"
+    },
+    "bb07e630d76547b99b52ec83d31cc21d50598796ed6b736242da2432d59bf0e4": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "LATERAL RECRUITMENT OF LOCAL BANK OFFICERS (PHASE III) IN THE BANK ON \r\nREGULAR BASIS PDF file download",
+      "url": "https://punjabandsind.bank.in/system/uploads/recruitment/7932_2026102116165647758.pdf",
+      "published_date": null,
+      "fingerprint": "bb07e630d76547b99b52ec83d31cc21d50598796ed6b736242da2432d59bf0e4",
+      "first_seen": "2026-10-21T17:03:35.160606+00:00",
+      "delivered": true
+    },
+    "0ba355a835a63d15c67f2c1341fd467f66e71f9cdc485a0e3dfe332730974911": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "Apply Now",
+      "url": "https://ibpsreg.ibps.in/psbrmoct25/",
+      "published_date": null,
+      "fingerprint": "0ba355a835a63d15c67f2c1341fd467f66e71f9cdc485a0e3dfe332730974911",
+      "first_seen": "2026-10-21T17:03:35.180064+00:00",
+      "delivered": true,
+      "content": "LATERAL RECRUITMENT OF MSME RELATIONSHIP MANAGER ON CONTRACTUAL BASIS IN THE BANK Formats for SC-ST, OBC, EWS PwDFormat for Experiance Certificate (Annexure-I)Guidelines for Scanning and Upload of Documents Apply Now"
+    },
+    "d6bfc0f8b37486e028092c7f466c48dd85fceeff65138a26bc68b5d82f7a71fb": {
+      "website_id": "niacl",
+      "org_name": "New India Assurance (NIACL)",
+      "title": "Pet Dog",
+      "url": "https://www.newindia.co.in/rural/insurance-for-dogs",
+      "published_date": null,
+      "fingerprint": "d6bfc0f8b37486e028092c7f466c48dd85fceeff65138a26bc68b5d82f7a71fb",
+      "first_seen": "2026-10-21T17:04:10.043561+00:00",
+      "delivered": true
+    },
+    "bb45e0566568a2339bfb481b64c52c479d9ed88038db31a8b45003cefd3a787b": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "RBI Bulletin – October 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63859",
+      "published_date": null,
+      "fingerprint": "bb45e0566568a2339bfb481b64c52c479d9ed88038db31a8b45003cefd3a787b",
+      "first_seen": "2026-10-23T13:34:30.347001+00:00",
+      "delivered": true
+    },
+    "5df98e9dc4d0c7654d8a626e53b624d3cc5a128ccb2420ea1f3bc9856489b9c0": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "RBI issues Reserve Bank of India (Commercial Banks – Forthcoming Instructions) Second Amendment Directions, 2026 on Minimum Capital Requirements for Operational Risk",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63858",
+      "published_date": null,
+      "fingerprint": "5df98e9dc4d0c7654d8a626e53b624d3cc5a128ccb2420ea1f3bc9856489b9c0",
+      "first_seen": "2026-10-23T13:34:30.347380+00:00",
+      "delivered": true
+    },
+    "d424a673167f19cdac16e5a783829e76a84da386ca5b5d761be38abd4e6754ce": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Money Supply for the fortnight ended on October 15, 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63856",
+      "published_date": "October 15, 2026",
+      "fingerprint": "d424a673167f19cdac16e5a783829e76a84da386ca5b5d761be38abd4e6754ce",
+      "first_seen": "2026-10-23T13:34:30.347771+00:00",
+      "delivered": true
+    },
+    "5b281df01d0558ae02330eeb98ee0c482c89b86c404414a33b4e2d900e93c37e": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "RBI issues guidelines on the implementation of Leverage Ratio 2017 Standard",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63854",
+      "published_date": null,
+      "fingerprint": "5b281df01d0558ae02330eeb98ee0c482c89b86c404414a33b4e2d900e93c37e",
+      "first_seen": "2026-10-23T13:34:30.348201+00:00",
+      "delivered": true
+    },
+    "2a9bde350a7193b68da807c51a94ef29a52a9540dff933ab247ad9acfb335449": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Reserve Money for the fortnight ended on October 15, 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63846",
+      "published_date": "October 15, 2026",
+      "fingerprint": "2a9bde350a7193b68da807c51a94ef29a52a9540dff933ab247ad9acfb335449",
+      "first_seen": "2026-10-23T13:34:30.348765+00:00",
+      "delivered": true
+    },
+    "31d4f30859f3d31d98f46a573636372e14066cd63f16f5caf97f41204cfeef8d": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Directions under Section 35A read with Section 56 of the Banking Regulation Act, 1949 – The Suri Friends’ Union Co-operative Bank Ltd., Suri, West Bengal – Extension of period",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63845",
+      "published_date": null,
+      "fingerprint": "31d4f30859f3d31d98f46a573636372e14066cd63f16f5caf97f41204cfeef8d",
+      "first_seen": "2026-10-23T13:34:30.349139+00:00",
+      "delivered": true
+    },
+    "8df2e69fa7ccb7f8b5d0a826079537ad3ec0a56d27124161854293665a895854": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Delegation of Compounding of certain Contraventions under FEMA, 1999 to Regional Offices of the Reserve Bank",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13745&Mode=0",
+      "published_date": null,
+      "fingerprint": "8df2e69fa7ccb7f8b5d0a826079537ad3ec0a56d27124161854293665a895854",
+      "first_seen": "2026-10-23T13:34:31.562907+00:00",
+      "delivered": true
+    },
+    "4cf04a01ad4e3a3eb6abb27661bd60eaf45fe66c348a82737f102ce838678396": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Reserve Bank of India (Commercial Banks – Prudential Norms on Capital Adequacy) Eleventh Amendment Directions, 2026",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13743&Mode=0",
+      "published_date": null,
+      "fingerprint": "4cf04a01ad4e3a3eb6abb27661bd60eaf45fe66c348a82737f102ce838678396",
+      "first_seen": "2026-10-23T13:34:31.563278+00:00",
+      "delivered": true
+    },
+    "ff256e725f2d10ab00d771c9ac9767719c32e0a84df3264b5d4a719c979e172d": {
+      "website_id": "rbi-opportunities",
+      "org_name": "RBI Opportunities",
+      "title": "Engagement of Part- Time Bank’s Medical Consultants (BMC) on Contract Basis with Fixed Hourly Remuneration at Reserve Bank of India, Thiruvananthapuram",
+      "url": "https://opportunities.rbi.org.in/scripts/bs_viewcontent.aspx?Id=5192",
+      "published_date": "Oct 23, 2026",
+      "fingerprint": "ff256e725f2d10ab00d771c9ac9767719c32e0a84df3264b5d4a719c979e172d",
+      "first_seen": "2026-10-23T13:34:32.936296+00:00",
+      "delivered": false
+    },
+    "313d7e5fb4f61e61fb0c7955c91ae26264f0e1f81ccf9df927d685d3f29ccaf6": {
+      "website_id": "central-bank-of-india",
+      "org_name": "Central Bank of India",
+      "title": "Nostro Account details",
+      "url": "https://centralbank.bank.in/themes/cbi/templates/international-banking-exim/pages/nostro.html",
+      "published_date": null,
+      "fingerprint": "313d7e5fb4f61e61fb0c7955c91ae26264f0e1f81ccf9df927d685d3f29ccaf6",
+      "first_seen": "2026-10-23T13:34:48.924931+00:00",
+      "delivered": true
+    },
+    "b60eb88d48aff843d59818da223040e19e2f8bd1f290c2fe545a5357d6d3432d": {
+      "website_id": "central-bank-of-india",
+      "org_name": "Central Bank of India",
+      "title": "Non- Fund Based Facilities",
+      "url": "https://centralbank.bank.in/themes/cbi/templates/international-banking-exim/pages/non-fund-based-facilities.html",
+      "published_date": null,
+      "fingerprint": "b60eb88d48aff843d59818da223040e19e2f8bd1f290c2fe545a5357d6d3432d",
+      "first_seen": "2026-10-23T13:34:48.925062+00:00",
+      "delivered": true
+    },
+    "634dfc6aa5e0cf92b76abf52891ad365bfb11c0645b3b78c2c932bfa89f84f5f": {
+      "website_id": "central-bank-of-india",
+      "org_name": "Central Bank of India",
+      "title": "Latest Interest Rates",
+      "url": "https://centralbank.bank.in/themes/cbi/templates/international-banking-exim/pages/nri-services-latest-fcnr-b-nre-interest-rates.html",
+      "published_date": null,
+      "fingerprint": "634dfc6aa5e0cf92b76abf52891ad365bfb11c0645b3b78c2c932bfa89f84f5f",
+      "first_seen": "2026-10-23T13:34:48.925325+00:00",
+      "delivered": true
+    },
+    "d4e5d563e6611dae8e0eb2b5f3d7071aafa611ec2769b9e12821ae71ec69af20": {
+      "website_id": "central-bank-of-india",
+      "org_name": "Central Bank of India",
+      "title": "Information relating to Daily FX Card rates, charges, documentation requirements and other applicable terms and condition on FEDAI's website",
+      "url": "https://centralbank.bank.in/themes/cbi/templates/international-banking-exim/pages/cbt-fedai.html",
+      "published_date": null,
+      "fingerprint": "d4e5d563e6611dae8e0eb2b5f3d7071aafa611ec2769b9e12821ae71ec69af20",
+      "first_seen": "2026-10-23T13:34:48.925732+00:00",
+      "delivered": true
+    },
+    "395c8db0ec5d2d8f5f1e589fec162a2ec26e37676ede4714c74c452f60dc38e0": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "Handling Import and Export Transctions",
+      "url": "https://punjabandsind.bank.in//system/uploads/document/7932_2026102210452637419.pdf",
+      "published_date": null,
+      "fingerprint": "395c8db0ec5d2d8f5f1e589fec162a2ec26e37676ede4714c74c452f60dc38e0",
+      "first_seen": "2026-10-23T13:34:59.783289+00:00",
+      "delivered": true
+    },
+    "ec390444cc49d2760bd7084d32ddb1e86de22215a011003992c1aca99d0830b7": {
+      "website_id": "exim-bank",
+      "org_name": "EXIM Bank",
+      "title": "LIST OF CANDIDATES SELECTED AS DEPUTY MANAGERS (AD. NO: HRM/ DM & M/ SRD/ 2025-26/ 07)",
+      "url": "https://www.eximbankindia.in/sites/default/files/2026-10/Final%20Selection%20-%20DM%20%28HR%29%202026.pdf",
+      "published_date": null,
+      "fingerprint": "ec390444cc49d2760bd7084d32ddb1e86de22215a011003992c1aca99d0830b7",
+      "first_seen": "2026-10-23T13:35:07.821875+00:00",
+      "delivered": false
+    },
+    "47eb343302922b4126a0f073ea0a539a93213ea8c7e28318b04f772c832187e1": {
+      "website_id": "gic-re",
+      "org_name": "General Insurance Corporation (GIC Re)",
+      "title": "Corrigendum: GEM/2026/B/8134254 - Appointment of an Actuary",
+      "url": "https://www.gicre.in/en/images/CORRIGENDUM_21102026.pdf",
+      "published_date": "21-10-2026",
+      "fingerprint": "47eb343302922b4126a0f073ea0a539a93213ea8c7e28318b04f772c832187e1",
+      "first_seen": "2026-10-23T13:35:31.317172+00:00",
+      "delivered": false
+    },
+    "1fa80b41ee7f72b7c028739174f0ee866ed7d2406b4a4b1c1882761dafb2800e": {
+      "website_id": "rbi-opportunities",
+      "org_name": "RBI Opportunities",
+      "title": "Recruitment Calendar",
+      "url": "https://opportunities.rbi.org.in/downloads/Class_I_(Officers)_Annual_Recruitment_Calendar_2027.pdf",
+      "published_date": null,
+      "fingerprint": "1fa80b41ee7f72b7c028739174f0ee866ed7d2406b4a4b1c1882761dafb2800e",
+      "first_seen": "2026-10-23T13:34:32.934824+00:00",
+      "delivered": false
+    },
+    "018f43166b1de78d5e386c0fa96fba20c59e2cacfa5d2d73cb8fdb7ff94c8433": {
+      "website_id": "exim-bank",
+      "org_name": "EXIM Bank",
+      "title": "LIST OF SHORTLISTED CANDIDATES FOR APPEARING IN PERSONAL INTERVIEW (ADVERTISEMENT NUMBER: HRM/ DM/ 2026-27/ 03)",
+      "url": "https://www.eximbankindia.in/sites/default/files/2026-10/Merit%20List%20for%20DM%20-%20ISU.pdf",
+      "published_date": null,
+      "fingerprint": "018f43166b1de78d5e386c0fa96fba20c59e2cacfa5d2d73cb8fdb7ff94c8433",
+      "first_seen": "2026-10-23T13:35:07.821436+00:00",
+      "delivered": false
+    },
+    "fb51854443b04a65c71be9dd44dc6c26f71d11fa05de92c81abdd2a0091d7391": {
+      "website_id": "exim-bank",
+      "org_name": "EXIM Bank",
+      "title": "LIST OF SHORTLISTED CANDIDATES FOR APPEARING IN PERSONAL INTERVIEW (ADVERTISEMENT NUMBER: HRM/ MT/ 2026-27/ 01)",
+      "url": "https://www.eximbankindia.in/sites/default/files/2026-10/Merit%20List%20for%20MT%20-%20Human%20Resource%20and%20Administration.pdf",
+      "published_date": null,
+      "fingerprint": "fb51854443b04a65c71be9dd44dc6c26f71d11fa05de92c81abdd2a0091d7391",
+      "first_seen": "2026-10-23T13:35:07.821632+00:00",
+      "delivered": false
+    },
+    "e707be1b100a9277b8a7d32fde45f47dead2d1135a7f9881384d6e3507966c33": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Reserve Bank of India (Commercial Banks – Forthcoming Instructions) Second Amendment Directions, 2026",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13744&Mode=0",
+      "published_date": null,
+      "fingerprint": "e707be1b100a9277b8a7d32fde45f47dead2d1135a7f9881384d6e3507966c33",
+      "first_seen": "2026-10-23T15:12:27.217504+00:00",
+      "delivered": true
+    },
+    "41edb60bee64b2f4394cd2fa1b2a7198ccda55dfc536abfa6d7f12d18c7a48fa": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "Saving Accounts",
+      "url": "https://punjabandsind.bank.in/content/saving-account",
+      "published_date": null,
+      "fingerprint": "41edb60bee64b2f4394cd2fa1b2a7198ccda55dfc536abfa6d7f12d18c7a48fa",
+      "first_seen": "2026-10-23T18:51:29.505115+00:00",
+      "delivered": true
+    },
+    "5996a3ca62a82aad4a69a77c199e7a99e7503ed993c7957d3b29a608b2e25164": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "Integrity Pledge",
+      "url": "https://punjabandsind.bank.in/module/Inte-grity",
+      "published_date": null,
+      "fingerprint": "5996a3ca62a82aad4a69a77c199e7a99e7503ed993c7957d3b29a608b2e25164",
+      "first_seen": "2026-10-24T06:11:23.558114+00:00",
+      "delivered": true
+    },
+    "c6b291480c94073a46dbbf57a6de25c24f005779dcea5c17031f607a4e4c31dc": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Hon’ble Prime Minister of India inaugurates the Reserve Bank of India’s Data Centre and Cybersecurity Training Institute in Bhubaneswar, Odisha",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63862",
+      "published_date": null,
+      "fingerprint": "c6b291480c94073a46dbbf57a6de25c24f005779dcea5c17031f607a4e4c31dc",
+      "first_seen": "2026-10-25T14:31:27.883915+00:00",
+      "delivered": true
+    },
+    "79d11bb19c7788273a3de71d8eef2208c013fb6f62897a7061f0536efd90dc75": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "Ind Advantage (Reward Program)",
+      "url": "https://indianbank.in/en/ind-advantage-reward-program",
+      "published_date": null,
+      "fingerprint": "79d11bb19c7788273a3de71d8eef2208c013fb6f62897a7061f0536efd90dc75",
+      "first_seen": "2026-10-26T03:03:31.726947+00:00",
+      "delivered": true
+    },
+    "d46c5d800b3d7ad055fe6bddd54a94069d53c600b25f7ffbcdb69b0a31784eaf": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "Ind Advantage (Rewards)",
+      "url": "https://indianbank.bank.in/departments/ind-advantage-reward-program/",
+      "published_date": null,
+      "fingerprint": "d46c5d800b3d7ad055fe6bddd54a94069d53c600b25f7ffbcdb69b0a31784eaf",
+      "first_seen": "2026-10-26T03:03:31.728682+00:00",
+      "delivered": true
+    },
+    "61a3d54350a231a060dfb5d0afaba9ba481cc3f447cbdf8bd95891aa8e5c6dac": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "Common Loan Application Form",
+      "url": "https://indianbank.in/documents/d/guest/common-loan-application-form",
+      "published_date": null,
+      "fingerprint": "61a3d54350a231a060dfb5d0afaba9ba481cc3f447cbdf8bd95891aa8e5c6dac",
+      "first_seen": "2026-10-26T03:03:31.709455+00:00",
+      "delivered": true
+    },
+    "2c3f5722fc5acf2b36db2c1dcf832c7e697e89f624cc726d4a9bd129509a703b": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "Downloads – Application Forms",
+      "url": "https://indianbank.bank.in/en/downloads-application-forms",
+      "published_date": null,
+      "fingerprint": "2c3f5722fc5acf2b36db2c1dcf832c7e697e89f624cc726d4a9bd129509a703b",
+      "first_seen": "2026-10-26T03:03:31.717065+00:00",
+      "delivered": true
+    },
+    "2551f9cb7a0656bc9cf90f52d3f35fc0c9060ebc02e8f43bce07d4b76f3632c9": {
+      "website_id": "rbi-opportunities",
+      "org_name": "RBI Opportunities",
+      "title": "Extension of last date for submission of Application - Engagement of Part-time Bank’s Medical Consultant on Contract Basis with Fixed Hourly Remuneration at Reserve Bank of India, Itanagar",
+      "url": "https://opportunities.rbi.org.in/scripts/bs_viewcontent.aspx?Id=5194",
+      "published_date": null,
+      "fingerprint": "2551f9cb7a0656bc9cf90f52d3f35fc0c9060ebc02e8f43bce07d4b76f3632c9",
+      "first_seen": "2026-10-26T05:11:02.476845+00:00",
+      "delivered": true
+    },
+    "7903e7c707f904fad33317171a444da24e577a150fcf202ef03b9560ad449367": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "LATERAL RECRUITMENT OF LOCAL BANK OFFICERS (PHASE III) IN THE BANK ON REGULAR BASIS",
+      "url": "https://punjabandsind.bank.in/system/uploads/recruitment/7932_2026102312133433976.pdf",
+      "published_date": "2026-10-23",
+      "fingerprint": "7903e7c707f904fad33317171a444da24e577a150fcf202ef03b9560ad449367",
+      "first_seen": "2026-10-23T12:15:00+00:00",
+      "delivered": false
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",

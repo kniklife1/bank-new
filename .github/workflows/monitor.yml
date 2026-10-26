@@ -10,7 +10,7 @@ on:
 
 # Prevent concurrent runs from reading stale state or sending duplicate alerts
 concurrency:
-  group: notice-monitor-state
+  group: notice-monitor-state-${{ github.ref }}
   cancel-in-progress: false
 
 permissions:
@@ -27,6 +27,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: true
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
@@ -35,25 +36,38 @@ jobs:
           python-version: '3.11'
           cache: 'pip'
 
-      - name: Install Dependencies
+      - name: Resolve Project Directory & Install Dependencies
+        id: resolve
         run: |
+          if [ -f "src/monitor.py" ]; then
+            PROJECT_DIR="."
+          elif [ -f "government-notice-monitor/src/monitor.py" ]; then
+            PROJECT_DIR="government-notice-monitor"
+          else
+            echo "::error::Could not find src/monitor.py in repository root or government-notice-monitor/."
+            exit 1
+          fi
+          echo "project_dir=${PROJECT_DIR}" >> "$GITHUB_OUTPUT"
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r "${PROJECT_DIR}/requirements.txt"
 
       - name: Run Notice Monitor
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        working-directory: ${{ steps.resolve.outputs.project_dir }}
         run: |
           python src/monitor.py --config config/websites.json --keywords config/keywords.json --state state/notices.json --max-notifications 10
 
       - name: Commit and Push State Updates Safely
+        if: always() && steps.resolve.outcome == 'success'
+        working-directory: ${{ steps.resolve.outputs.project_dir }}
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           
           # Only commit if state/notices.json actually changed
-          if ! git diff --quiet state/notices.json; then
+          if ! git diff --quiet -- state/notices.json; then
             echo "State file modified. Preparing commit..."
             cp state/notices.json /tmp/local_notices_state.json
             git add state/notices.json
@@ -61,27 +75,33 @@ jobs:
             
             # Retry loop with union-merge state protection to never overwrite newer remote state
             max_retries=3
+            branch_name="${GITHUB_REF_NAME:-main}"
             for i in $(seq 1 $max_retries); do
-              echo "Push attempt $i of $max_retries..."
-              if git push origin HEAD; then
+              echo "Push attempt $i of $max_retries to origin/$branch_name..."
+              if git push origin "HEAD:$branch_name"; then
                 echo "State pushed successfully."
+                rm -f /tmp/local_notices_state.json
                 exit 0
               fi
-              echo "Remote advanced. Fetching latest origin/main and union-merging state/notices.json..."
-              git fetch origin main
-              git reset --hard origin/main
+              echo "Remote advanced. Fetching latest origin/$branch_name and union-merging state/notices.json..."
+              git fetch origin "$branch_name"
+              git reset --hard "origin/$branch_name"
               python src/monitor.py --merge-state state/notices.json /tmp/local_notices_state.json state/notices.json
-              if ! git diff --quiet state/notices.json; then
+              if ! git diff --quiet -- state/notices.json; then
                 git add state/notices.json
                 git commit -m "chore(state): update notice monitor state [skip ci]"
+                cp state/notices.json /tmp/local_notices_state.json
               else
                 echo "Remote already contains all state updates."
+                rm -f /tmp/local_notices_state.json
                 exit 0
               fi
               sleep 2
             done
+            rm -f /tmp/local_notices_state.json
             echo "Failed to push state after $max_retries attempts."
             exit 1
           else
             echo "No state changes detected. Skipping git commit."
           fi
+

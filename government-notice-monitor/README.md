@@ -141,23 +141,31 @@ git push -u origin main
 2. Select **Notice Monitor** on the left, click **Run workflow** on branch `main`.
 3. Confirm the run logs `[BASELINE INITIALIZATION]` and commits `state/notices.json` with `"baseline_completed": true` without sending Telegram messages.
 
-### Step 5: Configure cron-job.org (Every 10 Minutes)
-1. **Create a Fine-Grained GitHub Personal Access Token:**
-   - Go to GitHub **Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token**.
-   - **Repository access:** Select **Only select repositories** → choose your `government-notice-monitor` repository.
-   - **Repository permissions:** Set **Actions** to **Read and write** (`Contents: Read-only` is automatically selected).
-   - Generate and copy the token (`github_pat_...`). Never commit this token to code or put it in a URL.
-2. **Create the Cronjob in cron-job.org:**
-   - **URL:** `https://api.github.com/repos/OWNER/REPO/actions/workflows/monitor.yml/dispatches`
+### Step 5: Configure cron-job.org for `kniklife1/bank-new` (Every 10 Minutes)
+1. **Create or Update Your Fine-Grained GitHub Personal Access Token:**
+   - Go to GitHub **Settings → Developer settings → Personal access tokens → Fine-grained tokens**.
+   - **Repository access:** Select **Only select repositories** → explicitly add **`kniklife1/bank-new`** (Note: if you previously created a token for `kniklife1/RRB-new-update` or `kniklife1/sscv4`, a newly created or private repository `kniklife1/bank-new` is **not** automatically included, which causes GitHub to return **HTTP `404 Not Found`**).
+   - **Repository permissions:** Set **Actions** to **Read and write** (`Metadata: Read-only` is automatically selected; optionally set `Contents: Read-only`).
+   - Generate/save and copy the token (`github_pat_...`). Never commit this token to code or put it in a URL.
+2. **Exact `cron-job.org` Settings for `kniklife1/bank-new`:**
+   - **URL:** `https://api.github.com/repos/kniklife1/bank-new/actions/workflows/monitor.yml/dispatches`
    - **Schedule:** Every 10 minutes (`*/10 * * * *`).
-   - **Request Method:** `POST`
+   - **Request Method (Advanced tab):** `POST`
    - **Headers (Advanced tab):**
      - `Accept`: `application/vnd.github+json`
      - `Authorization`: `Bearer <YOUR_FINE_GRAINED_GITHUB_PAT>`
-     - `X-GitHub-Api-Version`: `2022-11-28`
      - `Content-Type`: `application/json`
-   - **Request Body:**
+     - `X-GitHub-Api-Version`: `2022-11-28`
+   - **Request Body (Advanced tab):**
      ```json
      {"ref":"main"}
      ```
-   - Use **Test run** in `cron-job.org` to verify a `204 No Content` response and confirm a new `workflow_dispatch` run starts under your repository's **Actions** tab.
+   - Use **Test run** in `cron-job.org` to verify an HTTP **`204 No Content`** response and confirm a new `workflow_dispatch` run starts under `https://github.com/kniklife1/bank-new/actions`.
+
+### Troubleshooting `cron-job.org` HTTP 404 Errors on `kniklife1/bank-new`
+If `cron-job.org` returns `404 Not Found`, verify these four items:
+1. **Fine-Grained PAT Repository Scope**: GitHub masks `401`/`403` errors as `404 Not Found`. Ensure your Fine-Grained PAT explicitly lists `kniklife1/bank-new` under **Repository access** and grants **Actions: Read and write**.
+2. **Hidden `.github` Folder on Upload**: Ensure `.github/workflows/monitor.yml` (with the leading dot on `.github`) exists on branch `main` at the root of `kniklife1/bank-new`. When uploading via the GitHub Web UI, drag-and-drop can skip hidden `.github` folders unless selected explicitly or pushed via Git.
+3. **Exact REST API URL & `POST` Method**: Ensure the URL is `https://api.github.com/repos/kniklife1/bank-new/actions/workflows/monitor.yml/dispatches` (not `https://github.com/...`) and the HTTP method in the **Advanced** tab is set to **`POST`** (not `GET`).
+4. **Branch Reference**: Ensure the request body is `{"ref":"main"}` matching your default branch `main`.
+

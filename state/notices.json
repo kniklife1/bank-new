@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-26T05:42:20.722923+00:00",
+  "last_run_timestamp": "2026-10-21T16:52:39.928202+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 3592,
-    "last_run_new_notices": 10,
-    "last_run_errors": 1,
-    "last_run_extraction_ok": 21,
-    "last_run_fetched_ok": 22
+    "total_recorded_notices": 3556,
+    "last_run_new_notices": 0,
+    "last_run_errors": 0,
+    "last_run_extraction_ok": 0,
+    "last_run_fetched_ok": 0
   },
   "notices": {
     "9da63338791ba82966aef072b71411ccd5f4d258c0187d5f28ba2c5f889934c3": {
@@ -35608,7 +35608,7 @@
       "published_date": null,
       "fingerprint": "c163c6026686607811df4601af6dfac5e01a083b6c8c821105eb8e56f220f2df",
       "first_seen": "2026-10-21T17:02:48.627040+00:00",
-      "delivered": false,
+      "delivered": true,
       "content": "DOWNLOAD ADVERTISEMENT(HINDI (645 KB)/English) (959 KB)(NEW)"
     },
     "d6ce139f2ac5297c474bc56762903c0078c92cdc93791e5d054182cc03f83c67": {
@@ -35619,7 +35619,7 @@
       "published_date": null,
       "fingerprint": "d6ce139f2ac5297c474bc56762903c0078c92cdc93791e5d054182cc03f83c67",
       "first_seen": "2026-10-21T17:02:48.634220+00:00",
-      "delivered": false,
+      "delivered": true,
       "content": "DOWNLOAD ADVERTISEMENT (Hindi (577 KB)/English (1022 KB))(NEW)"
     },
     "bb07e630d76547b99b52ec83d31cc21d50598796ed6b736242da2432d59bf0e4": {
@@ -35630,7 +35630,7 @@
       "published_date": null,
       "fingerprint": "bb07e630d76547b99b52ec83d31cc21d50598796ed6b736242da2432d59bf0e4",
       "first_seen": "2026-10-21T17:03:35.160606+00:00",
-      "delivered": false
+      "delivered": true
     },
     "0ba355a835a63d15c67f2c1341fd467f66e71f9cdc485a0e3dfe332730974911": {
       "website_id": "punjab-and-sind-bank",
@@ -35640,7 +35640,7 @@
       "published_date": null,
       "fingerprint": "0ba355a835a63d15c67f2c1341fd467f66e71f9cdc485a0e3dfe332730974911",
       "first_seen": "2026-10-21T17:03:35.180064+00:00",
-      "delivered": false,
+      "delivered": true,
       "content": "LATERAL RECRUITMENT OF MSME RELATIONSHIP MANAGER ON CONTRACTUAL BASIS IN THE BANK Formats for SC-ST, OBC, EWS PwDFormat for Experiance Certificate (Annexure-I)Guidelines for Scanning and Upload of Documents Apply Now"
     },
     "d6bfc0f8b37486e028092c7f466c48dd85fceeff65138a26bc68b5d82f7a71fb": {
@@ -35651,7 +35651,7 @@
       "published_date": null,
       "fingerprint": "d6bfc0f8b37486e028092c7f466c48dd85fceeff65138a26bc68b5d82f7a71fb",
       "first_seen": "2026-10-21T17:04:10.043561+00:00",
-      "delivered": false
+      "delivered": true
     },
     "bb45e0566568a2339bfb481b64c52c479d9ed88038db31a8b45003cefd3a787b": {
       "website_id": "rbi",
@@ -35738,10 +35738,10 @@
       "org_name": "RBI Opportunities",
       "title": "Engagement of Part- Time Bank’s Medical Consultants (BMC) on Contract Basis with Fixed Hourly Remuneration at Reserve Bank of India, Thiruvananthapuram",
       "url": "https://opportunities.rbi.org.in/scripts/bs_viewcontent.aspx?Id=5192",
-      "published_date": null,
+      "published_date": "Oct 23, 2026",
       "fingerprint": "ff256e725f2d10ab00d771c9ac9767719c32e0a84df3264b5d4a719c979e172d",
       "first_seen": "2026-10-23T13:34:32.936296+00:00",
-      "delivered": true
+      "delivered": false
     },
     "313d7e5fb4f61e61fb0c7955c91ae26264f0e1f81ccf9df927d685d3f29ccaf6": {
       "website_id": "central-bank-of-india",
@@ -35801,17 +35801,17 @@
       "published_date": null,
       "fingerprint": "ec390444cc49d2760bd7084d32ddb1e86de22215a011003992c1aca99d0830b7",
       "first_seen": "2026-10-23T13:35:07.821875+00:00",
-      "delivered": true
+      "delivered": false
     },
     "47eb343302922b4126a0f073ea0a539a93213ea8c7e28318b04f772c832187e1": {
       "website_id": "gic-re",
       "org_name": "General Insurance Corporation (GIC Re)",
       "title": "Corrigendum: GEM/2026/B/8134254 - Appointment of an Actuary",
       "url": "https://www.gicre.in/en/images/CORRIGENDUM_21102026.pdf",
-      "published_date": null,
+      "published_date": "21-10-2026",
       "fingerprint": "47eb343302922b4126a0f073ea0a539a93213ea8c7e28318b04f772c832187e1",
       "first_seen": "2026-10-23T13:35:31.317172+00:00",
-      "delivered": true
+      "delivered": false
     },
     "1fa80b41ee7f72b7c028739174f0ee866ed7d2406b4a4b1c1882761dafb2800e": {
       "website_id": "rbi-opportunities",
@@ -35911,7 +35911,7 @@
       "published_date": null,
       "fingerprint": "61a3d54350a231a060dfb5d0afaba9ba481cc3f447cbdf8bd95891aa8e5c6dac",
       "first_seen": "2026-10-26T03:03:31.709455+00:00",
-      "delivered": false
+      "delivered": true
     },
     "2c3f5722fc5acf2b36db2c1dcf832c7e697e89f624cc726d4a9bd129509a703b": {
       "website_id": "indian-bank",
@@ -35921,7 +35921,7 @@
       "published_date": null,
       "fingerprint": "2c3f5722fc5acf2b36db2c1dcf832c7e697e89f624cc726d4a9bd129509a703b",
       "first_seen": "2026-10-26T03:03:31.717065+00:00",
-      "delivered": false
+      "delivered": true
     },
     "2551f9cb7a0656bc9cf90f52d3f35fc0c9060ebc02e8f43bce07d4b76f3632c9": {
       "website_id": "rbi-opportunities",
@@ -35932,6 +35932,16 @@
       "fingerprint": "2551f9cb7a0656bc9cf90f52d3f35fc0c9060ebc02e8f43bce07d4b76f3632c9",
       "first_seen": "2026-10-26T05:11:02.476845+00:00",
       "delivered": true
+    },
+    "7903e7c707f904fad33317171a444da24e577a150fcf202ef03b9560ad449367": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "LATERAL RECRUITMENT OF LOCAL BANK OFFICERS (PHASE III) IN THE BANK ON REGULAR BASIS",
+      "url": "https://punjabandsind.bank.in/system/uploads/recruitment/7932_2026102312133433976.pdf",
+      "published_date": "2026-10-23",
+      "fingerprint": "7903e7c707f904fad33317171a444da24e577a150fcf202ef03b9560ad449367",
+      "first_seen": "2026-10-23T12:15:00+00:00",
+      "delivered": false
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",

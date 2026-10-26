@@ -181,6 +181,26 @@ NON_RECRUITMENT_NOISE_PHRASES = [
     "e-tender for",
     "leasing-in of",
     "visit uco bank on whatsapp",
+    "pet dog",
+    "insurance for dogs",
+    "dog insurance",
+    "cattle insurance",
+    "common loan application",
+    "loan application form",
+    "education loan application",
+    "downloads - application forms",
+    "downloads – application forms",
+    "saving account",
+    "savings account",
+    "nostro account",
+    "non- fund based",
+    "non-fund based",
+    "daily fx card",
+    "handling import and export",
+    "integrity pledge",
+    "reward program",
+    "advocate login",
+    "nhb advisory",
 ]
 
 # Navigation & static hub link labels (English & Hindi) to discard
@@ -203,6 +223,7 @@ IGNORE_PHRASES = {
     "important announcement to physical shareholders", "policies, rules & guidelines",
     "institutional finance", "products & services", "ai botsite",
     "apply online", "online application", "register online",
+    "apply now", "apply link", "apply", "click here to apply", "click here to download",
     "निविदाएं", "मुख्य महाप्रबंधक/महाप्रबंधक", "अंचल प्रबंधक",
     "भौतिक शेयरधारकों हेतु महत्वपूर्ण उद्घोषणा", "भर्तियाँ", "वेब मैनेजर",
     "english file download", "hindi file download"
@@ -407,14 +428,44 @@ _PLURALIZABLE_WORDS: Set[str] = {
 
 def compile_keyword_pattern(keyword: str) -> re.Pattern:
     """Compiles a case-insensitive, word-boundary-aware regular expression for a keyword
-    that handles common spacing, hyphenation, and compound word variations while
-    preventing false substring matches (e.g. 'DV' in 'advt', 'PET' in 'competitive',
-    'posts' in 'postponed')."""
+    that handles common spacing, hyphenation, compound word variations, and official banking
+    recruitment phrasings while preventing false substring or retail noise matches."""
     raw = (keyword or "").strip()
     if not raw:
         return re.compile(r"(?!x)x")
 
-    raw_tokens = [t for t in re.split(r"[\s_-]+", raw.lower()) if t]
+    raw_lower = " ".join(raw.lower().split())
+    if raw_lower == "recruitment":
+        return re.compile(
+            r"(?<![A-Za-z0-9])(?:recruitments?|engagement[\s_./-]+of\b|empanelment[\s_./-]+of\b|appointment[\s_./-]+of\b)(?![A-Za-z0-9])",
+            re.IGNORECASE,
+        )
+    if raw_lower == "selection list":
+        return re.compile(
+            r"(?<![A-Za-z0-9])(?:selection[\s_./-]*lists?|(?:final|provisional(?:ly)?)[\s_./-]+selection|"
+            r"(?:list[\s_./-]+of[\s_./-]+)?(?:provisionally[\s_./-]+|finally[\s_./-]+)?selected[\s_./-]+candidates?|"
+            r"candidates?[\s_./-]+(?:provisionally[\s_./-]+|finally[\s_./-]+)?selected|"
+            r"(?:list[\s_./-]+of[\s_./-]+)?shortlisted[\s_./-]+candidates?|"
+            r"candidates?[\s_./-]+shortlisted)(?![A-Za-z0-9])",
+            re.IGNORECASE,
+        )
+    if raw_lower == "admit card":
+        return re.compile(
+            r"(?<![A-Za-z0-9])(?:admit[\s_./-]*cards?|call[\s_./-]*letters?)(?![A-Za-z0-9])",
+            re.IGNORECASE,
+        )
+    if raw_lower == "pet":
+        return re.compile(
+            r"(?<![A-Za-z0-9])pet(?![A-Za-z0-9])(?!(?:[\s_./-]+)(?:dog|dogs|cat|cats|animal|animals|insurance|care|policy|shop)\b)",
+            re.IGNORECASE,
+        )
+    if raw_lower == "application form":
+        return re.compile(
+            r"(?<!loan\s)(?<!account\s)(?<![A-Za-z0-9])application[\s_./-]+forms?(?![A-Za-z0-9])",
+            re.IGNORECASE,
+        )
+
+    raw_tokens = [t for t in re.split(r"[\s_-]+", raw_lower) if t]
     if not raw_tokens:
         return re.compile(r"(?!x)x")
 
@@ -539,13 +590,20 @@ class StdlibLinkParser(HTMLParser):
         self._current_title_parts: List[str] = []
         self._current_a_attrs: Dict[str, str] = {}
         self._context_buffer: List[str] = []
+        self._last_header_date: Optional[str] = None
+        self._links_in_current_tr: int = 0
 
     def handle_starttag(self, tag: str, attrs: List[Tuple[str, Optional[str]]]) -> None:
         tag_lower = tag.lower()
         if tag_lower in {"script", "style", "noscript"}:
             self._ignored_depth += 1
             return
-        if tag_lower in {"tr", "li", "article", "section", "p", "div"}:
+        if tag_lower in {"table", "tbody", "section", "ul", "ol"}:
+            self._last_header_date = None
+        if tag_lower == "tr":
+            self._context_buffer = []
+            self._links_in_current_tr = 0
+        elif tag_lower in {"li", "article", "section", "p", "div"}:
             self._context_buffer = []
         if tag_lower == "a":
             attr_dict = {k.lower(): (v or "") for k, v in attrs if k}
@@ -574,6 +632,13 @@ class StdlibLinkParser(HTMLParser):
             if self._ignored_depth > 0:
                 self._ignored_depth -= 1
             return
+        if tag_lower == "tr":
+            if self._links_in_current_tr == 0 and self._context_buffer:
+                row_text = " ".join(self._context_buffer)[:200]
+                hdr_date = extract_date(row_text)
+                if hdr_date:
+                    self._last_header_date = hdr_date
+            return
         if tag_lower == "a" and self._in_a:
             self._in_a = False
             raw_href = self._current_href or ""
@@ -584,9 +649,15 @@ class StdlibLinkParser(HTMLParser):
                     or self._current_a_attrs.get("aria-label", "").strip()
                 )
             if raw_href and title:
+                self._links_in_current_tr += 1
                 full_url = urllib.parse.urljoin(self.base_url, raw_href)
                 context_str = " ".join(self._context_buffer)[:350]
-                pub_date = extract_date(title) or extract_date(context_str)
+                pub_date = (
+                    extract_date(title)
+                    or extract_date(context_str)
+                    or self._last_header_date
+                    or extract_url_date(full_url)
+                )
                 self.links.append((full_url, title, pub_date))
                 if context_str and context_str != title:
                     self.link_contexts[(full_url, title)] = context_str
@@ -815,8 +886,8 @@ def parse_publication_date(date_str: Optional[str]) -> Optional[date]:
     cleaned = re.sub(r"(\d)(st|nd|rd|th)\b", r"\1", date_str.strip(), flags=re.IGNORECASE)
     cleaned = re.sub(r"\s+", " ", cleaned).strip(" ,.-")
 
-    # 1. ISO format YYYY-MM-DD
-    m_iso = re.match(r"^(\d{4})[-/.](\d{1,2})[-/.](\d{1,2})$", cleaned)
+    # 1. ISO format YYYY-MM-DD or YYYY_MM_DD
+    m_iso = re.match(r"^(\d{4})[-/._](\d{1,2})[-/._](\d{1,2})$", cleaned)
     if m_iso:
         try:
             y, m, d = int(m_iso.group(1)), int(m_iso.group(2)), int(m_iso.group(3))
@@ -825,7 +896,7 @@ def parse_publication_date(date_str: Optional[str]) -> Optional[date]:
         except ValueError:
             return None
 
-    # 2. Compact 8-digit YYYYMMDD (e.g. 20230514)
+    # 2. Compact 8-digit YYYYMMDD (e.g. 20230514) or DDMMYYYY (e.g. 21082026)
     m_compact = re.match(r"^(20\d{2})(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])$", cleaned)
     if m_compact:
         try:
@@ -835,8 +906,17 @@ def parse_publication_date(date_str: Optional[str]) -> Optional[date]:
         except ValueError:
             return None
 
+    m_compact_dmy = re.match(r"^(0[1-9]|[12]\d|3[01])(0[1-9]|1[0-2])(20\d{2})$", cleaned)
+    if m_compact_dmy:
+        try:
+            d, m, y = int(m_compact_dmy.group(1)), int(m_compact_dmy.group(2)), int(m_compact_dmy.group(3))
+            if 1995 <= y <= 2100:
+                return date(y, m, d)
+        except ValueError:
+            return None
+
     # 3. Indian numeric format DD-MM-YYYY or DD/MM/YY
-    m_dmy = re.match(r"^(\d{1,2})[-/.](\d{1,2})[-/.](\d{2,4})$", cleaned)
+    m_dmy = re.match(r"^(\d{1,2})[-/._](\d{1,2})[-/._](\d{2,4})$", cleaned)
     if m_dmy:
         try:
             d, m, y = int(m_dmy.group(1)), int(m_dmy.group(2)), int(m_dmy.group(3))
@@ -916,6 +996,42 @@ def extract_date(text: str, allow_future: bool = False) -> Optional[str]:
                 if not is_verified_publication_date(candidate):
                     continue
             return candidate
+    return None
+
+
+def extract_url_date(url: str, allow_future: bool = False) -> Optional[str]:
+    """Extracts an explicit date embedded in a document/notice URL path or filename
+    (supports YYYY-MM-DD, DD-MM-YYYY, YYYY_MM_DD, YYYYMMDD[HHMMSS...], and DDMMYYYY)."""
+    if not url:
+        return None
+    unquoted = urllib.parse.unquote(url)
+    parsed_path = urllib.parse.urlsplit(unquoted).path
+
+    direct = extract_date(parsed_path, allow_future=allow_future)
+    if direct:
+        return direct
+
+    # Check underscore-separated YYYY_MM_DD (e.g. Indian Bank 2026_05_04_17_45_20.pdf)
+    for m_u in re.finditer(r"(?<![0-9])(20\d{2})_(0[1-9]|1[0-2])_(0[1-9]|[12]\d|3[01])(?![0-9])", parsed_path):
+        cand = f"{m_u.group(1)}-{m_u.group(2)}-{m_u.group(3)}"
+        if allow_future or is_verified_publication_date(cand):
+            return cand
+
+    # Check YYYYMMDD (optionally followed by HHMMSS timestamp digits as in PSB 7932_2026102116165647758.pdf)
+    for m_ymd in re.finditer(
+        r"(?<![0-9])(20\d{2})(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])(?:(?![0-9])|(?=[0-2]\d[0-5]\d[0-5]\d))",
+        parsed_path,
+    ):
+        cand = f"{m_ymd.group(1)}-{m_ymd.group(2)}-{m_ymd.group(3)}"
+        if allow_future or is_verified_publication_date(cand):
+            return cand
+
+    # Check compact Indian DDMMYYYY in filename (e.g. 21082026_JA...pdf or CORRIGENDUM_21102026.pdf)
+    for m_dmy in re.finditer(r"(?<![0-9])(0[1-9]|[12]\d|3[01])(0[1-9]|1[0-2])(20\d{2})(?![0-9])", parsed_path):
+        cand = f"{m_dmy.group(1)}-{m_dmy.group(2)}-{m_dmy.group(3)}"
+        if allow_future or is_verified_publication_date(cand):
+            return cand
+
     return None
 
 
@@ -1038,16 +1154,22 @@ def _create_verified_ssl_context() -> ssl.SSLContext:
 
 
 def _decode_http_body(raw_bytes: bytes, content_encoding: str = "") -> str:
-    """Safely decompresses gzip/deflate HTTP payloads and decodes text."""
+    """Safely decompresses gzip, zlib-wrapped deflate, and raw RFC-1951 deflate HTTP payloads."""
     encoding = (content_encoding or "").lower()
     data = raw_bytes
-    try:
+    if data:
         if "gzip" in encoding or data[:2] == b"\x1f\x8b":
-            data = gzip.decompress(data)
+            try:
+                data = gzip.decompress(data)
+            except Exception:
+                data = raw_bytes
         elif "deflate" in encoding:
-            data = zlib.decompress(data)
-    except Exception:
-        data = raw_bytes
+            for wbits in (zlib.MAX_WBITS, -zlib.MAX_WBITS, zlib.MAX_WBITS | 32):
+                try:
+                    data = zlib.decompress(raw_bytes, wbits)
+                    break
+                except Exception:
+                    continue
     for charset in ("utf-8", "iso-8859-1", "cp1252"):
         try:
             return data.decode(charset)
@@ -1129,14 +1251,19 @@ class NoticeMonitor:
         self._compiled_keyword_entries: List[Tuple[str, str, re.Pattern]] = []
         self._rebuild_compiled_keywords()
 
-        self.telegram_token = (
+        raw_token = (
             telegram_token if telegram_token is not None
             else os.environ.get("TELEGRAM_BOT_TOKEN", "")
-        ).strip()
+        ).strip().strip("\"'")
+        # Strip accidental leading 'bot' prefix if user pasted 'bot123456:ABC...'
+        if re.match(r"^bot\d+:", raw_token, flags=re.IGNORECASE):
+            raw_token = raw_token[3:]
+        self.telegram_token = raw_token
+
         self.telegram_chat_id = (
             telegram_chat_id if telegram_chat_id is not None
             else os.environ.get("TELEGRAM_CHAT_ID", "")
-        ).strip()
+        ).strip().strip("\"'")
         self.timeout = timeout
         self.max_retries = max_retries
         self.dry_run = dry_run
@@ -1175,6 +1302,7 @@ class NoticeMonitor:
         self.websites_empty_extraction: int = 0
         self.checked_success: int = 0
         self.checked_errors: int = 0
+        self.total_candidates_extracted: int = 0
         self.new_notices_found: int = 0
         self.old_notices_suppressed: int = 0
         self.duplicates_suppressed: int = 0
@@ -1182,6 +1310,7 @@ class NoticeMonitor:
         self.notifications_capped: int = 0
         self.telegram_sent: int = 0
         self.telegram_failed: int = 0
+        self.last_telegram_error: str = ""
         self.state_committed: bool = False
         self.error_details: List[Dict[str, str]] = []
         self.site_results: List[Dict[str, Any]] = []
@@ -1444,17 +1573,23 @@ class NoticeMonitor:
             if title_dt is not None and title_dt < self.baseline_date:
                 return True, f"title date {title_dt.isoformat()} is older than baseline {self.baseline_date.isoformat()}"
 
-        # Check if the URL filename embeds a full parseable date older than baseline
+        # Check if the URL filename embeds a full parseable date older than baseline (YYYY-MM-DD, YYYY_MM_DD, YYYYMMDD, DDMMYYYY)
         unquoted_url = urllib.parse.unquote(candidate.url or "")
-        url_date_str = extract_date(unquoted_url, allow_future=True)
-        if not url_date_str:
-            m_compact = re.search(r"(?<![0-9])(20\d{2})(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])(?![0-9])", unquoted_url)
-            if m_compact:
-                url_date_str = m_compact.group(0)
+        url_date_str = extract_url_date(unquoted_url, allow_future=True)
         if url_date_str:
             url_dt = parse_publication_date(url_date_str)
             if url_dt is not None and url_dt < self.baseline_date:
                 return True, f"URL date {url_dt.isoformat()} is older than baseline {self.baseline_date.isoformat()}"
+
+        # Check IBPS registration portal path slugs with month+2-digit-year (e.g. ibpsreg.ibps.in/psbrmoct25/)
+        m_ibps_slug = re.search(
+            r"ibps(?:online|reg)\.ibps\.in/[a-z0-9_-]*?(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)(\d{2})\b",
+            unquoted_url.lower(),
+        )
+        if m_ibps_slug:
+            slug_yr = 2000 + int(m_ibps_slug.group(1))
+            if slug_yr < self.baseline_date.year:
+                return True, f"IBPS portal cycle year {slug_yr} is older than baseline year {self.baseline_date.year}"
 
         # If no full date is present, check if title/URL explicitly references only past years (< baseline_date.year)
         if not candidate.published_date and not title_date_str and not url_date_str:
@@ -1587,9 +1722,13 @@ class NoticeMonitor:
                 if HAS_THIRD_PARTY and self.session:
                     resp = self.session.get(url, timeout=(10, self.timeout), verify=cafile)
                     if resp.status_code == 200:
-                        if not resp.text or not resp.text.strip():
+                        encoding = resp.headers.get("Content-Encoding", "")
+                        body_text = _decode_http_body(resp.content, encoding) if getattr(resp, "content", None) else resp.text
+                        if not body_text or not body_text.strip():
                             return None, f"HTTP 200 with empty response body from {url}"
-                        return resp.text, None
+                        if "<title>request rejected</title>" in body_text[:500].lower():
+                            return None, f"WAF Request Rejected page on {url}"
+                        return body_text, None
                     if resp.status_code in {403, 404, 410}:
                         last_error = f"HTTP {resp.status_code} client error on {url}"
                         logger.warning(f"{last_error} (skipping retry)")
@@ -1619,6 +1758,8 @@ class NoticeMonitor:
                             decoded = _decode_http_body(raw_bytes, encoding)
                             if not decoded or not decoded.strip():
                                 return None, f"HTTP 200 with empty response body from {url}"
+                            if "<title>request rejected</title>" in decoded[:500].lower():
+                                return None, f"WAF Request Rejected page on {url}"
                             return decoded, None
                         last_error = f"HTTP {resp.status} received from {url}"
                         return None, last_error
@@ -1683,7 +1824,28 @@ class NoticeMonitor:
                     parent = a_tag.find_parent(["tr", "li", "div", "p", "article"])
                     if parent:
                         parent_text = " ".join(parent.get_text().split())[:300]
-                    extracted_date = extract_date(title_text) or extract_date(parent_text)
+
+                    # Also check preceding date-header <tr> rows (e.g. RBI tableheader rows)
+                    header_tr_date = None
+                    tr_parent = a_tag.find_parent("tr")
+                    if tr_parent is not None:
+                        prev_tr = tr_parent.find_previous_sibling("tr")
+                        steps = 0
+                        while prev_tr is not None and steps < 3:
+                            steps += 1
+                            if not prev_tr.find("a", href=True):
+                                prev_txt = " ".join(prev_tr.get_text().split())[:150]
+                                header_tr_date = extract_date(prev_txt)
+                                if header_tr_date:
+                                    break
+                            prev_tr = prev_tr.find_previous_sibling("tr")
+
+                    extracted_date = (
+                        extract_date(title_text)
+                        or extract_date(parent_text)
+                        or header_tr_date
+                        or extract_url_date(full_url)
+                    )
 
                     # Extract immediate row/item content for keyword matching without leaking whole-page wrappers
                     item_context = ""
@@ -1729,12 +1891,17 @@ class NoticeMonitor:
         content: str = "",
     ) -> bool:
         """Determines if a discovered link is a genuine official notice rather than
-        navigation chrome, static hub links, vendor RFPs, or routine liquidity press releases."""
+        navigation chrome, static hub links, bare file-size tags, vendor RFPs, or routine liquidity releases."""
         clean_title = " ".join(title.lower().split())
         norm_title = normalize_title(title)
         clean_url = url.lower()
 
         if clean_title in IGNORE_PHRASES or norm_title in IGNORE_PHRASES or len(clean_title) < 2:
+            return False
+
+        # Reject bare file-size or language annotations like '(645 KB)', '(577 KB)', '(Hindi (626 KB)'
+        # whose normalized title after stripping size/language tags is empty
+        if len(norm_title) < 2 and clean_title.upper() not in {"DV", "PET", "PST"}:
             return False
 
         # Very short titles (2-4 chars) are only valid if they match an explicit acronym keyword like DV, PET, PST
@@ -1803,7 +1970,7 @@ class NoticeMonitor:
         uses_custom_fetch = "fetch_url" in self.__dict__
 
         for page_url, is_dedicated in pages_to_check:
-            if not is_dedicated and (discovered_notices or pages_fetched_ok > 0):
+            if not is_dedicated and len(discovered_notices) > 0:
                 break
 
             try:
@@ -1901,6 +2068,7 @@ class NoticeMonitor:
         """Sends a single Telegram alert formatted using safe HTML mode.
         Returns True only if Telegram confirms delivery (or if dry_run is enabled)."""
         if not normalize_url(notice.url):
+            self.last_telegram_error = f"Invalid non-HTTP notice URL: {notice.url}"
             logger.error(f"Refusing to send alert with invalid non-HTTP notice URL: {notice.url}")
             return False
 
@@ -1916,14 +2084,14 @@ class NoticeMonitor:
         if not self.telegram_chat_id:
             missing_vars.append("TELEGRAM_CHAT_ID")
         if missing_vars:
+            self.last_telegram_error = f"Missing required environment variable(s): {', '.join(missing_vars)}"
             logger.error(
-                f"Cannot send Telegram alert for '{notice.title}': "
-                f"Missing required environment variable(s): {', '.join(missing_vars)}."
+                f"Cannot send Telegram alert for '{notice.title}': {self.last_telegram_error}."
             )
             return False
 
         url_endpoint = f"https://api.telegram.org/bot{self.telegram_token}/sendMessage"
-        payload = {
+        payload: Dict[str, Any] = {
             "chat_id": self.telegram_chat_id,
             "text": message_html,
             "parse_mode": "HTML",
@@ -1938,7 +2106,9 @@ class NoticeMonitor:
                         data = resp.json()
                         if data.get("ok"):
                             return True
-                        logger.warning(f"Telegram API returned ok=false for {notice.org_name}")
+                        desc = self._redact(str(data.get("description", "ok=false")))
+                        self.last_telegram_error = f"Telegram API returned ok=false: {desc}"
+                        logger.error(f"Telegram API error for {notice.org_name}: {desc}")
                         return False
                     if resp.status_code == 429:
                         retry_after = 3
@@ -1949,20 +2119,55 @@ class NoticeMonitor:
                         logger.warning(f"Telegram rate limited (429). Waiting {retry_after}s...")
                         time.sleep(min(retry_after, 10))
                         continue
-                    logger.warning(f"Telegram HTTP {resp.status_code} for {notice.org_name}")
+                    err_desc = ""
+                    try:
+                        err_desc = str(resp.json().get("description", ""))
+                    except Exception:
+                        err_desc = resp.text[:200]
+                    err_desc = self._redact(err_desc)
+                    self.last_telegram_error = f"Telegram HTTP {resp.status_code}: {err_desc}"
+                    logger.error(f"Telegram HTTP {resp.status_code} for {notice.org_name}: {err_desc}")
+                    if resp.status_code == 400 and "parse" in err_desc.lower() and "parse_mode" in payload:
+                        payload.pop("parse_mode", None)
+                        continue
                     return False
                 else:
+                    ctx = _create_verified_ssl_context()
                     data_bytes = json.dumps(payload).encode("utf-8")
                     req = urllib.request.Request(
                         url_endpoint,
                         data=data_bytes,
                         headers={"Content-Type": "application/json"},
                     )
-                    with urllib.request.urlopen(req, timeout=12) as resp:
+                    with urllib.request.urlopen(req, timeout=12, context=ctx) as resp:
                         resp_data = json.loads(resp.read().decode("utf-8"))
-                        return bool(resp_data.get("ok"))
+                        if resp_data.get("ok"):
+                            return True
+                        desc = self._redact(str(resp_data.get("description", "ok=false")))
+                        self.last_telegram_error = f"Telegram API returned ok=false: {desc}"
+                        logger.error(f"Telegram API error for {notice.org_name}: {desc}")
+                        return False
+            except urllib.error.HTTPError as http_err:
+                err_body = ""
+                try:
+                    raw_err = http_err.read().decode("utf-8", errors="replace")
+                    err_json = json.loads(raw_err)
+                    err_body = str(err_json.get("description", raw_err[:200]))
+                except Exception:
+                    err_body = str(http_err.reason)
+                safe_desc = self._redact(err_body)
+                self.last_telegram_error = f"Telegram HTTP {http_err.code}: {safe_desc}"
+                logger.error(f"Telegram HTTP {http_err.code} for {notice.org_name}: {safe_desc}")
+                if http_err.code == 400 and "parse" in safe_desc.lower() and "parse_mode" in payload and attempt == 0:
+                    payload.pop("parse_mode", None)
+                    continue
+                if http_err.code in {400, 401, 403, 404}:
+                    return False
+                if attempt == 0:
+                    time.sleep(1.5)
             except Exception as exc:
                 safe_err = self._redact(str(exc))
+                self.last_telegram_error = safe_err
                 logger.warning(f"Telegram send error for notice {notice.fingerprint[:8]}: {safe_err}")
                 if attempt == 0:
                     time.sleep(1.5)
@@ -2036,10 +2241,16 @@ class NoticeMonitor:
         self.validate_environment()
 
         # Collect previously undelivered notices for retry (unless they are duplicates, old, or do not match keywords)
+        pre_existing_undelivered_fps: Set[str] = {
+            fp for fp, n in self.existing_notices.items() if not n.delivered
+        }
         new_candidates: List[Notice] = []
         for n in list(self.existing_notices.values()):
             if not n.delivered:
-                if self.is_duplicate_notice(n):
+                norm_t = normalize_title(n.title)
+                if (
+                    len(norm_t) < 2 and n.title.strip().upper() not in {"DV", "PET", "PST"}
+                ) or n.title.strip().lower() in IGNORE_PHRASES or self.is_duplicate_notice(n):
                     n.delivered = True
                     self._state_dirty = True
                     continue
@@ -2055,6 +2266,11 @@ class NoticeMonitor:
                     self._index_notice_for_dedup(n)
                     self._state_dirty = True
                     continue
+                if not n.published_date:
+                    inferred_url_dt = extract_url_date(n.url)
+                    if inferred_url_dt:
+                        n.published_date = inferred_url_dt
+                        self._state_dirty = True
                 new_candidates.append(n)
 
         # Track candidates queued in the current run so cross-page/cross-site duplicates in the same run are suppressed
@@ -2093,6 +2309,7 @@ class NoticeMonitor:
             try:
                 notices, pages_ok, page_errs = self.scrape_website_detailed(site)
                 self.websites_fetched_ok += 1
+                self.total_candidates_extracted += len(notices)
 
                 if len(notices) > 0:
                     self.websites_extraction_ok += 1
@@ -2136,6 +2353,10 @@ class NoticeMonitor:
                         self.baselined_websites.add(site_id)
                         self._state_dirty = True
 
+                    site_after_dedup = 0
+                    site_after_date = 0
+                    site_after_kw = 0
+
                     for n in notices:
                         # 1. Check multi-layer deduplication against saved state
                         if self.is_duplicate_notice(n):
@@ -2148,7 +2369,6 @@ class NoticeMonitor:
                         grp = site_group_key(n.website_id)
                         ck = canonical_url_key(n.url)
                         is_doc = any(n.url.lower().split("?")[0].endswith(ext) for ext in DOCUMENT_EXTENSIONS)
-
                         if (
                             n.fingerprint in batch_fingerprints
                             or (nid and nid in batch_notice_ids)
@@ -2156,8 +2376,24 @@ class NoticeMonitor:
                             or (is_doc and ck in batch_doc_urls)
                             or (ck and ck not in self.configured_hub_urls and (grp, ck) in batch_canonical_urls)
                         ):
+                            # If an undelivered pending notice had its PDF re-uploaded under a newer URL with the same title, refresh its URL
+                            if nt and (grp, nt) in batch_title_keys and is_doc:
+                                for pending_n in new_candidates:
+                                    if (
+                                        site_group_key(pending_n.website_id) == grp
+                                        and normalize_title(pending_n.title) == nt
+                                        and pending_n.url != n.url
+                                        and pending_n.fingerprint in pre_existing_undelivered_fps
+                                    ):
+                                        pending_n.url = n.url
+                                        if n.published_date and not pending_n.published_date:
+                                            pending_n.published_date = n.published_date
+                                        self._state_dirty = True
+                                        break
                             self.duplicates_suppressed += 1
                             continue
+
+                        site_after_dedup += 1
 
                         # 3. Validate publication date / historical year so old notices are never alerted
                         is_old, old_reason = self.is_old_notice(n)
@@ -2173,6 +2409,8 @@ class NoticeMonitor:
                             self._state_dirty = True
                             continue
 
+                        site_after_date += 1
+
                         # 4. Filter by configured notification keywords in title or available content
                         matched_kw, kw_cat, kw_term = self.get_matched_keyword_info(n)
                         if not matched_kw:
@@ -2187,6 +2425,7 @@ class NoticeMonitor:
                             self._state_dirty = True
                             continue
 
+                        site_after_kw += 1
                         logger.info(
                             f"  [MATCHED KEYWORD] {org_name}: '{n.title[:70]}' matched [{kw_cat}: '{kw_term}']"
                         )
@@ -2203,6 +2442,13 @@ class NoticeMonitor:
                                 batch_canonical_urls.add((grp, ck))
                             if is_doc:
                                 batch_doc_urls.add(ck)
+
+                    if site_after_dedup > 0:
+                        logger.info(
+                            f"  [PIPELINE FUNNEL] {org_name}: extracted={len(notices)} -> "
+                            f"after_dedup={site_after_dedup} -> after_date={site_after_date} -> "
+                            f"after_keyword={site_after_kw}"
+                        )
 
             except Exception as exc:
                 self.checked_errors += 1
@@ -2241,6 +2487,7 @@ class NoticeMonitor:
                 n.delivered = True
                 self.existing_notices[n.fingerprint] = n
                 self._index_notice_for_dedup(n)
+                self._state_dirty = True
                 continue
 
             # Enforce configurable maximum of successful notifications per run (default: 10)
@@ -2248,7 +2495,8 @@ class NoticeMonitor:
                 self.notifications_capped += 1
                 n.delivered = False
                 self.existing_notices[n.fingerprint] = n
-                self._state_dirty = True
+                if n.fingerprint not in pre_existing_undelivered_fps:
+                    self._state_dirty = True
                 logger.info(
                     f"Per-run notification limit ({self.max_notifications_per_run} successful) reached. "
                     f"Queueing notice for next run: {n.title[:70]}"
@@ -2267,11 +2515,22 @@ class NoticeMonitor:
                 self.telegram_failed += 1
                 n.delivered = False
                 self.existing_notices[n.fingerprint] = n
-                self._state_dirty = True
+                if n.fingerprint not in pre_existing_undelivered_fps:
+                    self._state_dirty = True
                 logger.warning(f"Telegram notification failed for: {n.title}. Preserving for future retry.")
 
         self.save_state()
         self.print_summary()
+
+        # In live non-dry-run execution, if eligible notices were queued to send but 100% of Telegram
+        # deliveries failed, surface an explicit GitHub Actions error and non-zero exit code so the
+        # workflow never silently hides broken Telegram secrets/chat_id with a fake green checkmark.
+        uses_custom_sender = "send_telegram_alert" in self.__dict__
+        if not self.dry_run and not uses_custom_sender and self.telegram_failed > 0 and self.telegram_sent == 0:
+            reason = self.last_telegram_error or "Check TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in GitHub Repository Secrets"
+            print(f"::error title=Telegram Delivery Failed::0/{self.telegram_failed} alerts delivered ({reason})")
+            return 1
+
         return 0
 
     def print_summary(self) -> None:
@@ -2285,12 +2544,16 @@ class NoticeMonitor:
         print(f"Websites with notice extraction      : {self.websites_extraction_ok}")
         print(f"Websites fetched with 0 notices      : {self.websites_empty_extraction}")
         print(f"Websites with HTTP/SSL/conn errors   : {self.checked_errors}")
+        print(f"Candidate links extracted            : {self.total_candidates_extracted}")
+        print(f"Duplicates suppressed                : {self.duplicates_suppressed}")
         print(f"Old notices suppressed               : {self.old_notices_suppressed}")
         print(f"Non-keyword notices filtered out     : {self.keyword_filtered_out}")
         print(f"New keyword-matching notices         : {self.new_notices_found}")
         print(f"Telegram messages sent (limit {self.max_notifications_per_run:>2}/run) : {self.telegram_sent}")
         print(f"Notifications capped / deferred      : {self.notifications_capped}")
         print(f"Notifications failed / pending       : {self.telegram_failed}")
+        if self.last_telegram_error and self.telegram_failed > 0:
+            print(f"Last Telegram failure reason         : {self.last_telegram_error}")
         print(f"State changes committed to disk      : {'Yes' if self.state_committed else 'No'}")
         if self.baseline_mode:
             print("Run type                             : BASELINE INITIALIZATION (No alerts sent)")

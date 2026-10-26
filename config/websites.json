@@ -98,6 +98,8 @@
       "homepage_url": "https://opportunities.rbi.org.in/",
       "notice_urls": [
         "https://opportunities.rbi.org.in/scripts/vacancies.aspx",
+        "https://opportunities.rbi.org.in/Scripts/resultsnew.aspx",
+        "https://opportunities.rbi.org.in/Scripts/CallLetters.aspx",
         "https://opportunities.rbi.org.in/scripts/results.aspx"
       ],
       "category": "Financial Regulator",
@@ -154,6 +156,8 @@
       "official_url": "https://indianbank.in/",
       "homepage_url": "https://indianbank.in/",
       "notice_urls": [
+        "https://indianbank.in/en/career",
+        "https://indianbank.bank.in/en/career",
         "https://indianbank.in/career/"
       ],
       "category": "Public Sector Bank",

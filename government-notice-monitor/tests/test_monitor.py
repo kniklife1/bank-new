@@ -630,6 +630,94 @@ class TestGovernmentNoticeMonitorAudit(unittest.TestCase):
             self.assertIn("fp_b", merged["notices"])
             self.assertEqual(set(merged["baselined_websites"]), {"sbi", "pnb"})
 
+    def test_production_bug_fixes_rbi_exim_psb_bom_indianbank(self) -> None:
+        """
+        Regression test for the production bug where GitHub Actions reported Success
+        while new bank notices were missing from Telegram:
+        1. Genuine post-baseline RBI, EXIM Bank, GIC Re, and Punjab & Sind Bank notices match keywords & dates.
+        2. RBI preceding-row <td class="tableheader">Oct 23, 2026</td> date extraction works.
+        3. Compact DDMMYYYY (SBI Hindi PDF) and YYYYMMDDHHMMSS (PSB PDF) URL dates are parsed accurately.
+        4. Bare file-size titles like '(645 KB)', retail 'Pet Dog' / 'Common Loan Application Form', and 'Apply Now' are rejected.
+        5. WAF 'Request Rejected' page triggers homepage fallback instead of counting as a valid careers page.
+        """
+        from monitor import extract_url_date
+
+        # 1. Verify real post-baseline notices from Oct 21-25, 2026 match keywords
+        real_new_notices = [
+            (
+                "Engagement of Part- Time Bank’s Medical Consultants (BMC) on Contract Basis with Fixed Hourly Remuneration at Reserve Bank of India, Thiruvananthapuram",
+                "Recruitment",
+            ),
+            (
+                "LIST OF CANDIDATES SELECTED AS DEPUTY MANAGERS (AD. NO: HRM/ DM & M/ SRD/ 2025-26/ 07)",
+                "Results",
+            ),
+            (
+                "LIST OF SHORTLISTED CANDIDATES FOR APPEARING IN PERSONAL INTERVIEW (ADVERTISEMENT NUMBER: HRM/ DM/ 2026-27/ 03)",
+                "Recruitment",
+            ),
+            (
+                "Corrigendum: GEM/2026/B/8134254 - Appointment of an Actuary",
+                "Recruitment",
+            ),
+            (
+                "LATERAL RECRUITMENT OF LOCAL BANK OFFICERS (PHASE III) IN THE BANK ON REGULAR BASIS",
+                "Recruitment",
+            ),
+        ]
+        for title, expected_cat in real_new_notices:
+            matched, cat, _ = match_notice_keywords(title)
+            self.assertTrue(matched, f"Expected real notice to match keywords: {title}")
+            self.assertEqual(cat, expected_cat)
+
+        # 2. Verify retail/UI noise from live run is rejected
+        live_noise = [
+            "Pet Dog",
+            "Common Loan Application Form",
+            "(645 KB)",
+            "(577 KB)",
+        ]
+        for noise_title in live_noise:
+            matched, _, _ = match_notice_keywords(noise_title)
+            self.assertFalse(matched, f"Expected live noise to be rejected: {noise_title}")
+
+        # 3. Verify compact URL dates (DDMMYYYY and YYYYMMDDHHMMSS)
+        self.assertEqual(
+            extract_url_date("https://sbi.co.in/documents/77530/52947104/21082026_JA+2025+-Waitlist-2_Hindi+Website.pdf"),
+            "21-08-2026",
+        )
+        self.assertEqual(
+            extract_url_date("https://punjabandsind.bank.in/system/uploads/recruitment/7932_2026102312133433976.pdf"),
+            "2026-10-23",
+        )
+        self.assertEqual(
+            extract_url_date("https://www.gicre.in/en/images/CORRIGENDUM_21102026.pdf"),
+            "21-10-2026",
+        )
+
+        # 4. Verify RBI preceding-row tableheader date extraction + bare file-size rejection
+        m = NoticeMonitor(dry_run=True)
+        rbi_html = """
+        <table>
+          <tr><td class="tableheader" colspan="2"><b>Oct 23, 2026</b></td></tr>
+          <tr>
+            <td><a href="bs_viewcontent.aspx?Id=5192">Engagement of Part- Time Bank’s Medical Consultants (BMC)</a></td>
+            <td><a href="https://rbidocs.rbi.org.in/rdocs/Content/PDFs/BMC23102026.PDF">(645 KB)</a></td>
+          </tr>
+        </table>
+        """
+        links = m.parse_links_from_html(rbi_html, "https://opportunities.rbi.org.in/Scripts/Vacancies.aspx")
+        relevant = [
+            (u, t, d)
+            for (u, t, d) in links
+            if m.is_relevant_notice(t, u, is_dedicated_page=True)
+        ]
+        self.assertEqual(len(relevant), 1)
+        self.assertIn("Engagement of Part- Time Bank", relevant[0][1])
+        self.assertEqual(relevant[0][2], "Oct 23, 2026")
+        self.assertFalse(m.is_relevant_notice("Apply Now", "https://psb.in/apply", is_dedicated_page=True))
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
+
