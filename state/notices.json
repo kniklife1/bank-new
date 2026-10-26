@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-26T06:05:39.062618+00:00",
+  "last_run_timestamp": "2026-10-26T12:22:12.393155+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4045,
-    "last_run_new_notices": 1,
+    "total_recorded_notices": 4046,
+    "last_run_new_notices": 0,
     "last_run_errors": 1,
     "last_run_extraction_ok": 22,
     "last_run_fetched_ok": 22
@@ -40463,6 +40463,16 @@
       "first_seen": "2026-10-26T05:47:07.328307+00:00",
       "delivered": true,
       "content": "Empanelment Of Valuers More"
+    },
+    "15c83c078e07f2b2cf0a445cb32e378a5fbfc7ef58b912ff3aebc2cd378e468d": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Overseas Direct Investment for September 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63867",
+      "published_date": "Oct 26, 2026",
+      "fingerprint": "15c83c078e07f2b2cf0a445cb32e378a5fbfc7ef58b912ff3aebc2cd378e468d",
+      "first_seen": "2026-10-26T12:21:00.850428+00:00",
+      "delivered": true
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
