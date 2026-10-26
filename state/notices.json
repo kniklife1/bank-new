@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-26T06:03:01.031592+00:00",
+  "last_run_timestamp": "2026-10-26T06:05:39.062618+00:00",
   "baseline_completed": true,
   "stats": {
     "total_recorded_notices": 4045,
-    "last_run_new_notices": 11,
+    "last_run_new_notices": 1,
     "last_run_errors": 1,
     "last_run_extraction_ok": 22,
     "last_run_fetched_ok": 22
@@ -40461,7 +40461,7 @@
       "published_date": null,
       "fingerprint": "6096ceaacb4749cb147d0c16254cf99fbbedc42899f03439c439654b55d832fd",
       "first_seen": "2026-10-26T05:47:07.328307+00:00",
-      "delivered": false,
+      "delivered": true,
       "content": "Empanelment Of Valuers More"
     }
   },
