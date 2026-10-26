@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-26T05:51:46.047324+00:00",
+  "last_run_timestamp": "2026-10-26T05:55:48.301411+00:00",
   "baseline_completed": true,
   "stats": {
     "total_recorded_notices": 4045,
-    "last_run_new_notices": 31,
+    "last_run_new_notices": 21,
     "last_run_errors": 1,
     "last_run_extraction_ok": 22,
     "last_run_fetched_ok": 22
@@ -40261,7 +40261,7 @@
       "published_date": null,
       "fingerprint": "cf02b357fb8165ec3bb18492ba0c417aeeb0e37c3f71be6235fd7ba48db9fcf4",
       "first_seen": "2026-10-26T05:46:45.066427+00:00",
-      "delivered": false
+      "delivered": true
     },
     "a3e9ed29fbf270a7681bacdb7a33cc4a64dcf2241d1fb3f7fec51a4712c34b1d": {
       "website_id": "indian-bank",
@@ -40271,7 +40271,7 @@
       "published_date": null,
       "fingerprint": "a3e9ed29fbf270a7681bacdb7a33cc4a64dcf2241d1fb3f7fec51a4712c34b1d",
       "first_seen": "2026-10-26T05:46:45.068617+00:00",
-      "delivered": false
+      "delivered": true
     },
     "ea3fd303398d84cb88ce87f28b48c811e1ffb178c7164f204c9f08f7db5a0152": {
       "website_id": "indian-bank",
@@ -40281,7 +40281,7 @@
       "published_date": null,
       "fingerprint": "ea3fd303398d84cb88ce87f28b48c811e1ffb178c7164f204c9f08f7db5a0152",
       "first_seen": "2026-10-26T05:46:45.072946+00:00",
-      "delivered": false
+      "delivered": true
     },
     "42d60e5c99441fd2dfffd81441db9c486811b0356ab27893cccbd21fa5a92956": {
       "website_id": "indian-bank",
@@ -40291,7 +40291,7 @@
       "published_date": null,
       "fingerprint": "42d60e5c99441fd2dfffd81441db9c486811b0356ab27893cccbd21fa5a92956",
       "first_seen": "2026-10-26T05:46:45.073111+00:00",
-      "delivered": false
+      "delivered": true
     },
     "1eeacd48e5f0f9dd91c54f6dfbc254133dced8153df05aeb21f117f21158298e": {
       "website_id": "indian-bank",
@@ -40301,7 +40301,7 @@
       "published_date": null,
       "fingerprint": "1eeacd48e5f0f9dd91c54f6dfbc254133dced8153df05aeb21f117f21158298e",
       "first_seen": "2026-10-26T05:46:45.080831+00:00",
-      "delivered": false
+      "delivered": true
     },
     "d92677593f9e3084e989f84f2aa0bbcf8594ef2641ec16f5db2f17069f5b87f7": {
       "website_id": "indian-bank",
@@ -40311,7 +40311,7 @@
       "published_date": null,
       "fingerprint": "d92677593f9e3084e989f84f2aa0bbcf8594ef2641ec16f5db2f17069f5b87f7",
       "first_seen": "2026-10-26T05:46:45.081465+00:00",
-      "delivered": false
+      "delivered": true
     },
     "4354db8a030bf57e23f215612cb304fcfcd5ea926ffeedb376b790646581064c": {
       "website_id": "indian-bank",
@@ -40321,7 +40321,7 @@
       "published_date": null,
       "fingerprint": "4354db8a030bf57e23f215612cb304fcfcd5ea926ffeedb376b790646581064c",
       "first_seen": "2026-10-26T05:46:45.081983+00:00",
-      "delivered": false
+      "delivered": true
     },
     "0dab14f66e79d8e3cdfafe0898c613577b749ade3c974e32e8e9a36b99d5b616": {
       "website_id": "indian-bank",
@@ -40331,7 +40331,7 @@
       "published_date": null,
       "fingerprint": "0dab14f66e79d8e3cdfafe0898c613577b749ade3c974e32e8e9a36b99d5b616",
       "first_seen": "2026-10-26T05:46:45.098478+00:00",
-      "delivered": false
+      "delivered": true
     },
     "491b803cda8b8c914dbd6d096adfb941b9751ce8eae4b276e7576bf57bf09bc1": {
       "website_id": "indian-bank",
@@ -40341,7 +40341,7 @@
       "published_date": null,
       "fingerprint": "491b803cda8b8c914dbd6d096adfb941b9751ce8eae4b276e7576bf57bf09bc1",
       "first_seen": "2026-10-26T05:46:45.100475+00:00",
-      "delivered": false
+      "delivered": true
     },
     "4b77bb78973d3426189a4012be4b7e54ef5cb97620c375999c367a0ae0a64054": {
       "website_id": "indian-bank",
@@ -40351,7 +40351,7 @@
       "published_date": null,
       "fingerprint": "4b77bb78973d3426189a4012be4b7e54ef5cb97620c375999c367a0ae0a64054",
       "first_seen": "2026-10-26T05:46:45.101009+00:00",
-      "delivered": false
+      "delivered": true
     },
     "bed05dc5737e04227d8c8c19bff6c12de9ae64732cd12a779ecd2dc73664440b": {
       "website_id": "indian-bank",
