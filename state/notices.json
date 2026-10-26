@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-26T12:22:12.393155+00:00",
+  "last_run_timestamp": "2026-10-26T13:22:17.111219+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4046,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4048,
+    "last_run_new_notices": 1,
     "last_run_errors": 1,
     "last_run_extraction_ok": 22,
     "last_run_fetched_ok": 22
@@ -40473,6 +40473,28 @@
       "fingerprint": "15c83c078e07f2b2cf0a445cb32e378a5fbfc7ef58b912ff3aebc2cd378e468d",
       "first_seen": "2026-10-26T12:21:00.850428+00:00",
       "delivered": true
+    },
+    "dbb6658a7f76d19d8254fbd0705ab6c93e5984e24da7a0df361412c0d659407c": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "ASSISTANT MANAGER (LAW)-JMGS-I -",
+      "url": "https://sbi.co.in/documents/77530/57941334/26102026_SCO_02_INT_SCH_AM.pdf/9212c674-a64a-ed85-f6a9-43b8ab4c7355?t=1793019403534",
+      "published_date": "26-10-2026",
+      "fingerprint": "dbb6658a7f76d19d8254fbd0705ab6c93e5984e24da7a0df361412c0d659407c",
+      "first_seen": "2026-10-26T13:20:58.979213+00:00",
+      "delivered": true,
+      "content": "ASSISTANT MANAGER (LAW)-JMGS-I - (NEW)"
+    },
+    "d8106914cb72f755de1ac6f3af691dc48429a0f9a8b478e4e8fec92e584210d8": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "DEPUTY MANAGER (LAW)-MMGS-II - INTERVIEW SCHEDULE",
+      "url": "https://sbi.co.in/documents/77530/57941334/26102026_SCO_02_INT_SCH_DM.pdf/c561966e-48f9-19c2-c81c-b44753c0eaae?t=1793019436923",
+      "published_date": "26-10-2026",
+      "fingerprint": "d8106914cb72f755de1ac6f3af691dc48429a0f9a8b478e4e8fec92e584210d8",
+      "first_seen": "2026-10-26T13:20:58.979447+00:00",
+      "delivered": true,
+      "content": "DEPUTY MANAGER (LAW)-MMGS-II - INTERVIEW SCHEDULE (NEW)"
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
