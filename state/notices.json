@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-26T02:52:05.460068+00:00",
+  "last_run_timestamp": "2026-10-26T03:04:37.428730+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 3587,
-    "last_run_new_notices": 8,
+    "total_recorded_notices": 3591,
+    "last_run_new_notices": 10,
     "last_run_errors": 1,
-    "last_run_extraction_ok": 21,
+    "last_run_extraction_ok": 22,
     "last_run_fetched_ok": 22
   },
   "notices": {
@@ -35882,6 +35882,46 @@
       "fingerprint": "c6b291480c94073a46dbbf57a6de25c24f005779dcea5c17031f607a4e4c31dc",
       "first_seen": "2026-10-25T14:31:27.883915+00:00",
       "delivered": true
+    },
+    "79d11bb19c7788273a3de71d8eef2208c013fb6f62897a7061f0536efd90dc75": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "Ind Advantage (Reward Program)",
+      "url": "https://indianbank.in/en/ind-advantage-reward-program",
+      "published_date": null,
+      "fingerprint": "79d11bb19c7788273a3de71d8eef2208c013fb6f62897a7061f0536efd90dc75",
+      "first_seen": "2026-10-26T03:03:31.726947+00:00",
+      "delivered": true
+    },
+    "d46c5d800b3d7ad055fe6bddd54a94069d53c600b25f7ffbcdb69b0a31784eaf": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "Ind Advantage (Rewards)",
+      "url": "https://indianbank.bank.in/departments/ind-advantage-reward-program/",
+      "published_date": null,
+      "fingerprint": "d46c5d800b3d7ad055fe6bddd54a94069d53c600b25f7ffbcdb69b0a31784eaf",
+      "first_seen": "2026-10-26T03:03:31.728682+00:00",
+      "delivered": true
+    },
+    "61a3d54350a231a060dfb5d0afaba9ba481cc3f447cbdf8bd95891aa8e5c6dac": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "Common Loan Application Form",
+      "url": "https://indianbank.in/documents/d/guest/common-loan-application-form",
+      "published_date": null,
+      "fingerprint": "61a3d54350a231a060dfb5d0afaba9ba481cc3f447cbdf8bd95891aa8e5c6dac",
+      "first_seen": "2026-10-26T03:03:31.709455+00:00",
+      "delivered": false
+    },
+    "2c3f5722fc5acf2b36db2c1dcf832c7e697e89f624cc726d4a9bd129509a703b": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "Downloads – Application Forms",
+      "url": "https://indianbank.bank.in/en/downloads-application-forms",
+      "published_date": null,
+      "fingerprint": "2c3f5722fc5acf2b36db2c1dcf832c7e697e89f624cc726d4a9bd129509a703b",
+      "first_seen": "2026-10-26T03:03:31.717065+00:00",
+      "delivered": false
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
