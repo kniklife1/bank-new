@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-26T05:02:59.306977+00:00",
+  "last_run_timestamp": "2026-10-26T05:12:01.895600+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 3591,
+    "total_recorded_notices": 3592,
     "last_run_new_notices": 10,
     "last_run_errors": 1,
     "last_run_extraction_ok": 21,
@@ -35922,6 +35922,16 @@
       "fingerprint": "2c3f5722fc5acf2b36db2c1dcf832c7e697e89f624cc726d4a9bd129509a703b",
       "first_seen": "2026-10-26T03:03:31.717065+00:00",
       "delivered": false
+    },
+    "2551f9cb7a0656bc9cf90f52d3f35fc0c9060ebc02e8f43bce07d4b76f3632c9": {
+      "website_id": "rbi-opportunities",
+      "org_name": "RBI Opportunities",
+      "title": "Extension of last date for submission of Application - Engagement of Part-time Bank’s Medical Consultant on Contract Basis with Fixed Hourly Remuneration at Reserve Bank of India, Itanagar",
+      "url": "https://opportunities.rbi.org.in/scripts/bs_viewcontent.aspx?Id=5194",
+      "published_date": null,
+      "fingerprint": "2551f9cb7a0656bc9cf90f52d3f35fc0c9060ebc02e8f43bce07d4b76f3632c9",
+      "first_seen": "2026-10-26T05:11:02.476845+00:00",
+      "delivered": true
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
