@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-26T03:04:37.428730+00:00",
+  "last_run_timestamp": "2026-10-26T03:12:25.802157+00:00",
   "baseline_completed": true,
   "stats": {
     "total_recorded_notices": 3591,
     "last_run_new_notices": 10,
     "last_run_errors": 1,
-    "last_run_extraction_ok": 22,
+    "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 22
   },
   "notices": {
