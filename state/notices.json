@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-26T05:48:30.697983+00:00",
+  "last_run_timestamp": "2026-10-26T05:51:46.047324+00:00",
   "baseline_completed": true,
   "stats": {
     "total_recorded_notices": 4045,
@@ -35741,7 +35741,7 @@
       "published_date": "Oct 23, 2026",
       "fingerprint": "ff256e725f2d10ab00d771c9ac9767719c32e0a84df3264b5d4a719c979e172d",
       "first_seen": "2026-10-23T13:34:32.936296+00:00",
-      "delivered": false
+      "delivered": true
     },
     "313d7e5fb4f61e61fb0c7955c91ae26264f0e1f81ccf9df927d685d3f29ccaf6": {
       "website_id": "central-bank-of-india",
@@ -35801,7 +35801,7 @@
       "published_date": null,
       "fingerprint": "ec390444cc49d2760bd7084d32ddb1e86de22215a011003992c1aca99d0830b7",
       "first_seen": "2026-10-23T13:35:07.821875+00:00",
-      "delivered": false
+      "delivered": true
     },
     "47eb343302922b4126a0f073ea0a539a93213ea8c7e28318b04f772c832187e1": {
       "website_id": "gic-re",
@@ -35811,7 +35811,7 @@
       "published_date": "21-10-2026",
       "fingerprint": "47eb343302922b4126a0f073ea0a539a93213ea8c7e28318b04f772c832187e1",
       "first_seen": "2026-10-23T13:35:31.317172+00:00",
-      "delivered": false
+      "delivered": true
     },
     "1fa80b41ee7f72b7c028739174f0ee866ed7d2406b4a4b1c1882761dafb2800e": {
       "website_id": "rbi-opportunities",
@@ -35821,7 +35821,7 @@
       "published_date": null,
       "fingerprint": "1fa80b41ee7f72b7c028739174f0ee866ed7d2406b4a4b1c1882761dafb2800e",
       "first_seen": "2026-10-23T13:34:32.934824+00:00",
-      "delivered": false
+      "delivered": true
     },
     "018f43166b1de78d5e386c0fa96fba20c59e2cacfa5d2d73cb8fdb7ff94c8433": {
       "website_id": "exim-bank",
@@ -35831,7 +35831,7 @@
       "published_date": null,
       "fingerprint": "018f43166b1de78d5e386c0fa96fba20c59e2cacfa5d2d73cb8fdb7ff94c8433",
       "first_seen": "2026-10-23T13:35:07.821436+00:00",
-      "delivered": false
+      "delivered": true
     },
     "fb51854443b04a65c71be9dd44dc6c26f71d11fa05de92c81abdd2a0091d7391": {
       "website_id": "exim-bank",
@@ -35841,7 +35841,7 @@
       "published_date": null,
       "fingerprint": "fb51854443b04a65c71be9dd44dc6c26f71d11fa05de92c81abdd2a0091d7391",
       "first_seen": "2026-10-23T13:35:07.821632+00:00",
-      "delivered": false
+      "delivered": true
     },
     "e707be1b100a9277b8a7d32fde45f47dead2d1135a7f9881384d6e3507966c33": {
       "website_id": "rbi",
@@ -35941,7 +35941,7 @@
       "published_date": "2026-10-23",
       "fingerprint": "7903e7c707f904fad33317171a444da24e577a150fcf202ef03b9560ad449367",
       "first_seen": "2026-10-23T12:15:00+00:00",
-      "delivered": false
+      "delivered": true
     },
     "5936d3dbba157af06119cb8985f3c2981e41486e07787065fb8e6117a1ab3ad7": {
       "website_id": "rbi-opportunities",
@@ -40231,7 +40231,7 @@
       "published_date": null,
       "fingerprint": "d0d882c4a6d67d9785e21bcbaf487efde0f6a22809ac95d8f1ec46fc1c3b7f67",
       "first_seen": "2026-10-26T05:46:45.049161+00:00",
-      "delivered": false
+      "delivered": true
     },
     "7e8a44f2e7e9b3b0d8b56760ce12d1c89d656e7e42aee3c3de9cff21774358f6": {
       "website_id": "indian-bank",
@@ -40241,7 +40241,7 @@
       "published_date": null,
       "fingerprint": "7e8a44f2e7e9b3b0d8b56760ce12d1c89d656e7e42aee3c3de9cff21774358f6",
       "first_seen": "2026-10-26T05:46:45.049564+00:00",
-      "delivered": false
+      "delivered": true
     },
     "92d93b42d7ca97cbe4deb81a66c22888d750cc066d23e6f7d820b7dd03d3656a": {
       "website_id": "indian-bank",
@@ -40251,7 +40251,7 @@
       "published_date": null,
       "fingerprint": "92d93b42d7ca97cbe4deb81a66c22888d750cc066d23e6f7d820b7dd03d3656a",
       "first_seen": "2026-10-26T05:46:45.064305+00:00",
-      "delivered": false
+      "delivered": true
     },
     "cf02b357fb8165ec3bb18492ba0c417aeeb0e37c3f71be6235fd7ba48db9fcf4": {
       "website_id": "indian-bank",
