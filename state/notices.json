@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-27T04:52:27.730610+00:00",
+  "last_run_timestamp": "2026-10-27T11:42:59.584175+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4049,
+    "total_recorded_notices": 4050,
     "last_run_new_notices": 0,
     "last_run_errors": 1,
     "last_run_extraction_ok": 22,
@@ -40504,6 +40504,16 @@
       "published_date": "Oct 27, 2026",
       "fingerprint": "71dee34d2a7381b0d83e408fa7cc43f5907f98ead4cc00dddffad911492bcae4",
       "first_seen": "2026-10-27T04:51:00.576030+00:00",
+      "delivered": true
+    },
+    "fd3c2d5a9355c8fe7a9db50ee6525ed6d62e431ecf756204a3de43ad84728cab": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "NOTICE: ONLINE PSYCHOMETRIC TEST IN REMOTE PROCTORED (RPA) MODE",
+      "url": "https://sbi.co.in/webfiles/uploads/files_2627/10/Important_Notice_for_Psychometric_Test.pdf",
+      "published_date": null,
+      "fingerprint": "fd3c2d5a9355c8fe7a9db50ee6525ed6d62e431ecf756204a3de43ad84728cab",
+      "first_seen": "2026-10-27T11:41:01.032285+00:00",
       "delivered": true
     }
   },
