@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-27T11:42:59.584175+00:00",
+  "last_run_timestamp": "2026-10-27T12:52:53.034322+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4050,
+    "total_recorded_notices": 4051,
     "last_run_new_notices": 0,
     "last_run_errors": 1,
     "last_run_extraction_ok": 22,
@@ -40514,6 +40514,16 @@
       "published_date": null,
       "fingerprint": "fd3c2d5a9355c8fe7a9db50ee6525ed6d62e431ecf756204a3de43ad84728cab",
       "first_seen": "2026-10-27T11:41:01.032285+00:00",
+      "delivered": true
+    },
+    "0d16230daad1ff88fb90032e3a931d7e0680cff9d9e95520e5b7e4bb55fe67a4": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Reserve Bank holds 36th Conference of State Finance Secretaries",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63873",
+      "published_date": "Oct 27, 2026",
+      "fingerprint": "0d16230daad1ff88fb90032e3a931d7e0680cff9d9e95520e5b7e4bb55fe67a4",
+      "first_seen": "2026-10-27T12:51:11.971691+00:00",
       "delivered": true
     }
   },
