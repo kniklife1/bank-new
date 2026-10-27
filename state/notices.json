@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-27T12:52:53.034322+00:00",
+  "last_run_timestamp": "2026-10-27T13:03:00.724973+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4051,
+    "total_recorded_notices": 4052,
     "last_run_new_notices": 0,
     "last_run_errors": 1,
     "last_run_extraction_ok": 22,
@@ -40524,6 +40524,16 @@
       "published_date": "Oct 27, 2026",
       "fingerprint": "0d16230daad1ff88fb90032e3a931d7e0680cff9d9e95520e5b7e4bb55fe67a4",
       "first_seen": "2026-10-27T12:51:11.971691+00:00",
+      "delivered": true
+    },
+    "5fa01fa3d4080097afe6d170c7a2ad9cfa559b3d44012f1f230eb1be14cbaa2a": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "Engagement Support staff on contract basis at INDSETI Tirupattur-reg",
+      "url": "https://indianbank.in/documents/20117/34414/Contract Basis at Indseti- Thirupathur2026_10_27_13_00_10.pdf/b1fab1e8-1a66-37e0-85c8-7e8171b1caa8",
+      "published_date": "2026-10-27",
+      "fingerprint": "5fa01fa3d4080097afe6d170c7a2ad9cfa559b3d44012f1f230eb1be14cbaa2a",
+      "first_seen": "2026-10-27T13:02:02.679506+00:00",
       "delivered": true
     }
   },
