@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-27T13:03:00.724973+00:00",
+  "last_run_timestamp": "2026-10-27T13:12:29.442035+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4052,
+    "total_recorded_notices": 4053,
     "last_run_new_notices": 0,
     "last_run_errors": 1,
     "last_run_extraction_ok": 22,
@@ -40534,6 +40534,16 @@
       "published_date": "2026-10-27",
       "fingerprint": "5fa01fa3d4080097afe6d170c7a2ad9cfa559b3d44012f1f230eb1be14cbaa2a",
       "first_seen": "2026-10-27T13:02:02.679506+00:00",
+      "delivered": true
+    },
+    "83b7fb0d6f08263721b0ce354d63d544210bdd0e0ab0c01fa0790af427bd214e": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Implementation of Section 51A of UAPA, 1967: Updates to UNSC’s 1267/ 1989 ISIL (Da'esh) & Al-Qaida Sanctions List: Removal of 03 Entries",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13747&Mode=0",
+      "published_date": "Oct 27, 2026",
+      "fingerprint": "83b7fb0d6f08263721b0ce354d63d544210bdd0e0ab0c01fa0790af427bd214e",
+      "first_seen": "2026-10-27T13:11:12.024564+00:00",
       "delivered": true
     }
   },
