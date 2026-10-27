@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-26T13:22:17.111219+00:00",
+  "last_run_timestamp": "2026-10-27T04:52:27.730610+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4048,
-    "last_run_new_notices": 1,
+    "total_recorded_notices": 4049,
+    "last_run_new_notices": 0,
     "last_run_errors": 1,
     "last_run_extraction_ok": 22,
     "last_run_fetched_ok": 22
@@ -40495,6 +40495,16 @@
       "first_seen": "2026-10-26T13:20:58.979447+00:00",
       "delivered": true,
       "content": "DEPUTY MANAGER (LAW)-MMGS-II - INTERVIEW SCHEDULE (NEW)"
+    },
+    "71dee34d2a7381b0d83e408fa7cc43f5907f98ead4cc00dddffad911492bcae4": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Re-organisation of districts in the NCT of Delhi – Assignment and Review of Lead Bank Responsibility",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13746&Mode=0",
+      "published_date": "Oct 27, 2026",
+      "fingerprint": "71dee34d2a7381b0d83e408fa7cc43f5907f98ead4cc00dddffad911492bcae4",
+      "first_seen": "2026-10-27T04:51:00.576030+00:00",
+      "delivered": true
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
