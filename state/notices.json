@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-28T12:23:05.068374+00:00",
+  "last_run_timestamp": "2026-10-28T12:32:56.361035+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4060,
-    "last_run_new_notices": 1,
+    "total_recorded_notices": 4061,
+    "last_run_new_notices": 0,
     "last_run_errors": 1,
     "last_run_extraction_ok": 22,
     "last_run_fetched_ok": 22
@@ -40614,6 +40614,16 @@
       "published_date": "Oct 28, 2026",
       "fingerprint": "de751d30d18fef3585d3c8786aab9068970805f39823131d16cc47c196f1a3bd",
       "first_seen": "2026-10-28T12:21:08.093488+00:00",
+      "delivered": true
+    },
+    "f474a7ce98e7f726cbd6d4de853c0273dc0e3887c6aeaabe454720d87df4e7d8": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Directions under Section 35A read with Section 56 of the Banking Regulation Act, 1949 – Lokapavani Mahila Sahakari Bank Niyamitha, Mandya - Extension of Period",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63878",
+      "published_date": "Oct 28, 2026",
+      "fingerprint": "f474a7ce98e7f726cbd6d4de853c0273dc0e3887c6aeaabe454720d87df4e7d8",
+      "first_seen": "2026-10-28T12:31:23.515977+00:00",
       "delivered": true
     }
   },
