@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-28T07:03:18.863242+00:00",
+  "last_run_timestamp": "2026-10-28T08:03:11.423836+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4058,
+    "total_recorded_notices": 4059,
     "last_run_new_notices": 0,
     "last_run_errors": 1,
     "last_run_extraction_ok": 22,
@@ -40594,6 +40594,16 @@
       "published_date": "2026-10-28",
       "fingerprint": "a8740956e26d88d7cd1f5ab3fde68ee09d086ae32c70c439d6ca05e99e87155d",
       "first_seen": "2026-10-28T07:02:31.027480+00:00",
+      "delivered": true
+    },
+    "514e328c07dee1d0265649213f51e37b801a6b3e57acb819b4b0df6b9bbc0c86": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Directions under Section 35A read with Section 56 of the Banking Regulation Act, 1949 – Sonpeth Nagari Sahakari Bank Maryadit, Sonpeth, Dist. Parbhani – Extension of Period",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63875",
+      "published_date": "Oct 28, 2026",
+      "fingerprint": "514e328c07dee1d0265649213f51e37b801a6b3e57acb819b4b0df6b9bbc0c86",
+      "first_seen": "2026-10-28T08:01:42.274834+00:00",
       "delivered": true
     }
   },
