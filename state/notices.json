@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-28T06:42:34.968979+00:00",
+  "last_run_timestamp": "2026-10-28T07:03:18.863242+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4057,
-    "last_run_new_notices": 2,
+    "total_recorded_notices": 4058,
+    "last_run_new_notices": 0,
     "last_run_errors": 1,
     "last_run_extraction_ok": 22,
     "last_run_fetched_ok": 22
@@ -40584,6 +40584,16 @@
       "published_date": null,
       "fingerprint": "9af623a4739d751d5f6e9ed4b3a08ab2c73d4d7f412db340acb2f0ee9cb5306f",
       "first_seen": "2026-10-28T06:42:26.324569+00:00",
+      "delivered": true
+    },
+    "a8740956e26d88d7cd1f5ab3fde68ee09d086ae32c70c439d6ca05e99e87155d": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "yhyh PDF file download",
+      "url": "https://punjabandsind.bank.in/system/uploads/recruitment/2150_2026102812241315315.pdf",
+      "published_date": "2026-10-28",
+      "fingerprint": "a8740956e26d88d7cd1f5ab3fde68ee09d086ae32c70c439d6ca05e99e87155d",
+      "first_seen": "2026-10-28T07:02:31.027480+00:00",
       "delivered": true
     }
   },
