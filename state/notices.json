@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-28T08:03:11.423836+00:00",
+  "last_run_timestamp": "2026-10-28T12:23:05.068374+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4059,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4060,
+    "last_run_new_notices": 1,
     "last_run_errors": 1,
     "last_run_extraction_ok": 22,
     "last_run_fetched_ok": 22
@@ -40604,6 +40604,16 @@
       "published_date": "Oct 28, 2026",
       "fingerprint": "514e328c07dee1d0265649213f51e37b801a6b3e57acb819b4b0df6b9bbc0c86",
       "first_seen": "2026-10-28T08:01:42.274834+00:00",
+      "delivered": true
+    },
+    "de751d30d18fef3585d3c8786aab9068970805f39823131d16cc47c196f1a3bd": {
+      "website_id": "rbi-opportunities",
+      "org_name": "RBI Opportunities",
+      "title": "Final Result of Direct Recruitment for the Post of Officers in Grade ‘B’ (Direct Recruit-DR) (On Probation-OP) – DEPR Cadre - Panel Year 2026",
+      "url": "https://opportunities.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=5196",
+      "published_date": "Oct 28, 2026",
+      "fingerprint": "de751d30d18fef3585d3c8786aab9068970805f39823131d16cc47c196f1a3bd",
+      "first_seen": "2026-10-28T12:21:08.093488+00:00",
       "delivered": true
     }
   },
