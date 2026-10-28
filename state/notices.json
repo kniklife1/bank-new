@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-27T13:12:29.442035+00:00",
+  "last_run_timestamp": "2026-10-28T06:22:41.614786+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4053,
+    "total_recorded_notices": 4054,
     "last_run_new_notices": 0,
     "last_run_errors": 1,
     "last_run_extraction_ok": 22,
@@ -40544,6 +40544,16 @@
       "published_date": "Oct 27, 2026",
       "fingerprint": "83b7fb0d6f08263721b0ce354d63d544210bdd0e0ab0c01fa0790af427bd214e",
       "first_seen": "2026-10-27T13:11:12.024564+00:00",
+      "delivered": true
+    },
+    "1595da97098ae0bfa1b0901dc1dbd965b22f23624de211fc794e1519bf6406e8": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "testing by swati PDF file download",
+      "url": "https://punjabandsind.bank.in/system/uploads/recruitment/2150_2026102811491793169.pdf",
+      "published_date": "2026-10-28",
+      "fingerprint": "1595da97098ae0bfa1b0901dc1dbd965b22f23624de211fc794e1519bf6406e8",
+      "first_seen": "2026-10-28T06:21:45.930667+00:00",
       "delivered": true
     }
   },
