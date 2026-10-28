@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-28T06:32:52.449848+00:00",
+  "last_run_timestamp": "2026-10-28T06:42:34.968979+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4055,
-    "last_run_new_notices": 1,
+    "total_recorded_notices": 4057,
+    "last_run_new_notices": 2,
     "last_run_errors": 1,
     "last_run_extraction_ok": 22,
     "last_run_fetched_ok": 22
@@ -40564,6 +40564,26 @@
       "published_date": "26.10.2026",
       "fingerprint": "ccd74dc0d404192ee9482fb846ba0daac8c51c55d7e5a754df216c2c4fdf5add",
       "first_seen": "2026-10-28T06:32:46.046457+00:00",
+      "delivered": true
+    },
+    "5d57eccbf4c8fefaf372c5ebeea75bb1ed8c603576a707fb9c92324e9dcc92ec": {
+      "website_id": "gic-re",
+      "org_name": "General Insurance Corporation (GIC Re)",
+      "title": "GIC Re Corporate Website Tender - Result Declaration (GEM/2026/B/7704518)",
+      "url": "https://www.gicre.in/en/images/2026/GIC_Re_Corporate_Website_Tender_-_Result_Declaration_on_Website.pdf",
+      "published_date": null,
+      "fingerprint": "5d57eccbf4c8fefaf372c5ebeea75bb1ed8c603576a707fb9c92324e9dcc92ec",
+      "first_seen": "2026-10-28T06:42:26.324472+00:00",
+      "delivered": true
+    },
+    "9af623a4739d751d5f6e9ed4b3a08ab2c73d4d7f412db340acb2f0ee9cb5306f": {
+      "website_id": "gic-re",
+      "org_name": "General Insurance Corporation (GIC Re)",
+      "title": "Tender Result for Procurement of 300 Microsoft 365 Copilot Licenses (GEM/2026/B/7684932)",
+      "url": "https://www.gicre.in/en/images/Copilot_Licenses_-_Result_Declaration_on_Website.pdf",
+      "published_date": null,
+      "fingerprint": "9af623a4739d751d5f6e9ed4b3a08ab2c73d4d7f412db340acb2f0ee9cb5306f",
+      "first_seen": "2026-10-28T06:42:26.324569+00:00",
       "delivered": true
     }
   },
