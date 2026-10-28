@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-28T06:22:41.614786+00:00",
+  "last_run_timestamp": "2026-10-28T06:32:52.449848+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4054,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4055,
+    "last_run_new_notices": 1,
     "last_run_errors": 1,
     "last_run_extraction_ok": 22,
     "last_run_fetched_ok": 22
@@ -40554,6 +40554,16 @@
       "published_date": "2026-10-28",
       "fingerprint": "1595da97098ae0bfa1b0901dc1dbd965b22f23624de211fc794e1519bf6406e8",
       "first_seen": "2026-10-28T06:21:45.930667+00:00",
+      "delivered": true
+    },
+    "ccd74dc0d404192ee9482fb846ba0daac8c51c55d7e5a754df216c2c4fdf5add": {
+      "website_id": "gic-re",
+      "org_name": "General Insurance Corporation (GIC Re)",
+      "title": "Corrigendum 2 dated 26.10.2026: GEM/2026/B/8134254 - Appointment of an Actuary",
+      "url": "https://www.gicre.in/en/images/2026/CORRIGENDUM_2_27102026.pdf",
+      "published_date": "26.10.2026",
+      "fingerprint": "ccd74dc0d404192ee9482fb846ba0daac8c51c55d7e5a754df216c2c4fdf5add",
+      "first_seen": "2026-10-28T06:32:46.046457+00:00",
       "delivered": true
     }
   },
