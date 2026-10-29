@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-28T12:32:56.361035+00:00",
+  "last_run_timestamp": "2026-10-29T06:52:33.360704+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4061,
+    "total_recorded_notices": 4062,
     "last_run_new_notices": 0,
     "last_run_errors": 1,
     "last_run_extraction_ok": 22,
@@ -40624,6 +40624,16 @@
       "published_date": "Oct 28, 2026",
       "fingerprint": "f474a7ce98e7f726cbd6d4de853c0273dc0e3887c6aeaabe454720d87df4e7d8",
       "first_seen": "2026-10-28T12:31:23.515977+00:00",
+      "delivered": true
+    },
+    "8cd1658300ac1a3421ee14f483b5b836759dbe7b37aebb337daa9abc0e3b0c05": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "POLICY ON HANDLING OF IMPORT, EXPORT, MERCHANTING TRADE TRANSACTIONS AND REMITTANCES",
+      "url": "https://website.ib.in:8081/documents/d/guest/policy_website_disclosure_29102026-1-",
+      "published_date": "29-10-2026",
+      "fingerprint": "8cd1658300ac1a3421ee14f483b5b836759dbe7b37aebb337daa9abc0e3b0c05",
+      "first_seen": "2026-10-29T06:51:23.612916+00:00",
       "delivered": true
     }
   },
