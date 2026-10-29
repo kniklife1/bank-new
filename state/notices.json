@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-29T10:22:41.097221+00:00",
+  "last_run_timestamp": "2026-10-29T11:42:46.072823+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4064,
+    "total_recorded_notices": 4066,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -40654,6 +40654,26 @@
       "published_date": null,
       "fingerprint": "99ea7c04230051e3e73d345a68dc0e0b7d26d461b88bc568930bbf95ae52bc07",
       "first_seen": "2026-10-29T10:21:42.754896+00:00",
+      "delivered": true
+    },
+    "6b03e7fb2f378e933af59fc1ebd626c4bc99fc4887a573fad1bf010748de5401": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Directions under Section 35A read with Section 56 of the Banking Regulation Act, 1949 – The Irinjalakuda Town Co-operative Bank Ltd., Kerala - Extension of period",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63881",
+      "published_date": "Oct 29, 2026",
+      "fingerprint": "6b03e7fb2f378e933af59fc1ebd626c4bc99fc4887a573fad1bf010748de5401",
+      "first_seen": "2026-10-29T11:41:04.955702+00:00",
+      "delivered": true
+    },
+    "e9058f160a0ef61cfa7b3fc2ac98a470c40cf7c5bca402b60da607d33feeb875": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "RBI releases data on ECB / FCCB / RDB for August 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63882",
+      "published_date": "Oct 29, 2026",
+      "fingerprint": "e9058f160a0ef61cfa7b3fc2ac98a470c40cf7c5bca402b60da607d33feeb875",
+      "first_seen": "2026-10-29T11:41:04.955905+00:00",
       "delivered": true
     }
   },
