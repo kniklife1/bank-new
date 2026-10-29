@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-29T14:12:22.446903+00:00",
+  "last_run_timestamp": "2026-10-29T15:03:09.479266+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4068,
+    "total_recorded_notices": 4069,
     "last_run_new_notices": 1,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -40694,6 +40694,16 @@
       "published_date": "2026-10-29",
       "fingerprint": "2408d7801c62ea4a439ec96f1af019e8e1e3ba0838bec20c1a2a24e75f9aed34",
       "first_seen": "2026-10-29T14:11:25.351989+00:00",
+      "delivered": true
+    },
+    "9226692bcbebbb4478ee031c5963b54b72707bda993b68e0d65dac77c6e35f7e": {
+      "website_id": "rbi-opportunities",
+      "org_name": "RBI Opportunities",
+      "title": "Scorecard and Cut-off Marks for Recruitment of Officers in Grade ‘B’ (DR) – General Cadre - PY 2026",
+      "url": "https://opportunities.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=5197",
+      "published_date": "Oct 29, 2026",
+      "fingerprint": "9226692bcbebbb4478ee031c5963b54b72707bda993b68e0d65dac77c6e35f7e",
+      "first_seen": "2026-10-29T15:01:54.703513+00:00",
       "delivered": true
     }
   },
