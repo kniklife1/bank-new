@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-29T06:52:33.360704+00:00",
+  "last_run_timestamp": "2026-10-29T10:22:41.097221+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4062,
+    "total_recorded_notices": 4064,
     "last_run_new_notices": 0,
-    "last_run_errors": 1,
-    "last_run_extraction_ok": 22,
-    "last_run_fetched_ok": 22
+    "last_run_errors": 2,
+    "last_run_extraction_ok": 21,
+    "last_run_fetched_ok": 21
   },
   "notices": {
     "9da63338791ba82966aef072b71411ccd5f4d258c0187d5f28ba2c5f889934c3": {
@@ -40634,6 +40634,26 @@
       "published_date": "29-10-2026",
       "fingerprint": "8cd1658300ac1a3421ee14f483b5b836759dbe7b37aebb337daa9abc0e3b0c05",
       "first_seen": "2026-10-29T06:51:23.612916+00:00",
+      "delivered": true
+    },
+    "e74c368fc0ec706c9523e429ae395bfbb208fa1fb697eed5d5dca1a824c08096": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "Digi Gold Loan (Up to Rs. than 2.50 Lakhs)",
+      "url": "https://digiloans.punjabandsind.bank.in/goldloan/login",
+      "published_date": null,
+      "fingerprint": "e74c368fc0ec706c9523e429ae395bfbb208fa1fb697eed5d5dca1a824c08096",
+      "first_seen": "2026-10-29T10:21:42.754793+00:00",
+      "delivered": true
+    },
+    "99ea7c04230051e3e73d345a68dc0e0b7d26d461b88bc568930bbf95ae52bc07": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "Digi Gold Loan (More than 2.50 Lakhs) URL",
+      "url": "https://digiloans.punjabandsind.bank.in/msme/home/psbpl/gl",
+      "published_date": null,
+      "fingerprint": "99ea7c04230051e3e73d345a68dc0e0b7d26d461b88bc568930bbf95ae52bc07",
+      "first_seen": "2026-10-29T10:21:42.754896+00:00",
       "delivered": true
     }
   },
