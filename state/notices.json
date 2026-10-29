@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-29T11:42:46.072823+00:00",
+  "last_run_timestamp": "2026-10-29T12:03:13.481136+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4066,
+    "total_recorded_notices": 4067,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -40674,6 +40674,16 @@
       "published_date": "Oct 29, 2026",
       "fingerprint": "e9058f160a0ef61cfa7b3fc2ac98a470c40cf7c5bca402b60da607d33feeb875",
       "first_seen": "2026-10-29T11:41:04.955905+00:00",
+      "delivered": true
+    },
+    "66a2305ebeb4eb99ee0f93cba162a6521f3351df89cfe4c33df58701815a4791": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Rate of Interest on Government of India Floating Rate Bond 2034",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63883",
+      "published_date": "Oct 29, 2026",
+      "fingerprint": "66a2305ebeb4eb99ee0f93cba162a6521f3351df89cfe4c33df58701815a4791",
+      "first_seen": "2026-10-29T12:01:39.254429+00:00",
       "delivered": true
     }
   },
