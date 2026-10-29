@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-29T12:03:13.481136+00:00",
+  "last_run_timestamp": "2026-10-29T14:12:22.446903+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4067,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4068,
+    "last_run_new_notices": 1,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
@@ -40684,6 +40684,16 @@
       "published_date": "Oct 29, 2026",
       "fingerprint": "66a2305ebeb4eb99ee0f93cba162a6521f3351df89cfe4c33df58701815a4791",
       "first_seen": "2026-10-29T12:01:39.254429+00:00",
+      "delivered": true
+    },
+    "2408d7801c62ea4a439ec96f1af019e8e1e3ba0838bec20c1a2a24e75f9aed34": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "List of Provisionally Selected Candidates",
+      "url": "https://indianbank.in/documents/20117/34414/List of Provisionally selected candidates2026_10_29_14_08_27.pdf/7d3d36ab-bb42-9667-65ce-e92bf3ac0bfd",
+      "published_date": "2026-10-29",
+      "fingerprint": "2408d7801c62ea4a439ec96f1af019e8e1e3ba0838bec20c1a2a24e75f9aed34",
+      "first_seen": "2026-10-29T14:11:25.351989+00:00",
       "delivered": true
     }
   },
