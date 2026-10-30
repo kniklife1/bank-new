@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-30T12:02:53.508813+00:00",
+  "last_run_timestamp": "2026-10-30T12:12:34.508540+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4076,
+    "total_recorded_notices": 4077,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -40775,6 +40775,16 @@
       "published_date": "Oct 30, 2026",
       "fingerprint": "c783658fd31c12dad727661f8f72449ac4fc55a35fec0b858a64ffc9ad9f82bd",
       "first_seen": "2026-10-30T12:01:38.047336+00:00",
+      "delivered": true
+    },
+    "b41ace46107e1460ab3f7a7b0b17e03326a8e80d1184bfaa5f61aeabf8edce2f": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Lending and Deposit Rates of Scheduled Commercial Banks – October 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63894",
+      "published_date": "Oct 30, 2026",
+      "fingerprint": "b41ace46107e1460ab3f7a7b0b17e03326a8e80d1184bfaa5f61aeabf8edce2f",
+      "first_seen": "2026-10-30T12:11:07.132134+00:00",
       "delivered": true
     }
   },
