@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-30T12:32:57.665180+00:00",
+  "last_run_timestamp": "2026-10-30T12:52:37.870139+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4078,
-    "last_run_new_notices": 1,
+    "total_recorded_notices": 4079,
+    "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
@@ -40797,6 +40797,16 @@
       "first_seen": "2026-10-30T12:31:25.117907+00:00",
       "delivered": true,
       "content": "DOWNLOAD INTERVIEW CALL LETTER (NEW)"
+    },
+    "4dfdfed13102c43643250d7b8bc33470b956b404eb7314bf9dc6b05cdedbe07f": {
+      "website_id": "iob",
+      "org_name": "Indian Overseas Bank (IOB)",
+      "title": "Internet Banking – Retail (Transaction Guide)",
+      "url": "https://www.iob.bank.in/en/nri-banking",
+      "published_date": null,
+      "fingerprint": "4dfdfed13102c43643250d7b8bc33470b956b404eb7314bf9dc6b05cdedbe07f",
+      "first_seen": "2026-10-30T12:51:38.472899+00:00",
+      "delivered": true
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
