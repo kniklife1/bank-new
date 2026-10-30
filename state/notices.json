@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-30T11:52:29.369579+00:00",
+  "last_run_timestamp": "2026-10-30T12:02:53.508813+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4075,
+    "total_recorded_notices": 4076,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -40765,6 +40765,16 @@
       "published_date": "Oct 30, 2026",
       "fingerprint": "19f5cabfd1ca46054b226bc33b959e42addd41cc10bc7b724435a626c43ed5b0",
       "first_seen": "2026-10-30T11:51:02.623770+00:00",
+      "delivered": true
+    },
+    "c783658fd31c12dad727661f8f72449ac4fc55a35fec0b858a64ffc9ad9f82bd": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Monthly Data on India’s International Trade in Services for the Month of September 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63893",
+      "published_date": "Oct 30, 2026",
+      "fingerprint": "c783658fd31c12dad727661f8f72449ac4fc55a35fec0b858a64ffc9ad9f82bd",
+      "first_seen": "2026-10-30T12:01:38.047336+00:00",
       "delivered": true
     }
   },
