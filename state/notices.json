@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-30T10:22:20.024011+00:00",
+  "last_run_timestamp": "2026-10-30T10:42:42.196388+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4072,
+    "total_recorded_notices": 4073,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -40735,6 +40735,16 @@
       "published_date": "Oct 30, 2026",
       "fingerprint": "c255ad90419cab9af3d8d1771d31fe8229df5c6a977e45d8172ee4a29f0524b5",
       "first_seen": "2026-10-30T10:21:05.791443+00:00",
+      "delivered": true
+    },
+    "c7574204856a6137406a782d40eb1a6124b6c28a30b0c2e8205ba5fe881f6948": {
+      "website_id": "gic-re",
+      "org_name": "General Insurance Corporation (GIC Re)",
+      "title": "Reinsurance Pool",
+      "url": "https://www.gicre.in/en/business-en/reinsurance-pool",
+      "published_date": null,
+      "fingerprint": "c7574204856a6137406a782d40eb1a6124b6c28a30b0c2e8205ba5fe881f6948",
+      "first_seen": "2026-10-30T10:42:37.341529+00:00",
       "delivered": true
     }
   },
