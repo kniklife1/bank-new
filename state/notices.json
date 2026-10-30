@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-30T10:42:42.196388+00:00",
+  "last_run_timestamp": "2026-10-30T11:32:59.496282+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4073,
+    "total_recorded_notices": 4074,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -40745,6 +40745,16 @@
       "published_date": null,
       "fingerprint": "c7574204856a6137406a782d40eb1a6124b6c28a30b0c2e8205ba5fe881f6948",
       "first_seen": "2026-10-30T10:42:37.341529+00:00",
+      "delivered": true
+    },
+    "6a0d28b25b517e14fb657fecd88e095736cd2e26e35c59c21ba53f9ada61de2c": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Sectoral Deployment of Bank Credit – September 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63891",
+      "published_date": "Oct 30, 2026",
+      "fingerprint": "6a0d28b25b517e14fb657fecd88e095736cd2e26e35c59c21ba53f9ada61de2c",
+      "first_seen": "2026-10-30T11:31:29.430663+00:00",
       "delivered": true
     }
   },
