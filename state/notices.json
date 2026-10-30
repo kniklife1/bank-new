@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-30T11:32:59.496282+00:00",
+  "last_run_timestamp": "2026-10-30T11:52:29.369579+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4074,
+    "total_recorded_notices": 4075,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -40755,6 +40755,16 @@
       "published_date": "Oct 30, 2026",
       "fingerprint": "6a0d28b25b517e14fb657fecd88e095736cd2e26e35c59c21ba53f9ada61de2c",
       "first_seen": "2026-10-30T11:31:29.430663+00:00",
+      "delivered": true
+    },
+    "19f5cabfd1ca46054b226bc33b959e42addd41cc10bc7b724435a626c43ed5b0": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "625th Meeting of Central Board of the Reserve Bank of India",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63892",
+      "published_date": "Oct 30, 2026",
+      "fingerprint": "19f5cabfd1ca46054b226bc33b959e42addd41cc10bc7b724435a626c43ed5b0",
+      "first_seen": "2026-10-30T11:51:02.623770+00:00",
       "delivered": true
     }
   },
