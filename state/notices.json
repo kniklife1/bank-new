@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-30T05:12:25.559401+00:00",
+  "last_run_timestamp": "2026-10-30T10:12:39.713374+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4070,
+    "total_recorded_notices": 4071,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -40715,6 +40715,17 @@
       "fingerprint": "3a6465d8061161e072b8391e6e4402d4abb8b2ca75ff5e23d8b44ddede516c99",
       "first_seen": "2026-10-30T05:10:58.791650+00:00",
       "delivered": true
+    },
+    "eaed9e825f4b1837e88dc63084e39c6dcb11ed570f6280a88619c3e3b6bd5b53": {
+      "website_id": "lic",
+      "org_name": "Life Insurance Corporation (LIC)",
+      "title": "*Invitation for Earnings Call -H1FY27 on 5th November, 2026 at 7:00 pm*",
+      "url": "https://licindia.in/documents/20121/45907/Invite+of+Earnings+Call+-+05112026.pdf/786a6542-f5a7-db19-fc41-13103ccde9f3?t=1793346702408",
+      "published_date": null,
+      "fingerprint": "eaed9e825f4b1837e88dc63084e39c6dcb11ed570f6280a88619c3e3b6bd5b53",
+      "first_seen": "2026-10-30T10:12:21.413783+00:00",
+      "delivered": true,
+      "content": "*Aap ki punji aap ka Adhikar* *Invitation for Earnings Call -H1FY27 on 5th November, 2026 at 7:00 pm*"
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
