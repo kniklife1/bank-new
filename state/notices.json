@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-30T12:12:34.508540+00:00",
+  "last_run_timestamp": "2026-10-30T12:32:57.665180+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4077,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4078,
+    "last_run_new_notices": 1,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
@@ -40786,6 +40786,17 @@
       "fingerprint": "b41ace46107e1460ab3f7a7b0b17e03326a8e80d1184bfaa5f61aeabf8edce2f",
       "first_seen": "2026-10-30T12:11:07.132134+00:00",
       "delivered": true
+    },
+    "fe2c494588f5db6c4b29002284868e0ec2c5e303a2fc7404ba2013be09299c8f": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "DOWNLOAD INTERVIEW CALL LETTER",
+      "url": "https://ibpsreg.ibps.in/sbiscoljun26/intclg_oct26/login.php?appid=e625fb5f5b0c906616020b61d08dc3ac",
+      "published_date": null,
+      "fingerprint": "fe2c494588f5db6c4b29002284868e0ec2c5e303a2fc7404ba2013be09299c8f",
+      "first_seen": "2026-10-30T12:31:25.117907+00:00",
+      "delivered": true,
+      "content": "DOWNLOAD INTERVIEW CALL LETTER (NEW)"
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
