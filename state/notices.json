@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-31T07:12:11.874325+00:00",
+  "last_run_timestamp": "2026-10-31T10:12:27.178569+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4086,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4087,
+    "last_run_new_notices": 1,
     "last_run_errors": 2,
     "last_run_extraction_ok": 20,
     "last_run_fetched_ok": 21
@@ -40878,6 +40878,16 @@
       "first_seen": "2026-10-31T07:10:57.761140+00:00",
       "delivered": true,
       "content": "LINK FOR ONLINE PSYCHOMETRIC TEST IN REMOTE PROCTORED (RPA) MODE(NEW)"
+    },
+    "d2f27874cfa6229c727ed9d1799c4f3c0a084cc97ff1dfde2322404a4fdfd5d8": {
+      "website_id": "idbi-bank",
+      "org_name": "IDBI Bank",
+      "title": "Appointment of Dentons Link Legal - Assignment Awarded on Nomination Basis",
+      "url": "https://www.idbi.bank.in/pdf/Appointment-of-Dentons-Link-Legal.pdf",
+      "published_date": null,
+      "fingerprint": "d2f27874cfa6229c727ed9d1799c4f3c0a084cc97ff1dfde2322404a4fdfd5d8",
+      "first_seen": "2026-10-31T10:11:41.008810+00:00",
+      "delivered": true
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
