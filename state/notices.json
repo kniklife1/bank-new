@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-31T05:03:00.197150+00:00",
+  "last_run_timestamp": "2026-10-31T07:12:11.874325+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4085,
-    "last_run_new_notices": 1,
+    "total_recorded_notices": 4086,
+    "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 20,
     "last_run_fetched_ok": 21
@@ -40867,6 +40867,17 @@
       "fingerprint": "057c2b9ac9920539657e23b9a34c47c3134c425dcace8c476e73aacbe2a5d1ef",
       "first_seen": "2026-10-31T05:01:33.582931+00:00",
       "delivered": true
+    },
+    "8179ee9687947c5b9ec6132334ef5734ac2105a6500ad48df37da43780d335cf": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "LINK FOR ONLINE PSYCHOMETRIC TEST IN REMOTE PROCTORED (RPA) MODE",
+      "url": "https://ibpsreg.ibps.in/sbipojun26/optcla_oct26/login.php?appid=0ccc916d16abf7276a74ae4a24e0074b",
+      "published_date": null,
+      "fingerprint": "8179ee9687947c5b9ec6132334ef5734ac2105a6500ad48df37da43780d335cf",
+      "first_seen": "2026-10-31T07:10:57.761140+00:00",
+      "delivered": true,
+      "content": "LINK FOR ONLINE PSYCHOMETRIC TEST IN REMOTE PROCTORED (RPA) MODE(NEW)"
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
