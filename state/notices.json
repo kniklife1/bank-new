@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-30T12:52:37.870139+00:00",
+  "last_run_timestamp": "2026-10-31T03:53:15.289432+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4079,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4084,
+    "last_run_new_notices": 1,
     "last_run_errors": 2,
-    "last_run_extraction_ok": 21,
+    "last_run_extraction_ok": 20,
     "last_run_fetched_ok": 21
   },
   "notices": {
@@ -40806,6 +40806,56 @@
       "published_date": null,
       "fingerprint": "4dfdfed13102c43643250d7b8bc33470b956b404eb7314bf9dc6b05cdedbe07f",
       "first_seen": "2026-10-30T12:51:38.472899+00:00",
+      "delivered": true
+    },
+    "8fe98aa7666b2c27ec1ec3ba0828a676e7a09fa3a0621ed9e0e0304068e43007": {
+      "website_id": "niacl",
+      "org_name": "New India Assurance (NIACL)",
+      "title": "AFTER APPEAL - Final List of Surveyors Qualified under SMP Exercise 2026-27",
+      "url": "https://www.newindia.co.in/portal/readMore/assets/docs/surveyor_management_policy/AFTER APPEA-Final List of Surveyors Qualified under SMP Exercise 2026-27.pdf",
+      "published_date": null,
+      "fingerprint": "8fe98aa7666b2c27ec1ec3ba0828a676e7a09fa3a0621ed9e0e0304068e43007",
+      "first_seen": "2026-10-31T03:52:59.765421+00:00",
+      "delivered": true
+    },
+    "104b42461ef10fe9b9c8a249692ae7b8648138c2643b8b5df7ff53572f906599": {
+      "website_id": "niacl",
+      "org_name": "New India Assurance (NIACL)",
+      "title": "Become An Agent",
+      "url": "https://www.newindia.co.in/become-insurance-agent",
+      "published_date": null,
+      "fingerprint": "104b42461ef10fe9b9c8a249692ae7b8648138c2643b8b5df7ff53572f906599",
+      "first_seen": "2026-10-31T03:52:59.766349+00:00",
+      "delivered": true
+    },
+    "44b3b818c94d1f91c8d2d400b2e2173e965e85fc407616495e83f3602ab61ba5": {
+      "website_id": "niacl",
+      "org_name": "New India Assurance (NIACL)",
+      "title": "MSME Digital Platform",
+      "url": "https://www.newindia.co.in/msmeinfo",
+      "published_date": null,
+      "fingerprint": "44b3b818c94d1f91c8d2d400b2e2173e965e85fc407616495e83f3602ab61ba5",
+      "first_seen": "2026-10-31T03:52:59.766466+00:00",
+      "delivered": true
+    },
+    "1f9c6f800194d101efdf64428bd11679176a166f16196cb3b2a575bca99831fc": {
+      "website_id": "niacl",
+      "org_name": "New India Assurance (NIACL)",
+      "title": "Surveyor Management",
+      "url": "https://www.newindia.co.in/surveyor-management",
+      "published_date": null,
+      "fingerprint": "1f9c6f800194d101efdf64428bd11679176a166f16196cb3b2a575bca99831fc",
+      "first_seen": "2026-10-31T03:52:59.938639+00:00",
+      "delivered": true
+    },
+    "9e2e7220fe81642dc14d6e28dd39fd95f25280e633c22d6d822e6414a66354c0": {
+      "website_id": "niacl",
+      "org_name": "New India Assurance (NIACL)",
+      "title": "Application_Form_for_empanelment_SMP_25_26",
+      "url": "https://www.newindia.co.in/portal/readMore/assets/docs/surveyor_management_policy/Application Form for empanelment_SMP_25-26.docx",
+      "published_date": null,
+      "fingerprint": "9e2e7220fe81642dc14d6e28dd39fd95f25280e633c22d6d822e6414a66354c0",
+      "first_seen": "2026-10-31T03:52:59.913653+00:00",
       "delivered": true
     }
   },
