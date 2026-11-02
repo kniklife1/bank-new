@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-02T04:32:43.807280+00:00",
+  "last_run_timestamp": "2026-11-02T06:42:22.422510+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4088,
+    "total_recorded_notices": 4089,
     "last_run_new_notices": 1,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -40898,6 +40898,17 @@
       "fingerprint": "5978515ceeee6a112f9c7ddd1ce5d08afc3d1be90a22be7a39a3019e5ea88913",
       "first_seen": "2026-11-02T04:31:15.566923+00:00",
       "delivered": true
+    },
+    "83ee6f77537616070af3351b6aa1bec6de31bc378f0afcf1c0be1adc8f2dd61d": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "APPLY ONLINE (02.11.2026 TO 23.11.2026)",
+      "url": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-26/apply",
+      "published_date": "02.11.2026",
+      "fingerprint": "83ee6f77537616070af3351b6aa1bec6de31bc378f0afcf1c0be1adc8f2dd61d",
+      "first_seen": "2026-11-02T06:40:59.024224+00:00",
+      "delivered": true,
+      "content": "APPLY ONLINE (02.11.2026 TO 23.11.2026)(NEW)"
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
