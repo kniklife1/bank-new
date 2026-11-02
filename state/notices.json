@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-10-31T10:12:27.178569+00:00",
+  "last_run_timestamp": "2026-11-02T04:32:43.807280+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4087,
+    "total_recorded_notices": 4088,
     "last_run_new_notices": 1,
     "last_run_errors": 2,
-    "last_run_extraction_ok": 20,
+    "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
   },
   "notices": {
@@ -40887,6 +40887,16 @@
       "published_date": null,
       "fingerprint": "d2f27874cfa6229c727ed9d1799c4f3c0a084cc97ff1dfde2322404a4fdfd5d8",
       "first_seen": "2026-10-31T10:11:41.008810+00:00",
+      "delivered": true
+    },
+    "5978515ceeee6a112f9c7ddd1ce5d08afc3d1be90a22be7a39a3019e5ea88913": {
+      "website_id": "rbi-opportunities",
+      "org_name": "RBI Opportunities",
+      "title": "Engagement of Part-Time Medical Consultants (MC) on Contractual Basis with Fixed Hourly Remuneration at Reserve Bank of India, New Delhi",
+      "url": "https://opportunities.rbi.org.in/scripts/bs_viewcontent.aspx?Id=5199",
+      "published_date": "Nov 02, 2026",
+      "fingerprint": "5978515ceeee6a112f9c7ddd1ce5d08afc3d1be90a22be7a39a3019e5ea88913",
+      "first_seen": "2026-11-02T04:31:15.566923+00:00",
       "delivered": true
     }
   },
