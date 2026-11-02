@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-02T06:42:22.422510+00:00",
+  "last_run_timestamp": "2026-11-02T11:52:27.803953+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4089,
-    "last_run_new_notices": 1,
+    "total_recorded_notices": 4090,
+    "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
@@ -40909,6 +40909,16 @@
       "first_seen": "2026-11-02T06:40:59.024224+00:00",
       "delivered": true,
       "content": "APPLY ONLINE (02.11.2026 TO 23.11.2026)(NEW)"
+    },
+    "e8cc1e7c12ad5c2c985652100a33e955055cee5cee63c305bd83693ab3227989": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Processing of Applications Received Under the Citizen’s Charter Status as on October 31, 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63901",
+      "published_date": "October 31, 2026",
+      "fingerprint": "e8cc1e7c12ad5c2c985652100a33e955055cee5cee63c305bd83693ab3227989",
+      "first_seen": "2026-11-02T11:51:01.383797+00:00",
+      "delivered": true
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
