@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-02T11:52:27.803953+00:00",
+  "last_run_timestamp": "2026-11-02T14:03:48.494316+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4090,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4091,
+    "last_run_new_notices": 1,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
@@ -40918,6 +40918,16 @@
       "published_date": "October 31, 2026",
       "fingerprint": "e8cc1e7c12ad5c2c985652100a33e955055cee5cee63c305bd83693ab3227989",
       "first_seen": "2026-11-02T11:51:01.383797+00:00",
+      "delivered": true
+    },
+    "24e93767908c7083babf120c6f5752dd61e6ab56adacf7d7e9f00d015419ebae": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "LATERAL RECRUITMENT OF LOCAL BANK OFFICERS (Phase-III)” in JMGS I on a regular basis PDF file download",
+      "url": "https://punjabandsind.bank.in/system/uploads/recruitment/7932_2026110219270682000.pdf",
+      "published_date": "2026-11-02",
+      "fingerprint": "24e93767908c7083babf120c6f5752dd61e6ab56adacf7d7e9f00d015419ebae",
+      "first_seen": "2026-11-02T14:02:36.789041+00:00",
       "delivered": true
     }
   },
