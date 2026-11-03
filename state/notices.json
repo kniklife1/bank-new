@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-03T11:32:39.982802+00:00",
+  "last_run_timestamp": "2026-11-03T14:03:01.918703+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4096,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4097,
+    "last_run_new_notices": 1,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
@@ -40980,6 +40980,17 @@
       "fingerprint": "6d5edb8951d5ea6ab6343221a14087154fa38f2ed73e4445fc6d127239d0f2e0",
       "first_seen": "2026-11-03T11:31:20.124719+00:00",
       "delivered": true
+    },
+    "f8005f74445094107d879bd2a217ba31805b6496e13f580ec626d7312161f1ab": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "APPLY ONLINE (04.11.2026 to 25.11.2026)",
+      "url": "https://ibpsreg.ibps.in/sbirscooct26/",
+      "published_date": "04.11.2026",
+      "fingerprint": "f8005f74445094107d879bd2a217ba31805b6496e13f580ec626d7312161f1ab",
+      "first_seen": "2026-11-03T14:01:34.716440+00:00",
+      "delivered": true,
+      "content": "APPLY ONLINE (04.11.2026 to 25.11.2026)(NEW)"
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
