@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-02T14:03:48.494316+00:00",
+  "last_run_timestamp": "2026-11-03T08:22:41.781392+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4091,
+    "total_recorded_notices": 4092,
     "last_run_new_notices": 1,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -40928,6 +40928,16 @@
       "published_date": "2026-11-02",
       "fingerprint": "24e93767908c7083babf120c6f5752dd61e6ab56adacf7d7e9f00d015419ebae",
       "first_seen": "2026-11-02T14:02:36.789041+00:00",
+      "delivered": true
+    },
+    "5f2b1b5a799c9ba82cad215d48634ba48f52def6ba606b659e6f63656dd6d098": {
+      "website_id": "exim-bank",
+      "org_name": "EXIM Bank",
+      "title": "INTIMATION OF EXAMINATION - ADVERTISEMENT NO. HRM/DM&M/SRD/2026-27/04",
+      "url": "https://www.eximbankindia.in/sites/default/files/2026-11/Intimation%20of%20Exam%20Date%20-%20SRD.pdf",
+      "published_date": null,
+      "fingerprint": "5f2b1b5a799c9ba82cad215d48634ba48f52def6ba606b659e6f63656dd6d098",
+      "first_seen": "2026-11-03T08:22:08.298334+00:00",
       "delivered": true
     }
   },
