@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-03T08:22:41.781392+00:00",
+  "last_run_timestamp": "2026-11-03T10:52:29.469008+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4092,
+    "total_recorded_notices": 4093,
     "last_run_new_notices": 1,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -40939,6 +40939,17 @@
       "fingerprint": "5f2b1b5a799c9ba82cad215d48634ba48f52def6ba606b659e6f63656dd6d098",
       "first_seen": "2026-11-03T08:22:08.298334+00:00",
       "delivered": true
+    },
+    "295527bb282aad254a4937b4e6e183f2f25e8219a1711480d52663e98ae985a5": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "BIODATA",
+      "url": "https://sbi.co.in/documents/77530/57941334/BIODATA+%281%29.pdf/ba74f351-cd0c-df70-df65-2db21a367ddd?t=1786026614337",
+      "published_date": null,
+      "fingerprint": "295527bb282aad254a4937b4e6e183f2f25e8219a1711480d52663e98ae985a5",
+      "first_seen": "2026-11-03T10:51:07.000876+00:00",
+      "delivered": true,
+      "content": "DOWNLOAD ADVERTISEMENT(Hindi (495 KB)/English (864 KB))(NEW)BIODATA(NEW)"
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
