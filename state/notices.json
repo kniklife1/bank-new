@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-03T10:52:29.469008+00:00",
+  "last_run_timestamp": "2026-11-03T11:32:39.982802+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4093,
-    "last_run_new_notices": 1,
+    "total_recorded_notices": 4096,
+    "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
@@ -40950,6 +40950,36 @@
       "first_seen": "2026-11-03T10:51:07.000876+00:00",
       "delivered": true,
       "content": "DOWNLOAD ADVERTISEMENT(Hindi (495 KB)/English (864 KB))(NEW)BIODATA(NEW)"
+    },
+    "ae342d153ab5a53e35fc5ea10afd2013086ac97872cc56f08b03b74daa612d36": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "RBI launches the November 2026 round of the Rural Consumer Confidence Survey",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63907",
+      "published_date": "Nov 03, 2026",
+      "fingerprint": "ae342d153ab5a53e35fc5ea10afd2013086ac97872cc56f08b03b74daa612d36",
+      "first_seen": "2026-11-03T11:31:20.124416+00:00",
+      "delivered": true
+    },
+    "6adb626532c7c2c9409ffc471c3cab97acd8bcc1b57b9ec34b79b3ff393e1cce": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "RBI launches the November 2026 round of Urban Consumer Confidence Survey",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63908",
+      "published_date": "Nov 03, 2026",
+      "fingerprint": "6adb626532c7c2c9409ffc471c3cab97acd8bcc1b57b9ec34b79b3ff393e1cce",
+      "first_seen": "2026-11-03T11:31:20.124560+00:00",
+      "delivered": true
+    },
+    "6d5edb8951d5ea6ab6343221a14087154fa38f2ed73e4445fc6d127239d0f2e0": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "RBI launches the November 2026 round of the Inflation Expectations Survey of Households",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63909",
+      "published_date": "Nov 03, 2026",
+      "fingerprint": "6d5edb8951d5ea6ab6343221a14087154fa38f2ed73e4445fc6d127239d0f2e0",
+      "first_seen": "2026-11-03T11:31:20.124719+00:00",
+      "delivered": true
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
