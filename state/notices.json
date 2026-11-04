@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-04T04:22:18.425930+00:00",
+  "last_run_timestamp": "2026-11-04T05:52:38.750826+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4099,
-    "last_run_new_notices": 1,
+    "total_recorded_notices": 4100,
+    "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
@@ -41010,6 +41010,16 @@
       "published_date": null,
       "fingerprint": "e2ab535e920b0391b62003e02986602d22b6126c91bb8ebb7898964f6efafa9e",
       "first_seen": "2026-11-04T04:21:23.610447+00:00",
+      "delivered": true
+    },
+    "874eceae0ee6064a12be5b5f77eef2a6bf3113310d71dde46a7956020bff265a": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Press Release on Constitution of the Technical Consultative Committee for Financial Markets (TCCFM)",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63914",
+      "published_date": "Nov 04, 2026",
+      "fingerprint": "874eceae0ee6064a12be5b5f77eef2a6bf3113310d71dde46a7956020bff265a",
+      "first_seen": "2026-11-04T05:51:03.765967+00:00",
       "delivered": true
     }
   },
