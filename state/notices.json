@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-04T05:52:38.750826+00:00",
+  "last_run_timestamp": "2026-11-04T11:32:36.557691+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4100,
+    "total_recorded_notices": 4101,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -41020,6 +41020,16 @@
       "published_date": "Nov 04, 2026",
       "fingerprint": "874eceae0ee6064a12be5b5f77eef2a6bf3113310d71dde46a7956020bff265a",
       "first_seen": "2026-11-04T05:51:03.765967+00:00",
+      "delivered": true
+    },
+    "d89668ac3b6afbcbcba2d9aa61b0587b7ad45a00ced9ee96efbe99e8b83a9ce7": {
+      "website_id": "rbi-opportunities",
+      "org_name": "RBI Opportunities",
+      "title": "Recruitment for the Post of Office Attendant - Panel Year 2025: Scorecard of Online Examination held on March 01, 2026",
+      "url": "https://opportunities.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=5201",
+      "published_date": "March 01, 2026",
+      "fingerprint": "d89668ac3b6afbcbcba2d9aa61b0587b7ad45a00ced9ee96efbe99e8b83a9ce7",
+      "first_seen": "2026-11-04T11:31:21.607598+00:00",
       "delivered": true
     }
   },
