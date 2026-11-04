@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-03T14:03:01.918703+00:00",
+  "last_run_timestamp": "2026-11-04T04:22:18.425930+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4097,
+    "total_recorded_notices": 4099,
     "last_run_new_notices": 1,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -40991,6 +40991,26 @@
       "first_seen": "2026-11-03T14:01:34.716440+00:00",
       "delivered": true,
       "content": "APPLY ONLINE (04.11.2026 to 25.11.2026)(NEW)"
+    },
+    "d861e88ac498adc757873899b5c419ee00ef15317cd9f54bda5c1b13558ea98b": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "Click here for New Registration",
+      "url": "https://ibpsreg.ibps.in/inbraoct26/",
+      "published_date": null,
+      "fingerprint": "d861e88ac498adc757873899b5c419ee00ef15317cd9f54bda5c1b13558ea98b",
+      "first_seen": "2026-11-04T04:21:23.610598+00:00",
+      "delivered": true
+    },
+    "e2ab535e920b0391b62003e02986602d22b6126c91bb8ebb7898964f6efafa9e": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "Detailed advertisement for Engagement of Apprentices for FY 2026-27 under the Apprentices Act 1961",
+      "url": "https://indianbank.in/documents/20117/34414/FINAL UPDATED ADVERTISEMENT FOR ENGAGEMENT OF APPRENTICES FOR FY 2026-27 - 04.11.20262026_11_04_04_14_20.pdf/451450a2-0501-51ba-e37c-db63b9c27425",
+      "published_date": null,
+      "fingerprint": "e2ab535e920b0391b62003e02986602d22b6126c91bb8ebb7898964f6efafa9e",
+      "first_seen": "2026-11-04T04:21:23.610447+00:00",
+      "delivered": true
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
