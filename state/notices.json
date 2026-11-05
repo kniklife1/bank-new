@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-05T07:12:37.155359+00:00",
+  "last_run_timestamp": "2026-11-05T07:23:11.037641+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4103,
+    "total_recorded_notices": 4104,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
-    "last_run_extraction_ok": 21,
+    "last_run_extraction_ok": 20,
     "last_run_fetched_ok": 21
   },
   "notices": {
@@ -41050,6 +41050,16 @@
       "published_date": "June 06, 2026",
       "fingerprint": "464584e05ddaae62962d9fa011ca0c6cd3c81b988b90d4152f75c5eaf424e9a6",
       "first_seen": "2026-11-05T07:11:02.717562+00:00",
+      "delivered": true
+    },
+    "73c21947130a59893c30afc33bd52a8340869476a6493c6f2bb53738a037965d": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Directions under Section 35A read with Section 56 of the Banking Regulation Act, 1949 – The Pusad Urban Co-operative Bank Ltd., Pusad, Dist. Yavatmal, Maharashtra – Extension of Period",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63924",
+      "published_date": "Nov 05, 2026",
+      "fingerprint": "73c21947130a59893c30afc33bd52a8340869476a6493c6f2bb53738a037965d",
+      "first_seen": "2026-11-05T07:21:03.055580+00:00",
       "delivered": true
     }
   },
