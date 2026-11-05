@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-04T11:32:36.557691+00:00",
+  "last_run_timestamp": "2026-11-05T05:22:02.787022+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4101,
+    "total_recorded_notices": 4102,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -41030,6 +41030,16 @@
       "published_date": "March 01, 2026",
       "fingerprint": "d89668ac3b6afbcbcba2d9aa61b0587b7ad45a00ced9ee96efbe99e8b83a9ce7",
       "first_seen": "2026-11-04T11:31:21.607598+00:00",
+      "delivered": true
+    },
+    "d947bce6af3d1294b968595e048f118602de4882eb176b5d10f45e6a81318994": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Directions under Section 35A read with Section 56 of the Banking Regulation Act, 1949 – Urban Co-operative Bank Limited, Dehradun - Extension of Period",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63922",
+      "published_date": "Nov 05, 2026",
+      "fingerprint": "d947bce6af3d1294b968595e048f118602de4882eb176b5d10f45e6a81318994",
+      "first_seen": "2026-11-05T05:20:54.572290+00:00",
       "delivered": true
     }
   },
