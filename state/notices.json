@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-05T07:23:11.037641+00:00",
+  "last_run_timestamp": "2026-11-05T11:42:08.491762+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4104,
+    "total_recorded_notices": 4106,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
-    "last_run_extraction_ok": 20,
+    "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
   },
   "notices": {
@@ -41060,6 +41060,26 @@
       "published_date": "Nov 05, 2026",
       "fingerprint": "73c21947130a59893c30afc33bd52a8340869476a6493c6f2bb53738a037965d",
       "first_seen": "2026-11-05T07:21:03.055580+00:00",
+      "delivered": true
+    },
+    "5f5e1a6d9ba04eb7ef1ca620fac2f8fa85a07679e66f66ab2fbed07e4497d7cd": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Consolidation of Instructions Related to Priority Sector Lending – Drafts for Comments",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63925",
+      "published_date": "Nov 05, 2026",
+      "fingerprint": "5f5e1a6d9ba04eb7ef1ca620fac2f8fa85a07679e66f66ab2fbed07e4497d7cd",
+      "first_seen": "2026-11-05T11:41:00.250792+00:00",
+      "delivered": true
+    },
+    "073b00f5f40b6034a0dc7eb1deb4d9e87546aef2a6df230e94fb8bd591176851": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Foreign Exchange Turnover Data: September 28, 2026 – October 01, 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63926",
+      "published_date": "September 28, 2026",
+      "fingerprint": "073b00f5f40b6034a0dc7eb1deb4d9e87546aef2a6df230e94fb8bd591176851",
+      "first_seen": "2026-11-05T11:41:00.250969+00:00",
       "delivered": true
     }
   },
