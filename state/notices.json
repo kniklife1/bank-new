@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-05T12:03:05.471093+00:00",
+  "last_run_timestamp": "2026-11-05T12:32:41.229146+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4110,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4111,
+    "last_run_new_notices": 1,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
@@ -41120,6 +41120,16 @@
       "published_date": "October 19, 2026",
       "fingerprint": "f1042760d866e6cdcef799ad36aec7af888da67467d29ce204ed50dbf71108f0",
       "first_seen": "2026-11-05T12:01:38.187275+00:00",
+      "delivered": true
+    },
+    "24b464f60e8fd4fc245a8b8323116f78569a797a3c4eb185af83a62a2d58a35a": {
+      "website_id": "rbi-opportunities",
+      "org_name": "RBI Opportunities",
+      "title": "Recruitment for the Post of Office Attendant in Reserve Bank of India - Panel Year 2025 - Display of Roll Numbers of Finally Selected Candidates for Appointment in the Bank’s Mumbai Office",
+      "url": "https://opportunities.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=5209",
+      "published_date": "Nov 05, 2026",
+      "fingerprint": "24b464f60e8fd4fc245a8b8323116f78569a797a3c4eb185af83a62a2d58a35a",
+      "first_seen": "2026-11-05T12:31:28.683155+00:00",
       "delivered": true
     }
   },
