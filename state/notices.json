@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-05T05:22:02.787022+00:00",
+  "last_run_timestamp": "2026-11-05T07:12:37.155359+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4102,
+    "total_recorded_notices": 4103,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -41040,6 +41040,16 @@
       "published_date": "Nov 05, 2026",
       "fingerprint": "d947bce6af3d1294b968595e048f118602de4882eb176b5d10f45e6a81318994",
       "first_seen": "2026-11-05T05:20:54.572290+00:00",
+      "delivered": true
+    },
+    "464584e05ddaae62962d9fa011ca0c6cd3c81b988b90d4152f75c5eaf424e9a6": {
+      "website_id": "rbi-opportunities",
+      "org_name": "RBI Opportunities",
+      "title": "Recruitment for the post of Junior Engineer (Civil/Electrical) – Panel Year 2026 – Display of Marksheet and Zone-wise Cut-Offs of Online Examination held on June 06, 2026",
+      "url": "https://opportunities.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=5203",
+      "published_date": "June 06, 2026",
+      "fingerprint": "464584e05ddaae62962d9fa011ca0c6cd3c81b988b90d4152f75c5eaf424e9a6",
+      "first_seen": "2026-11-05T07:11:02.717562+00:00",
       "delivered": true
     }
   },
