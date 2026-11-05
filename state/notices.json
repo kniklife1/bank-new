@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-05T11:52:07.906779+00:00",
+  "last_run_timestamp": "2026-11-05T12:03:05.471093+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4108,
+    "total_recorded_notices": 4110,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -41100,6 +41100,26 @@
       "published_date": "October 05, 2026",
       "fingerprint": "e938b9012d17a3d58bdd88a66a372cc3a2e2d8847fbff9e3cf1ad33c1aafce29",
       "first_seen": "2026-11-05T11:50:56.771094+00:00",
+      "delivered": true
+    },
+    "5e1947585971a5a1365ab0fd262e21fed0637bfd72252abd4b03dcd2106def3d": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Foreign Exchange Turnover Data: October 26, 2026 – October 30, 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63930",
+      "published_date": "October 26, 2026",
+      "fingerprint": "5e1947585971a5a1365ab0fd262e21fed0637bfd72252abd4b03dcd2106def3d",
+      "first_seen": "2026-11-05T12:01:38.187046+00:00",
+      "delivered": true
+    },
+    "f1042760d866e6cdcef799ad36aec7af888da67467d29ce204ed50dbf71108f0": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Foreign Exchange Turnover Data: October 19, 2026 – October 23, 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63929",
+      "published_date": "October 19, 2026",
+      "fingerprint": "f1042760d866e6cdcef799ad36aec7af888da67467d29ce204ed50dbf71108f0",
+      "first_seen": "2026-11-05T12:01:38.187275+00:00",
       "delivered": true
     }
   },
