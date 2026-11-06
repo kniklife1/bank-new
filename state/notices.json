@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-06T07:02:45.842388+00:00",
+  "last_run_timestamp": "2026-11-06T07:42:38.678766+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4112,
-    "last_run_new_notices": 1,
+    "total_recorded_notices": 4113,
+    "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
@@ -41140,6 +41140,16 @@
       "published_date": null,
       "fingerprint": "ef60e41051a3343b4fefb6302a0be4857c81a5bc6400e6f5e8c1f311874adc90",
       "first_seen": "2026-11-06T07:02:40.815727+00:00",
+      "delivered": true
+    },
+    "e2d5999d33e7b1a64f1f8b6dd11f08f4f36aa571fa256314206a5892ff0723fa": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "वित्तीय वर्ष 2026-27 के लिए अप्रेंटिस अधिनियम, 1961 के अंतर्गत अप्रेंटिसों का चयन",
+      "url": "https://indianbank.in/documents/20117/34414/Final Hindi Apprentice Advertisement 20262026_11_06_07_32_05.pdf/b17c0248-f2e1-e545-c3b7-57ede2db99e1",
+      "published_date": null,
+      "fingerprint": "e2d5999d33e7b1a64f1f8b6dd11f08f4f36aa571fa256314206a5892ff0723fa",
+      "first_seen": "2026-11-06T07:41:17.650731+00:00",
       "delivered": true
     }
   },
