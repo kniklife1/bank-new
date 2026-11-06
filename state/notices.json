@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-05T12:32:41.229146+00:00",
+  "last_run_timestamp": "2026-11-06T07:02:45.842388+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4111,
+    "total_recorded_notices": 4112,
     "last_run_new_notices": 1,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -41130,6 +41130,16 @@
       "published_date": "Nov 05, 2026",
       "fingerprint": "24b464f60e8fd4fc245a8b8323116f78569a797a3c4eb185af83a62a2d58a35a",
       "first_seen": "2026-11-05T12:31:28.683155+00:00",
+      "delivered": true
+    },
+    "ef60e41051a3343b4fefb6302a0be4857c81a5bc6400e6f5e8c1f311874adc90": {
+      "website_id": "gic-re",
+      "org_name": "General Insurance Corporation (GIC Re)",
+      "title": "Recruitment of Company Secretary – Detailed Advertisement",
+      "url": "https://www.gicre.in/images/Detailed-Advertisement-Appointment_of_Company_Secretary-.pdf",
+      "published_date": null,
+      "fingerprint": "ef60e41051a3343b4fefb6302a0be4857c81a5bc6400e6f5e8c1f311874adc90",
+      "first_seen": "2026-11-06T07:02:40.815727+00:00",
       "delivered": true
     }
   },
