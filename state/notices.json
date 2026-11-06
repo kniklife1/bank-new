@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-06T12:03:29.399106+00:00",
+  "last_run_timestamp": "2026-11-06T12:22:28.666524+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4117,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4118,
+    "last_run_new_notices": 1,
     "last_run_errors": 2,
-    "last_run_extraction_ok": 20,
+    "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
   },
   "notices": {
@@ -41191,6 +41191,16 @@
       "published_date": "Nov 06, 2026",
       "fingerprint": "a92511865b8a67f14e57a725e2c58c3ae5c33bb85261450d7a2df222304f73b7",
       "first_seen": "2026-11-06T12:01:57.557627+00:00",
+      "delivered": true
+    },
+    "a14d617d7e955b4f4512b10295f2c03f0579c2d2dd25f56e06a8e05db7d626a6": {
+      "website_id": "rbi-opportunities",
+      "org_name": "RBI Opportunities",
+      "title": "Recruitment for the Post of Office Attendant in Reserve Bank of India - Panel Year 2025 - Display of Roll Numbers of Finally Selected Candidates for Appointment in the Bank’s Chandigarh Office",
+      "url": "https://opportunities.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=5210",
+      "published_date": "Nov 06, 2026",
+      "fingerprint": "a14d617d7e955b4f4512b10295f2c03f0579c2d2dd25f56e06a8e05db7d626a6",
+      "first_seen": "2026-11-06T12:21:04.832790+00:00",
       "delivered": true
     }
   },
