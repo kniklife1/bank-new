@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-06T07:42:38.678766+00:00",
+  "last_run_timestamp": "2026-11-06T11:03:16.219694+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4113,
+    "total_recorded_notices": 4114,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -41150,6 +41150,16 @@
       "published_date": null,
       "fingerprint": "e2d5999d33e7b1a64f1f8b6dd11f08f4f36aa571fa256314206a5892ff0723fa",
       "first_seen": "2026-11-06T07:41:17.650731+00:00",
+      "delivered": true
+    },
+    "363bf556c6b9ed183900110376d5931d4618955230f2e2c3dac0108999380a98": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Directions under Section 35A read with Section 56 of the Banking Regulation Act, 1949 – Sri Guru Raghavendra Sahakara Bank Niyamitha, Bengaluru - Extension of Period",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63938",
+      "published_date": "Nov 06, 2026",
+      "fingerprint": "363bf556c6b9ed183900110376d5931d4618955230f2e2c3dac0108999380a98",
+      "first_seen": "2026-11-06T11:01:41.622711+00:00",
       "delivered": true
     }
   },
