@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-06T11:03:16.219694+00:00",
+  "last_run_timestamp": "2026-11-06T11:32:42.572307+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4114,
+    "total_recorded_notices": 4115,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
-    "last_run_extraction_ok": 21,
+    "last_run_extraction_ok": 20,
     "last_run_fetched_ok": 21
   },
   "notices": {
@@ -41160,6 +41160,16 @@
       "published_date": "Nov 06, 2026",
       "fingerprint": "363bf556c6b9ed183900110376d5931d4618955230f2e2c3dac0108999380a98",
       "first_seen": "2026-11-06T11:01:41.622711+00:00",
+      "delivered": true
+    },
+    "d892338f8040732d4ed1b69506eb7e9f0aa03b7e8a00bdbfc8e13d41c7d5fc42": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Sectoral Deployment of Credit by NBFC – September 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63940",
+      "published_date": "Nov 06, 2026",
+      "fingerprint": "d892338f8040732d4ed1b69506eb7e9f0aa03b7e8a00bdbfc8e13d41c7d5fc42",
+      "first_seen": "2026-11-06T11:31:20.150897+00:00",
       "delivered": true
     }
   },
