@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-06T11:42:28.078384+00:00",
+  "last_run_timestamp": "2026-11-06T12:03:29.399106+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4116,
-    "last_run_new_notices": 1,
+    "total_recorded_notices": 4117,
+    "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 20,
     "last_run_fetched_ok": 21
@@ -41182,6 +41182,16 @@
       "first_seen": "2026-11-06T11:40:59.593639+00:00",
       "delivered": true,
       "content": "ZONAL HEAD (RETAIL) – INTERVIEW SCHEDULE (NEW)"
+    },
+    "a92511865b8a67f14e57a725e2c58c3ae5c33bb85261450d7a2df222304f73b7": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Census on Foreign Liabilities and Assets of Indian Direct Investment Entities for 2025-26",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63941",
+      "published_date": "Nov 06, 2026",
+      "fingerprint": "a92511865b8a67f14e57a725e2c58c3ae5c33bb85261450d7a2df222304f73b7",
+      "first_seen": "2026-11-06T12:01:57.557627+00:00",
+      "delivered": true
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
