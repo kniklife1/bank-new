@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-06T11:32:42.572307+00:00",
+  "last_run_timestamp": "2026-11-06T11:42:28.078384+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4115,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4116,
+    "last_run_new_notices": 1,
     "last_run_errors": 2,
     "last_run_extraction_ok": 20,
     "last_run_fetched_ok": 21
@@ -41171,6 +41171,17 @@
       "fingerprint": "d892338f8040732d4ed1b69506eb7e9f0aa03b7e8a00bdbfc8e13d41c7d5fc42",
       "first_seen": "2026-11-06T11:31:20.150897+00:00",
       "delivered": true
+    },
+    "66ef71ef9cca30d49956f06ecc20777c77413ab28ff4c4a2268b67b9dbc711a3": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "ZONAL HEAD (RETAIL) – INTERVIEW SCHEDULE",
+      "url": "https://sbi.co.in/documents/77530/57941334/06112026_SCO_23_INT_SCH_ZH.pdf/8f9a4e60-78d3-597f-7c20-6c2b09db2142?t=1793962103821",
+      "published_date": "06-11-2026",
+      "fingerprint": "66ef71ef9cca30d49956f06ecc20777c77413ab28ff4c4a2268b67b9dbc711a3",
+      "first_seen": "2026-11-06T11:40:59.593639+00:00",
+      "delivered": true,
+      "content": "ZONAL HEAD (RETAIL) – INTERVIEW SCHEDULE (NEW)"
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
