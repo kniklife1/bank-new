@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-06T13:12:29.822470+00:00",
+  "last_run_timestamp": "2026-11-07T04:12:28.475027+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4119,
+    "total_recorded_notices": 4120,
     "last_run_new_notices": 1,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -41211,6 +41211,16 @@
       "published_date": "2026-11-06",
       "fingerprint": "fb70b6b8f5f28558b38aefd263af051fb83ae78dc89b7d34b972406c16d4fb36",
       "first_seen": "2026-11-06T13:11:48.805919+00:00",
+      "delivered": true
+    },
+    "ed5d813aa1ac24b2fe3ed795c48be9560b97bd9538dd5346efef5f6b1aec45f0": {
+      "website_id": "rbi-opportunities",
+      "org_name": "RBI Opportunities",
+      "title": "Recruitment for the post of Office Attendant – Panel Year 2025: Display of Roll Numbers of Finally Selected Candidates in the Bank’s Bhopal & Raipur Office",
+      "url": "https://opportunities.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=5211",
+      "published_date": "Nov 07, 2026",
+      "fingerprint": "ed5d813aa1ac24b2fe3ed795c48be9560b97bd9538dd5346efef5f6b1aec45f0",
+      "first_seen": "2026-11-07T04:11:07.046562+00:00",
       "delivered": true
     }
   },
