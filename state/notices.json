@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-07T04:12:28.475027+00:00",
+  "last_run_timestamp": "2026-11-07T06:23:33.089188+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4120,
-    "last_run_new_notices": 1,
+    "total_recorded_notices": 4122,
+    "last_run_new_notices": 2,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
@@ -41222,6 +41222,28 @@
       "fingerprint": "ed5d813aa1ac24b2fe3ed795c48be9560b97bd9538dd5346efef5f6b1aec45f0",
       "first_seen": "2026-11-07T04:11:07.046562+00:00",
       "delivered": true
+    },
+    "1899741e4d5695a5789418b579d393e35d8ec0b629ca7b65883fbcad2778d30e": {
+      "website_id": "lic",
+      "org_name": "Life Insurance Corporation (LIC)",
+      "title": "Download Android app",
+      "url": "https://play.google.com/store/apps/details?id=com.lic.customer.superapp&hl=en_IN",
+      "published_date": null,
+      "fingerprint": "1899741e4d5695a5789418b579d393e35d8ec0b629ca7b65883fbcad2778d30e",
+      "first_seen": "2026-11-07T06:23:20.778775+00:00",
+      "delivered": true,
+      "content": "MYLIC An online platform that allows LIC customers to manage their LIC policies, receive notifications for pending actions, and purchase new, personalized policies all in one place. Download Android app Download iOS app"
+    },
+    "ae121413e37a8d22894b6a118ae6f82157286bb14eda78f72687bbd95eedcf22": {
+      "website_id": "lic",
+      "org_name": "Life Insurance Corporation (LIC)",
+      "title": "Download iOS app",
+      "url": "https://apps.apple.com/in/app/my-lic/id6740513802",
+      "published_date": null,
+      "fingerprint": "ae121413e37a8d22894b6a118ae6f82157286bb14eda78f72687bbd95eedcf22",
+      "first_seen": "2026-11-07T06:23:20.778925+00:00",
+      "delivered": true,
+      "content": "MYLIC An online platform that allows LIC customers to manage their LIC policies, receive notifications for pending actions, and purchase new, personalized policies all in one place. Download Android app Download iOS app"
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
