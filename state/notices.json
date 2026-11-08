@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-07T06:23:33.089188+00:00",
+  "last_run_timestamp": "2026-11-08T11:12:42.332244+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4122,
-    "last_run_new_notices": 2,
+    "total_recorded_notices": 4123,
+    "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
@@ -41244,6 +41244,16 @@
       "first_seen": "2026-11-07T06:23:20.778925+00:00",
       "delivered": true,
       "content": "MYLIC An online platform that allows LIC customers to manage their LIC policies, receive notifications for pending actions, and purchase new, personalized policies all in one place. Download Android app Download iOS app"
+    },
+    "ea15862128f03f70c3b5477cf9b092c577c3de0a8d56c6cde991cb01f1750ba9": {
+      "website_id": "canara-bank",
+      "org_name": "Canara Bank",
+      "title": "Learning & Development Vertical's Inter Bank Training Initiatives",
+      "url": "https://canarabank.com/learning-development-vertical-s-inter-bank-training-initiatives",
+      "published_date": null,
+      "fingerprint": "ea15862128f03f70c3b5477cf9b092c577c3de0a8d56c6cde991cb01f1750ba9",
+      "first_seen": "2026-11-08T11:11:24.212460+00:00",
+      "delivered": true
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
