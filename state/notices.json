@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-08T11:12:42.332244+00:00",
+  "last_run_timestamp": "2026-11-09T10:52:43.266171+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4123,
+    "total_recorded_notices": 4124,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -41253,6 +41253,16 @@
       "published_date": null,
       "fingerprint": "ea15862128f03f70c3b5477cf9b092c577c3de0a8d56c6cde991cb01f1750ba9",
       "first_seen": "2026-11-08T11:11:24.212460+00:00",
+      "delivered": true
+    },
+    "5cfc77dd7cd8d52668af0035ee799418bb45d5478b27927f6c93390196a9ffcb": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Reserve Bank cancels Certificate of Registration of Gandhinagar Leasing and Finance Ltd.",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63949",
+      "published_date": "Nov 09, 2026",
+      "fingerprint": "5cfc77dd7cd8d52668af0035ee799418bb45d5478b27927f6c93390196a9ffcb",
+      "first_seen": "2026-11-09T10:51:08.499876+00:00",
       "delivered": true
     }
   },
