@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-10T02:12:33.150953+00:00",
+  "last_run_timestamp": "2026-11-10T11:03:29.123281+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4135,
-    "last_run_new_notices": 3,
+    "total_recorded_notices": 4141,
+    "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
@@ -41377,6 +41377,66 @@
       "published_date": "30-Oct-2026",
       "fingerprint": "79f1195eac576b341de4eeb721add75e0a72df3e38f353578656ba136ad13dcd",
       "first_seen": "2026-11-10T02:11:12.340981+00:00",
+      "delivered": true
+    },
+    "c82ce7b927478d262b59de4ea7f1524fe7d92c55a3aa3be7e6d981f445e70d79": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "NPS Corporate Registration Journey",
+      "url": "https://mynps360direct.nps-proteantech.in/msf-subscriber/welcome-nps?client=5a3e94d8f5ac8ddec23241d448c8d8310a9c348c&secure=6e3a358601cec2f1866df3948dd9dfca9f261263&onlyshow=corp",
+      "published_date": null,
+      "fingerprint": "c82ce7b927478d262b59de4ea7f1524fe7d92c55a3aa3be7e6d981f445e70d79",
+      "first_seen": "2026-11-10T11:02:03.467702+00:00",
+      "delivered": true
+    },
+    "4172e87d3ade860af6857d4a3f490469419080243575948529b9f16a334de61b": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "NPS Vatsalya Registration",
+      "url": "https://mynps360direct.nps-proteantech.in/diy/vatsalya?client=5a3e94d8f5ac8ddec23241d448c8d8310a9c348c&secure=6e3a358601cec2f1866df3948dd9dfca9f261263",
+      "published_date": null,
+      "fingerprint": "4172e87d3ade860af6857d4a3f490469419080243575948529b9f16a334de61b",
+      "first_seen": "2026-11-10T11:02:03.467790+00:00",
+      "delivered": true
+    },
+    "d5a29d961adf054aa09c991ab5580ce6a97c9c0b79d83dce82e18dd65d078307": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "NPS Sanchay Registration",
+      "url": "https://mynps360direct.nps-proteantech.in/smart-sanchay-pop/welcome-nps-sanchay?client=5a3e94d8f5ac8ddec23241d448c8d8310a9c348c&secure=6e3a358601cec2f1866df3948dd9dfca9f261263&infl=false",
+      "published_date": null,
+      "fingerprint": "d5a29d961adf054aa09c991ab5580ce6a97c9c0b79d83dce82e18dd65d078307",
+      "first_seen": "2026-11-10T11:02:03.467890+00:00",
+      "delivered": true
+    },
+    "b8f59a48c922c049d38053d497ccadf0537687c33b765fe3ac412535aefed67c": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "Subsequent Contribution",
+      "url": "https://mynps360direct.nps-proteantech.in/diy/contribution?client=5a3e94d8f5ac8ddec23241d448c8d8310a9c348c&secure=6e3a358601cec2f1866df3948dd9dfca9f261263",
+      "published_date": null,
+      "fingerprint": "b8f59a48c922c049d38053d497ccadf0537687c33b765fe3ac412535aefed67c",
+      "first_seen": "2026-11-10T11:02:03.467974+00:00",
+      "delivered": true
+    },
+    "07ba53718ee99f41848d4c9fc34745b0604146c4f00daac05b3868360dd91e88": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "SIP (Systematic Investment Plan)",
+      "url": "https://mynps360direct.nps-proteantech.in/diy/sip?client=5a3e94d8f5ac8ddec23241d448c8d8310a9c348c&secure=6e3a358601cec2f1866df3948dd9dfca9f261263",
+      "published_date": null,
+      "fingerprint": "07ba53718ee99f41848d4c9fc34745b0604146c4f00daac05b3868360dd91e88",
+      "first_seen": "2026-11-10T11:02:03.468070+00:00",
+      "delivered": true
+    },
+    "7b93e8c9b46f2cd8fd249439ad19f07cfa10d4bd83cd5509c53f5a35413a95ee": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "NPS Individual Registration Journey",
+      "url": "https://mynps360direct.nps-proteantech.in/msf-subscriber/welcome-nps?client=5a3e94d8f5ac8ddec23241d448c8d8310a9c348c&secure=6e3a358601cec2f1866df3948dd9dfca9f261263&infl=false",
+      "published_date": null,
+      "fingerprint": "7b93e8c9b46f2cd8fd249439ad19f07cfa10d4bd83cd5509c53f5a35413a95ee",
+      "first_seen": "2026-11-10T11:02:03.468278+00:00",
       "delivered": true
     }
   },
