@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-09T13:33:09.037221+00:00",
+  "last_run_timestamp": "2026-11-10T02:12:33.150953+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4125,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4135,
+    "last_run_new_notices": 3,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
@@ -41273,6 +41273,110 @@
       "published_date": "Nov 09, 2026",
       "fingerprint": "2493abce36b4a47ecb74ab283fe3680dd7faface0ae446e440495753c020d265",
       "first_seen": "2026-11-09T13:31:26.923825+00:00",
+      "delivered": true
+    },
+    "ec97a5f66e5ebcd66c5356b9858ceb6910f2eab87e706ae1e25f80c8e40201c9": {
+      "website_id": "ibps",
+      "org_name": "IBPS",
+      "title": "CRP-RRBs-XV",
+      "url": "https://www.ibps.in/index.php/rural-bank-xv/",
+      "published_date": "09 Nov, 2026",
+      "fingerprint": "ec97a5f66e5ebcd66c5356b9858ceb6910f2eab87e706ae1e25f80c8e40201c9",
+      "first_seen": "2026-11-10T02:11:12.339312+00:00",
+      "delivered": true,
+      "content": "CRP-RRBs-XV Posted on 09 Nov, 2026"
+    },
+    "483c7c9e6e23a2e1cfb2e490b9b99ec85d2c27d658a82976faaf87c4a9915915": {
+      "website_id": "ibps",
+      "org_name": "IBPS",
+      "title": "CRP-SPL-XVI",
+      "url": "http://ibpsreg.ibps.in/crpspxvimy26/presta_oct26/login.php?appid=f8a5692529ba20a12e158903a42a917c",
+      "published_date": "15 Oct, 2026",
+      "fingerprint": "483c7c9e6e23a2e1cfb2e490b9b99ec85d2c27d658a82976faaf87c4a9915915",
+      "first_seen": "2026-11-10T02:11:12.339602+00:00",
+      "delivered": true,
+      "content": "CRP-SPL-XVI Posted on 15 Oct, 2026"
+    },
+    "0941330a7014b032d28f48be173276b463da2dea77a3270c1cb4d5d15582eb7c": {
+      "website_id": "ibps",
+      "org_name": "IBPS",
+      "title": "CRP-PO/MTs-XVI",
+      "url": "https://www.ibps.in/wp-content/uploads/Detailed-Notification_CRP-PO-XVI_Final_V1_30.06.2026.pdf",
+      "published_date": "01 Jul, 2026",
+      "fingerprint": "0941330a7014b032d28f48be173276b463da2dea77a3270c1cb4d5d15582eb7c",
+      "first_seen": "2026-11-10T02:11:12.339927+00:00",
+      "delivered": true,
+      "content": "CRP-PO/MTs-XVI Posted on 01 Jul, 2026"
+    },
+    "3fbcaa32123acdca68c409a330acf8c5a97d2022254299cb542c7957cf2e160f": {
+      "website_id": "ibps",
+      "org_name": "IBPS",
+      "title": "Notification for Common Recruitment Process for CRP- SPL-XVI",
+      "url": "https://www.ibps.in/wp-content/uploads/Detailed-Notification-CRP-SPL-XVI_Final_V1_30.06.2026.pdf",
+      "published_date": "01 Jul, 2026",
+      "fingerprint": "3fbcaa32123acdca68c409a330acf8c5a97d2022254299cb542c7957cf2e160f",
+      "first_seen": "2026-11-10T02:11:12.340269+00:00",
+      "delivered": true,
+      "content": "CRP- SPL-XVI Posted on 01 Jul, 2026 Notification for Common Recruitment Process for CRP- SPL-XVI"
+    },
+    "6cc5356171ccbcce2c0636afc07ec2f8a1c1ea8abac7efff659766f7b047c508": {
+      "website_id": "ibps",
+      "org_name": "IBPS",
+      "title": "RSBL Promotion from Clerk (Junior Officer) to Assistant Branch Manager, Senior Officer to Assistant Branch Manager & Junior Officer to Senior Officer Registration From 30-Oct-2026",
+      "url": "https://ibpsreg.ibps.in/rsbl2sep26/",
+      "published_date": "30-Oct-2026",
+      "fingerprint": "6cc5356171ccbcce2c0636afc07ec2f8a1c1ea8abac7efff659766f7b047c508",
+      "first_seen": "2026-11-10T02:11:12.340833+00:00",
+      "delivered": true
+    },
+    "9635f58850246fcc17116b1e109265089690cd1d8d4d27c7e9c6190ac4c85d66": {
+      "website_id": "ibps",
+      "org_name": "IBPS",
+      "title": "CWC Recruitment of Various Posts Registration From 17-Oct-2026",
+      "url": "https://ibpsreg.ibps.in/cwcaug26/",
+      "published_date": "17-Oct-2026",
+      "fingerprint": "9635f58850246fcc17116b1e109265089690cd1d8d4d27c7e9c6190ac4c85d66",
+      "first_seen": "2026-11-10T02:11:12.341072+00:00",
+      "delivered": true
+    },
+    "c92cb7cc760188ad42e6c0df17b97a665c9f50f1285aac0d20eaf5946ab82a71": {
+      "website_id": "ibps",
+      "org_name": "IBPS",
+      "title": "NIT Recruitment of Non-Faculty Position Registration From 01-Oct-2026",
+      "url": "https://ibpsreg.ibps.in/nitrjul26/",
+      "published_date": "01-Oct-2026",
+      "fingerprint": "c92cb7cc760188ad42e6c0df17b97a665c9f50f1285aac0d20eaf5946ab82a71",
+      "first_seen": "2026-11-10T02:11:12.341165+00:00",
+      "delivered": true
+    },
+    "b5ae1a3d52c00c9eb4b0a25acfc3c3f6bc45bff9f3f923c0e05100eb8a6f9a4b": {
+      "website_id": "ibps",
+      "org_name": "IBPS",
+      "title": "SBI Recruitment of Specialist Cadre Officers (Manager (Security) / Deputy Manager (Security)) Registration From 04-Nov-2026",
+      "url": "https://ibpsreg.ibps.in/sbirscooct26/",
+      "published_date": "04-Nov-2026",
+      "fingerprint": "b5ae1a3d52c00c9eb4b0a25acfc3c3f6bc45bff9f3f923c0e05100eb8a6f9a4b",
+      "first_seen": "2026-11-10T02:11:12.340429+00:00",
+      "delivered": true
+    },
+    "53701f76b7f869d4df4a0c590d18fec57a602baf753ec454826819dfe20552cb": {
+      "website_id": "ibps",
+      "org_name": "IBPS",
+      "title": "SBI Recruitment of Specialist Cadre Officer (Assistant Manager -Engineer (Fire)) Registration From 04-Nov-2026",
+      "url": "https://ibpsreg.ibps.in/sbiameoct26/",
+      "published_date": "04-Nov-2026",
+      "fingerprint": "53701f76b7f869d4df4a0c590d18fec57a602baf753ec454826819dfe20552cb",
+      "first_seen": "2026-11-10T02:11:12.340555+00:00",
+      "delivered": true
+    },
+    "79f1195eac576b341de4eeb721add75e0a72df3e38f353578656ba136ad13dcd": {
+      "website_id": "ibps",
+      "org_name": "IBPS",
+      "title": "RSBL Recruitment of Clerk (Junior Officer), Assistant Branch Manager & Assistant Manager-IT Registration From 30-Oct-2026",
+      "url": "https://ibpsreg.ibps.in/rsblrsep26/",
+      "published_date": "30-Oct-2026",
+      "fingerprint": "79f1195eac576b341de4eeb721add75e0a72df3e38f353578656ba136ad13dcd",
+      "first_seen": "2026-11-10T02:11:12.340981+00:00",
       "delivered": true
     }
   },
