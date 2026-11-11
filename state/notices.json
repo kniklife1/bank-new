@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-10T11:03:29.123281+00:00",
+  "last_run_timestamp": "2026-11-11T02:52:18.947418+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4141,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4144,
+    "last_run_new_notices": 3,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
@@ -41437,6 +41437,36 @@
       "published_date": null,
       "fingerprint": "7b93e8c9b46f2cd8fd249439ad19f07cfa10d4bd83cd5509c53f5a35413a95ee",
       "first_seen": "2026-11-10T11:02:03.468278+00:00",
+      "delivered": true
+    },
+    "32885fb8e06ead472cb75b792fea86a71663441c9af859cca20670bbae571050": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "ENGAGEMENT OF AI SPECIALIST OFFICERS FOR AI CELL ON CONTRACTUAL BASIS - 2026.",
+      "url": "https://indianbank.in/documents/20117/34414/Final Detailed Advertisement for engagement of AI Specialist officers 2026 along with Annexure2026_11_11_02_45_08.pdf/28d05aba-a6bf-f22a-2201-7e8eb32db92b",
+      "published_date": "2026-11-11",
+      "fingerprint": "32885fb8e06ead472cb75b792fea86a71663441c9af859cca20670bbae571050",
+      "first_seen": "2026-11-11T02:51:19.558171+00:00",
+      "delivered": true
+    },
+    "4bf89d098eee7e2b202fd58f5e90baaf107d2f71be5b6a881ba0c2bc082974d6": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "ENGAGEMENT OF CONSULTANT FOR INFORMATION TECHNOLOGY DEPARTMENT ON CONTRACT BASIS – 2026.",
+      "url": "https://indianbank.in/documents/20117/34414/Detailed Advertisment for engagement of Consultant for Information Technology along with annexure2026_11_11_02_43_59.pdf/4ba14148-6ffd-8fc2-b957-f0faa1489ee3",
+      "published_date": "2026-11-11",
+      "fingerprint": "4bf89d098eee7e2b202fd58f5e90baaf107d2f71be5b6a881ba0c2bc082974d6",
+      "first_seen": "2026-11-11T02:51:19.558322+00:00",
+      "delivered": true
+    },
+    "9378efe348a5d06bd42475ac731c3a1db968f059443fcd9a8d69e81cb16c9e03": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "ENGAGEMENT OF AI - CYBERSECURITY SPECIALIST OFFICERS FOR INFORMATION SYSTEM SECURITY DEPARTMENT (ISSD) ON CONTRACTUAL BASIS - 2026",
+      "url": "https://indianbank.in/documents/20117/34414/Detailed Advertisement for engagement of AI Specialist officers 2026 in ISSD along with Annexure2026_11_11_02_43_08.pdf/8544623f-0f82-b7f3-410a-d657df39ed39",
+      "published_date": "2026-11-11",
+      "fingerprint": "9378efe348a5d06bd42475ac731c3a1db968f059443fcd9a8d69e81cb16c9e03",
+      "first_seen": "2026-11-11T02:51:19.558489+00:00",
       "delivered": true
     }
   },
