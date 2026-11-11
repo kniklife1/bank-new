@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-11T02:52:18.947418+00:00",
+  "last_run_timestamp": "2026-11-11T11:12:59.367956+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4144,
-    "last_run_new_notices": 3,
+    "total_recorded_notices": 4145,
+    "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
@@ -41467,6 +41467,16 @@
       "published_date": "2026-11-11",
       "fingerprint": "9378efe348a5d06bd42475ac731c3a1db968f059443fcd9a8d69e81cb16c9e03",
       "first_seen": "2026-11-11T02:51:19.558489+00:00",
+      "delivered": true
+    },
+    "d4d236d47fdaac579fc87a75df06f08dfa8afc07a19917d40025483b29111944": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "SOP- Export & Import",
+      "url": "https://punjabandsind.bank.in//system/uploads/document/7932_2026111116401295393.pdf",
+      "published_date": "2026-11-11",
+      "fingerprint": "d4d236d47fdaac579fc87a75df06f08dfa8afc07a19917d40025483b29111944",
+      "first_seen": "2026-11-11T11:11:40.484448+00:00",
       "delivered": true
     }
   },
