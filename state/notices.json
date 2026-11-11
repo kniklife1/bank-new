@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-11T11:12:59.367956+00:00",
+  "last_run_timestamp": "2026-11-11T12:03:18.407986+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4145,
+    "total_recorded_notices": 4146,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -41477,6 +41477,16 @@
       "published_date": "2026-11-11",
       "fingerprint": "d4d236d47fdaac579fc87a75df06f08dfa8afc07a19917d40025483b29111944",
       "first_seen": "2026-11-11T11:11:40.484448+00:00",
+      "delivered": true
+    },
+    "80ab7a7c5a35eb9f08ad308aa44cecc47a932a9f193b8805c619d57cc45b7845": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Reserve Money and Money Supply for the fortnight ended on October 31, 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63957",
+      "published_date": "October 31, 2026",
+      "fingerprint": "80ab7a7c5a35eb9f08ad308aa44cecc47a932a9f193b8805c619d57cc45b7845",
+      "first_seen": "2026-11-11T12:01:39.564968+00:00",
       "delivered": true
     }
   },
