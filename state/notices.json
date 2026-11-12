@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-11T12:42:33.316394+00:00",
+  "last_run_timestamp": "2026-11-12T04:22:41.655985+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4147,
+    "total_recorded_notices": 4150,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -41497,6 +41497,36 @@
       "published_date": "Nov 11, 2026",
       "fingerprint": "72a8d7aa07f7034623af2ff2426816b1b5bb3700cec14d53ee7c3d6c11a276e0",
       "first_seen": "2026-11-11T12:41:03.568088+00:00",
+      "delivered": true
+    },
+    "297df8b71467fb62244212c78b2bb905e25db5e1a13179dd17bfb96302e3c060": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "INWARD REMITTANCES",
+      "url": "https://indianbank.bank.in/en/inward-remittances",
+      "published_date": null,
+      "fingerprint": "297df8b71467fb62244212c78b2bb905e25db5e1a13179dd17bfb96302e3c060",
+      "first_seen": "2026-11-12T04:21:24.444145+00:00",
+      "delivered": true
+    },
+    "eb74eba515355c32f697a932d081fc0f501c23b93da981b317b22453ba850bc7": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "OUTWARD REMITTANCES",
+      "url": "https://indianbank.bank.in/en/outward-remittances",
+      "published_date": null,
+      "fingerprint": "eb74eba515355c32f697a932d081fc0f501c23b93da981b317b22453ba850bc7",
+      "first_seen": "2026-11-12T04:21:24.444248+00:00",
+      "delivered": true
+    },
+    "446be44d4b28796f8a737d3619687eb3fc8e3ec6554e405848bb6e38b2b2842e": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "DIGITAL PLATFORMS",
+      "url": "https://indianbank.bank.in/en/digital-platforms",
+      "published_date": null,
+      "fingerprint": "446be44d4b28796f8a737d3619687eb3fc8e3ec6554e405848bb6e38b2b2842e",
+      "first_seen": "2026-11-12T04:21:24.444521+00:00",
       "delivered": true
     }
   },
