@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-12T04:42:32.197737+00:00",
+  "last_run_timestamp": "2026-11-12T05:03:13.396285+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4157,
+    "total_recorded_notices": 4158,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -41597,6 +41597,16 @@
       "published_date": null,
       "fingerprint": "ee0afba2c06ea701cde441fd4b33d74f65c62e8947dc9af32f3d418c7f88eaee",
       "first_seen": "2026-11-12T04:41:18.473416+00:00",
+      "delivered": true
+    },
+    "c486fc0b156c0efc13ad969ac1966264a78ea61387ad2a7eeeeb5ed91fd5a177": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "POLICY ON HANDLING OF INTERNATIONAL TRADE TRANSACTIONS UNDER FEMA 23 ( R )",
+      "url": "https://indianbank.bank.in/documents/d/guest/policy_website_disclosure-1-",
+      "published_date": null,
+      "fingerprint": "c486fc0b156c0efc13ad969ac1966264a78ea61387ad2a7eeeeb5ed91fd5a177",
+      "first_seen": "2026-11-12T05:01:57.180365+00:00",
       "delivered": true
     }
   },
