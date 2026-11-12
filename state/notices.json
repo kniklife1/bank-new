@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-12T04:22:41.655985+00:00",
+  "last_run_timestamp": "2026-11-12T04:42:32.197737+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4150,
+    "total_recorded_notices": 4157,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -41527,6 +41527,76 @@
       "published_date": null,
       "fingerprint": "446be44d4b28796f8a737d3619687eb3fc8e3ec6554e405848bb6e38b2b2842e",
       "first_seen": "2026-11-12T04:21:24.444521+00:00",
+      "delivered": true
+    },
+    "2b0cfd06298fe199e3e80554dc6e68387ea878f1d62ed949b2239ad702261c79": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "Inward-Trade Transactions (Exports of Goods and Services)",
+      "url": "https://indianbank.bank.in/en/inward-trade-transactions-exports-of-goods-and-services-",
+      "published_date": null,
+      "fingerprint": "2b0cfd06298fe199e3e80554dc6e68387ea878f1d62ed949b2239ad702261c79",
+      "first_seen": "2026-11-12T04:41:18.472134+00:00",
+      "delivered": true
+    },
+    "2f073bea55ef7a79f04356e209d3bd650ba3237a438a7da1213caec4a105c25d": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "Inward Non-Trade Transactions",
+      "url": "https://indianbank.bank.in/en/inward-non-trade-transactions",
+      "published_date": null,
+      "fingerprint": "2f073bea55ef7a79f04356e209d3bd650ba3237a438a7da1213caec4a105c25d",
+      "first_seen": "2026-11-12T04:41:18.472260+00:00",
+      "delivered": true
+    },
+    "375a3057ddd29daa258f2eb50f739a210e662c23f0b164699bf60d69b0990327": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "Inward Capital Account Transactions (FDI/ECB/OI Disinvestment & Loan Repayment)",
+      "url": "https://indianbank.bank.in/en/inward-capital-account-transactions-fdi/ecb/oi-disinvestment-loan-repayment-",
+      "published_date": null,
+      "fingerprint": "375a3057ddd29daa258f2eb50f739a210e662c23f0b164699bf60d69b0990327",
+      "first_seen": "2026-11-12T04:41:18.472482+00:00",
+      "delivered": true
+    },
+    "754aa35fa05abdb07ecfc4909d1e949bd10d1c251383bb5e3c232dcaab22ef6d": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "Outward Trade Transactions (Imports of Goods and Services)",
+      "url": "https://indianbank.bank.in/en/outward-trade-transactions-imports-of-goods-and-services-",
+      "published_date": null,
+      "fingerprint": "754aa35fa05abdb07ecfc4909d1e949bd10d1c251383bb5e3c232dcaab22ef6d",
+      "first_seen": "2026-11-12T04:41:18.472656+00:00",
+      "delivered": true
+    },
+    "b2ee4eb269fcdce5fcf239489d341bf99bfe3c7994f23378baa13a50f14f3cbe": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "Outward Non-Trade Transactions",
+      "url": "https://indianbank.bank.in/en/outward-non-trade-transactions",
+      "published_date": null,
+      "fingerprint": "b2ee4eb269fcdce5fcf239489d341bf99bfe3c7994f23378baa13a50f14f3cbe",
+      "first_seen": "2026-11-12T04:41:18.472784+00:00",
+      "delivered": true
+    },
+    "831d6af3e82bf3bacf6d429be9a7c21c3ae05b1eb440171aa751dabde70aefeb": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "Outward Capital Account Transactions (Overseas Investment/ OPI/ ECB Repayments/ FDI Repatriation)",
+      "url": "https://indianbank.bank.in/en/outward-capital-account-transactions-overseas-investment/-opi/-ecb-repayments/-fdi-repatriation-",
+      "published_date": null,
+      "fingerprint": "831d6af3e82bf3bacf6d429be9a7c21c3ae05b1eb440171aa751dabde70aefeb",
+      "first_seen": "2026-11-12T04:41:18.473011+00:00",
+      "delivered": true
+    },
+    "ee0afba2c06ea701cde441fd4b33d74f65c62e8947dc9af32f3d418c7f88eaee": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "Customer Information on Cross – Border Transactions",
+      "url": "https://indianbank.bank.in/en/customer-information-on-cross-border-transactions",
+      "published_date": null,
+      "fingerprint": "ee0afba2c06ea701cde441fd4b33d74f65c62e8947dc9af32f3d418c7f88eaee",
+      "first_seen": "2026-11-12T04:41:18.473416+00:00",
       "delivered": true
     }
   },
