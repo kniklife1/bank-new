@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-12T05:32:41.933220+00:00",
+  "last_run_timestamp": "2026-11-12T06:12:40.715816+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4159,
+    "total_recorded_notices": 4160,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -41617,6 +41617,16 @@
       "published_date": null,
       "fingerprint": "aaa93021222ed2c5019a5486ce2109042fefd70485118f9cd2f8ea056a03fd48",
       "first_seen": "2026-11-12T05:31:44.538927+00:00",
+      "delivered": true
+    },
+    "86f09d1c1974c1b59ffff1ee0adf1fa864b390d39848671ee57c86be65fd342d": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "RBI releases data on ECB / FCCB / RDB for September 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63961",
+      "published_date": "Nov 12, 2026",
+      "fingerprint": "86f09d1c1974c1b59ffff1ee0adf1fa864b390d39848671ee57c86be65fd342d",
+      "first_seen": "2026-11-12T06:11:03.774908+00:00",
       "delivered": true
     }
   },
