@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-12T05:03:13.396285+00:00",
+  "last_run_timestamp": "2026-11-12T05:32:41.933220+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4158,
+    "total_recorded_notices": 4159,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -41607,6 +41607,16 @@
       "published_date": null,
       "fingerprint": "c486fc0b156c0efc13ad969ac1966264a78ea61387ad2a7eeeeb5ed91fd5a177",
       "first_seen": "2026-11-12T05:01:57.180365+00:00",
+      "delivered": true
+    },
+    "aaa93021222ed2c5019a5486ce2109042fefd70485118f9cd2f8ea056a03fd48": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "CROSS BORDER TRANSACTIONS, DOCUMENTATION, TAT",
+      "url": "https://indianbank.bank.in/documents/d/guest/indian-bank-framework",
+      "published_date": null,
+      "fingerprint": "aaa93021222ed2c5019a5486ce2109042fefd70485118f9cd2f8ea056a03fd48",
+      "first_seen": "2026-11-12T05:31:44.538927+00:00",
       "delivered": true
     }
   },
