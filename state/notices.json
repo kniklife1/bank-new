@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-13T12:12:24.870809+00:00",
+  "last_run_timestamp": "2026-11-13T14:43:03.176132+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4170,
-    "last_run_new_notices": 0,
-    "last_run_errors": 2,
-    "last_run_extraction_ok": 21,
-    "last_run_fetched_ok": 21
+    "total_recorded_notices": 4171,
+    "last_run_new_notices": 1,
+    "last_run_errors": 3,
+    "last_run_extraction_ok": 20,
+    "last_run_fetched_ok": 20
   },
   "notices": {
     "9da63338791ba82966aef072b71411ccd5f4d258c0187d5f28ba2c5f889934c3": {
@@ -41728,6 +41728,16 @@
       "published_date": null,
       "fingerprint": "3427e35f3261c110bc70fb9dbb8874e94c2ff4c6d4278f8529c2964062190462",
       "first_seen": "2026-11-13T12:11:21.050092+00:00",
+      "delivered": true
+    },
+    "a8fed5c73cf6cf3e4b8b5c3dde7dce9f6fa14e5ae8bcb64bfcf422a012e8d929": {
+      "website_id": "exim-bank",
+      "org_name": "EXIM Bank",
+      "title": "Download Call Letter for Online Written Examination – Advt. No: HRM/DM&M/SRD/2026-27/04",
+      "url": "http://ibpsreg.ibps.in/iebsrdaug26/oecla_oct26/login.php?appid=b4a57f0d93a64f44ebe44e5d1e7dbe37",
+      "published_date": null,
+      "fingerprint": "a8fed5c73cf6cf3e4b8b5c3dde7dce9f6fa14e5ae8bcb64bfcf422a012e8d929",
+      "first_seen": "2026-11-13T14:42:22.408040+00:00",
       "delivered": true
     }
   },
