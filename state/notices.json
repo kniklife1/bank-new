@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-13T12:03:04.259202+00:00",
+  "last_run_timestamp": "2026-11-13T12:12:24.870809+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4169,
+    "total_recorded_notices": 4170,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -41718,6 +41718,16 @@
       "published_date": "Nov 13, 2026",
       "fingerprint": "9a053878332fe4f4e8800c088b1404ff3fcc2745b62ea174dc1d1340d60b8607",
       "first_seen": "2026-11-13T12:01:35.087872+00:00",
+      "delivered": true
+    },
+    "3427e35f3261c110bc70fb9dbb8874e94c2ff4c6d4278f8529c2964062190462": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "SUMMARY OF FX SERVICES",
+      "url": "https://indianbank.bank.in/documents/d/guest/fxservices_14003",
+      "published_date": null,
+      "fingerprint": "3427e35f3261c110bc70fb9dbb8874e94c2ff4c6d4278f8529c2964062190462",
+      "first_seen": "2026-11-13T12:11:21.050092+00:00",
       "delivered": true
     }
   },
