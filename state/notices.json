@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-13T08:23:07.570465+00:00",
+  "last_run_timestamp": "2026-11-13T09:32:57.956175+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4165,
+    "total_recorded_notices": 4166,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -41678,6 +41678,16 @@
       "published_date": null,
       "fingerprint": "ab3d958b80aa0fd6989da90e0fc5b03683f6e0be2a28cf7a304db5f8bc9ff4ff",
       "first_seen": "2026-11-13T08:22:27.667558+00:00",
+      "delivered": true
+    },
+    "def986f19be65e9806de1a997a859910448e4e4dc3138992fea300092ff4baad": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Scheduled Banks’ Statement of Position in India as on October 31, 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63971",
+      "published_date": "October 31, 2026",
+      "fingerprint": "def986f19be65e9806de1a997a859910448e4e4dc3138992fea300092ff4baad",
+      "first_seen": "2026-11-13T09:31:22.322956+00:00",
       "delivered": true
     }
   },
