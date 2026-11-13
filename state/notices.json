@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-13T09:32:57.956175+00:00",
+  "last_run_timestamp": "2026-11-13T10:23:09.057929+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4166,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4167,
+    "last_run_new_notices": 1,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
@@ -41688,6 +41688,16 @@
       "published_date": "October 31, 2026",
       "fingerprint": "def986f19be65e9806de1a997a859910448e4e4dc3138992fea300092ff4baad",
       "first_seen": "2026-11-13T09:31:22.322956+00:00",
+      "delivered": true
+    },
+    "96c7fa0045dd5106f3bd2f3291a630dca4ec7df40f61fb88f1bf61cfaaa83f43": {
+      "website_id": "exim-bank",
+      "org_name": "EXIM Bank",
+      "title": "Recruitment of Data Protection Officer (DPO) and Deputy Data Protection Officer (Deputy DPO)",
+      "url": "https://www.eximbankindia.in/sites/default/files/2026-11/Advertisement%20for%20upload.pdf",
+      "published_date": null,
+      "fingerprint": "96c7fa0045dd5106f3bd2f3291a630dca4ec7df40f61fb88f1bf61cfaaa83f43",
+      "first_seen": "2026-11-13T10:22:48.168940+00:00",
       "delivered": true
     }
   },
