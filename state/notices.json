@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-13T02:42:17.672752+00:00",
+  "last_run_timestamp": "2026-11-13T08:23:07.570465+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4164,
-    "last_run_new_notices": 1,
+    "total_recorded_notices": 4165,
+    "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
@@ -41668,6 +41668,16 @@
       "published_date": "12-11-2026",
       "fingerprint": "165e4621a5d2ce1f71353393db0bde26cbf53c2491eb3dadc80e2089357252e2",
       "first_seen": "2026-11-13T02:41:46.077877+00:00",
+      "delivered": true
+    },
+    "ab3d958b80aa0fd6989da90e0fc5b03683f6e0be2a28cf7a304db5f8bc9ff4ff": {
+      "website_id": "gic-re",
+      "org_name": "General Insurance Corporation (GIC Re)",
+      "title": "GeM – eAuction for Sale of 3 Office Cars (GIC-HO/OSD/StaffCarDispose/464/2025-26)",
+      "url": "https://www.gicre.in/en/images/2026/auction_notice_43126.pdf",
+      "published_date": null,
+      "fingerprint": "ab3d958b80aa0fd6989da90e0fc5b03683f6e0be2a28cf7a304db5f8bc9ff4ff",
+      "first_seen": "2026-11-13T08:22:27.667558+00:00",
       "delivered": true
     }
   },
