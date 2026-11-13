@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-12T14:42:23.061801+00:00",
+  "last_run_timestamp": "2026-11-13T02:33:41.128061+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4161,
+    "total_recorded_notices": 4163,
     "last_run_new_notices": 0,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
@@ -41638,6 +41638,27 @@
       "fingerprint": "aa2ffc93d01ef8c963aa8ae1b7e89c32b449c9a9f3f7461c3b8ab0caf1e99984",
       "first_seen": "2026-11-12T14:41:24.029521+00:00",
       "delivered": true
+    },
+    "3b19af9580add38bca352535758b9322eebc88166ac7bbbf434ed644530171f6": {
+      "website_id": "sebi",
+      "org_name": "Securities and Exchange Board of India (SEBI)",
+      "title": "Investment Advisers",
+      "url": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListingAll=yes&cid=26",
+      "published_date": null,
+      "fingerprint": "3b19af9580add38bca352535758b9322eebc88166ac7bbbf434ed644530171f6",
+      "first_seen": "2026-11-13T02:33:37.692247+00:00",
+      "delivered": true
+    },
+    "234e4487c49be5cfacc69f5576fdb54736535ec7590c10ad3fa03ea40052c156": {
+      "website_id": "sebi",
+      "org_name": "Securities and Exchange Board of India (SEBI)",
+      "title": "CGM: Shri D. V. Sekhar, Tel No.:- +91 022 26449570 Email Id: dvsekhar@sebi.gov.in",
+      "url": "https://www.sebi.gov.in/department/legal-affairs-department-1-lad-1-vertical-i-78/overview.html",
+      "published_date": null,
+      "fingerprint": "234e4487c49be5cfacc69f5576fdb54736535ec7590c10ad3fa03ea40052c156",
+      "first_seen": "2026-11-13T02:33:37.701669+00:00",
+      "delivered": true,
+      "content": "Legal Affairs Department 1 (LAD 1) Vertical-I (LAD1 Vertical-I)CGM: Shri D. V. Sekhar, Tel No.:- +91 022 26449570 Email Id: dvsekhar@sebi.gov.inGo to Department Section"
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
