@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-13T02:33:41.128061+00:00",
+  "last_run_timestamp": "2026-11-13T02:42:17.672752+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4163,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4164,
+    "last_run_new_notices": 1,
     "last_run_errors": 2,
     "last_run_extraction_ok": 21,
     "last_run_fetched_ok": 21
@@ -41659,6 +41659,16 @@
       "first_seen": "2026-11-13T02:33:37.701669+00:00",
       "delivered": true,
       "content": "Legal Affairs Department 1 (LAD 1) Vertical-I (LAD1 Vertical-I)CGM: Shri D. V. Sekhar, Tel No.:- +91 022 26449570 Email Id: dvsekhar@sebi.gov.inGo to Department Section"
+    },
+    "165e4621a5d2ce1f71353393db0bde26cbf53c2491eb3dadc80e2089357252e2": {
+      "website_id": "exim-bank",
+      "org_name": "EXIM Bank",
+      "title": "ADVERTISEMENT NO. HRM/MT/M/2026-27/05",
+      "url": "https://www.eximbankindia.in/sites/default/files/2026-11/MT%20%20M%20Recruitment%20Advertisement%2012-11-2026%201.pdf",
+      "published_date": "12-11-2026",
+      "fingerprint": "165e4621a5d2ce1f71353393db0bde26cbf53c2491eb3dadc80e2089357252e2",
+      "first_seen": "2026-11-13T02:41:46.077877+00:00",
+      "delivered": true
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
