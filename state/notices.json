@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-16T05:43:47.964855+00:00",
+  "last_run_timestamp": "2026-11-16T05:54:42.673193+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4173,
+    "total_recorded_notices": 4174,
     "last_run_new_notices": 0,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
@@ -41758,6 +41758,16 @@
       "published_date": "Nov 16, 2026",
       "fingerprint": "6a04f3e7f492d56a6666f8208b24ac69c80085e903cb2797f60584dace127835",
       "first_seen": "2026-11-16T05:41:03.250165+00:00",
+      "delivered": true
+    },
+    "d6089cf3a17a842d826d0476a68a6265f865ffe5e06c580d40cf6e471bde3a76": {
+      "website_id": "iob",
+      "org_name": "Indian Overseas Bank (IOB)",
+      "title": "IOB Digital Rupee(e₹)",
+      "url": "https://www.iob.bank.in/en/iob-digital-rupee-e%E2%82%B9-",
+      "published_date": null,
+      "fingerprint": "d6089cf3a17a842d826d0476a68a6265f865ffe5e06c580d40cf6e471bde3a76",
+      "first_seen": "2026-11-16T05:51:36.190463+00:00",
       "delivered": true
     }
   },
