@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-13T14:43:03.176132+00:00",
+  "last_run_timestamp": "2026-11-16T05:43:47.964855+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4171,
-    "last_run_new_notices": 1,
+    "total_recorded_notices": 4173,
+    "last_run_new_notices": 0,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
     "last_run_fetched_ok": 20
@@ -41738,6 +41738,26 @@
       "published_date": null,
       "fingerprint": "a8fed5c73cf6cf3e4b8b5c3dde7dce9f6fa14e5ae8bcb64bfcf422a012e8d929",
       "first_seen": "2026-11-13T14:42:22.408040+00:00",
+      "delivered": true
+    },
+    "50231d0944162d6caf7a1081aa2e4fbb01acc0ab0b9b81ee8512e33a453394fc": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "RBI cancels Certificate of Registration of 49 NBFCs",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63979",
+      "published_date": "Nov 16, 2026",
+      "fingerprint": "50231d0944162d6caf7a1081aa2e4fbb01acc0ab0b9b81ee8512e33a453394fc",
+      "first_seen": "2026-11-16T05:41:03.249943+00:00",
+      "delivered": true
+    },
+    "6a04f3e7f492d56a6666f8208b24ac69c80085e903cb2797f60584dace127835": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "13 NBFCs and 1 HFC surrender their Certificates of Registration to the RBI",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63978",
+      "published_date": "Nov 16, 2026",
+      "fingerprint": "6a04f3e7f492d56a6666f8208b24ac69c80085e903cb2797f60584dace127835",
+      "first_seen": "2026-11-16T05:41:03.250165+00:00",
       "delivered": true
     }
   },
