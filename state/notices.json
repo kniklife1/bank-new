@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-17T09:53:52.879739+00:00",
+  "last_run_timestamp": "2026-11-17T15:43:59.228093+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4175,
+    "total_recorded_notices": 4176,
     "last_run_new_notices": 0,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
@@ -41778,6 +41778,16 @@
       "published_date": "Nov 17, 2026",
       "fingerprint": "651451998d44b2c681c6255b43d51863ef9f972f8e384862cb870cb584052655",
       "first_seen": "2026-11-17T09:51:09.874084+00:00",
+      "delivered": true
+    },
+    "00ebf9f708a74bd74cfb148653b4cf1fde042faca595292b7bda2543164d31fa": {
+      "website_id": "iob",
+      "org_name": "Indian Overseas Bank (IOB)",
+      "title": "Summary of FX Services",
+      "url": "https://www.iob.bank.in/documents/d/guest/summary-of-fx-services",
+      "published_date": null,
+      "fingerprint": "00ebf9f708a74bd74cfb148653b4cf1fde042faca595292b7bda2543164d31fa",
+      "first_seen": "2026-11-17T15:41:54.733485+00:00",
       "delivered": true
     }
   },
