@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-16T05:54:42.673193+00:00",
+  "last_run_timestamp": "2026-11-17T09:53:52.879739+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4174,
+    "total_recorded_notices": 4175,
     "last_run_new_notices": 0,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
@@ -41768,6 +41768,16 @@
       "published_date": null,
       "fingerprint": "d6089cf3a17a842d826d0476a68a6265f865ffe5e06c580d40cf6e471bde3a76",
       "first_seen": "2026-11-16T05:51:36.190463+00:00",
+      "delivered": true
+    },
+    "651451998d44b2c681c6255b43d51863ef9f972f8e384862cb870cb584052655": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Directions under Section 35A read with Section 56 of the Banking Regulation Act, 1949 – Nagar Sahakari Bank Ltd., Etawah – Extension of Period",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63988",
+      "published_date": "Nov 17, 2026",
+      "fingerprint": "651451998d44b2c681c6255b43d51863ef9f972f8e384862cb870cb584052655",
+      "first_seen": "2026-11-17T09:51:09.874084+00:00",
       "delivered": true
     }
   },
