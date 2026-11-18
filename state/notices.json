@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-18T10:43:52.879889+00:00",
+  "last_run_timestamp": "2026-11-18T11:23:50.678984+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4182,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4183,
+    "last_run_new_notices": 1,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
     "last_run_fetched_ok": 20
@@ -41850,6 +41850,16 @@
       "first_seen": "2026-11-18T10:41:23.286848+00:00",
       "delivered": true,
       "content": "<SUMMARY OF FX SERVICES FOR CUSTOMERS"
+    },
+    "5669dd7d249e6a0129519e50b62f4d81901c99dbe9ca8595e7657b3002d28cea": {
+      "website_id": "rbi-opportunities",
+      "org_name": "RBI Opportunities",
+      "title": "Engagement of Young Professionals - Result",
+      "url": "https://opportunities.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=5215",
+      "published_date": "Nov 18, 2026",
+      "fingerprint": "5669dd7d249e6a0129519e50b62f4d81901c99dbe9ca8595e7657b3002d28cea",
+      "first_seen": "2026-11-18T11:21:09.412675+00:00",
+      "delivered": true
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
