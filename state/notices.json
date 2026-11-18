@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-18T11:23:50.678984+00:00",
+  "last_run_timestamp": "2026-11-18T12:44:18.285556+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4183,
+    "total_recorded_notices": 4184,
     "last_run_new_notices": 1,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
@@ -41860,6 +41860,17 @@
       "fingerprint": "5669dd7d249e6a0129519e50b62f4d81901c99dbe9ca8595e7657b3002d28cea",
       "first_seen": "2026-11-18T11:21:09.412675+00:00",
       "delivered": true
+    },
+    "b51d50747bc2ce33cc0f7724111ff24cfaf93467a0f165f15082d25379947f45": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "DEPUTY MANAGER (AI SPECIALISTS) - INTERVIEW SCHEDULE",
+      "url": "https://sbi.co.in/documents/77530/57941334/18112026_SCO_11_INT_SCH.pdf/855e83b5-7c8a-3253-7996-57d3085d26e5?t=1795003900788",
+      "published_date": "18-11-2026",
+      "fingerprint": "b51d50747bc2ce33cc0f7724111ff24cfaf93467a0f165f15082d25379947f45",
+      "first_seen": "2026-11-18T12:41:05.783634+00:00",
+      "delivered": true,
+      "content": "DEPUTY MANAGER (AI SPECIALISTS) - INTERVIEW SCHEDULE(NEW)"
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
