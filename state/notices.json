@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-18T09:44:19.447879+00:00",
+  "last_run_timestamp": "2026-11-18T10:34:13.100737+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4180,
-    "last_run_new_notices": 2,
+    "total_recorded_notices": 4181,
+    "last_run_new_notices": 0,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
     "last_run_fetched_ok": 20
@@ -41828,6 +41828,16 @@
       "published_date": "2026-11-18",
       "fingerprint": "9089401e583d005a79884b6405e8940133de0e873d4468bf10d14fd038fc06ba",
       "first_seen": "2026-11-18T09:41:47.724401+00:00",
+      "delivered": true
+    },
+    "07277353a91627eb4d206b8e467564a91b9d22b0fa7776597468ea9327e43dba": {
+      "website_id": "iob",
+      "org_name": "Indian Overseas Bank (IOB)",
+      "title": "Schedule Of Charges Forex",
+      "url": "https://www.iob.bank.in/documents/d/guest/Service-Charges-for-Foreign-Exchange-Transactions-01012025",
+      "published_date": "01-01-2025",
+      "fingerprint": "07277353a91627eb4d206b8e467564a91b9d22b0fa7776597468ea9327e43dba",
+      "first_seen": "2026-11-18T10:32:00.123666+00:00",
       "delivered": true
     }
   },
