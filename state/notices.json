@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-18T01:04:15.655035+00:00",
+  "last_run_timestamp": "2026-11-18T09:44:19.447879+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4178,
-    "last_run_new_notices": 1,
+    "total_recorded_notices": 4180,
+    "last_run_new_notices": 2,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
     "last_run_fetched_ok": 20
@@ -41808,6 +41808,26 @@
       "published_date": "2026-11-18",
       "fingerprint": "180c58ce3268e93f1bfbfbce616f058b5e19c1a2783bca30fb2f733e17d68ceb",
       "first_seen": "2026-11-18T01:02:32.100359+00:00",
+      "delivered": true
+    },
+    "2856e559308299a050910a3bdbce91efe6f34341fe81244753b32699f4a886ce": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "LATERAL RECRUITMENT OF LOCAL BANK OFFICERS (Phase-III) – RESERVE LIST OF CANDIDATES FOR LANGUAGE PROFICIENCY TEST & DOCUMENT VERIFICATION in JMGS I on regular basis PDF file download",
+      "url": "https://punjabandsind.bank.in/system/uploads/recruitment/2150_2026111815062398996.pdf",
+      "published_date": "2026-11-18",
+      "fingerprint": "2856e559308299a050910a3bdbce91efe6f34341fe81244753b32699f4a886ce",
+      "first_seen": "2026-11-18T09:41:47.724218+00:00",
+      "delivered": true
+    },
+    "9089401e583d005a79884b6405e8940133de0e873d4468bf10d14fd038fc06ba": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "LIST OF PROVISIONALLY SELECTED CANDIDATES FOR LATERAL RECRUITMENT OF LOCAL BANK OFFICERS (PHASE-III) in JMGS I on regular basis PDF file download",
+      "url": "https://punjabandsind.bank.in/system/uploads/recruitment/2150_2026111815035697710.pdf",
+      "published_date": "2026-11-18",
+      "fingerprint": "9089401e583d005a79884b6405e8940133de0e873d4468bf10d14fd038fc06ba",
+      "first_seen": "2026-11-18T09:41:47.724401+00:00",
       "delivered": true
     }
   },
