@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-18T00:44:00.984451+00:00",
+  "last_run_timestamp": "2026-11-18T01:04:15.655035+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4177,
+    "total_recorded_notices": 4178,
     "last_run_new_notices": 1,
-    "last_run_errors": 4,
-    "last_run_extraction_ok": 19,
-    "last_run_fetched_ok": 19
+    "last_run_errors": 3,
+    "last_run_extraction_ok": 20,
+    "last_run_fetched_ok": 20
   },
   "notices": {
     "9da63338791ba82966aef072b71411ccd5f4d258c0187d5f28ba2c5f889934c3": {
@@ -41798,6 +41798,16 @@
       "published_date": "2026-11-18",
       "fingerprint": "a1e763716ff408688e7f79a30d9eaca9d6e19ab166bc4e28c5451d76ce38c0f5",
       "first_seen": "2026-11-18T00:41:54.086490+00:00",
+      "delivered": true
+    },
+    "180c58ce3268e93f1bfbfbce616f058b5e19c1a2783bca30fb2f733e17d68ceb": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "Notice for extension of Deadline of Engagement of Chief risk  officer in the Bank PDF file download",
+      "url": "https://punjabandsind.bank.in/system/uploads/recruitment/2150_2026111806242364638.pdf",
+      "published_date": "2026-11-18",
+      "fingerprint": "180c58ce3268e93f1bfbfbce616f058b5e19c1a2783bca30fb2f733e17d68ceb",
+      "first_seen": "2026-11-18T01:02:32.100359+00:00",
       "delivered": true
     }
   },
