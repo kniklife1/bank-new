@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-18T10:34:13.100737+00:00",
+  "last_run_timestamp": "2026-11-18T10:43:52.879889+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4181,
+    "total_recorded_notices": 4182,
     "last_run_new_notices": 0,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
@@ -41839,6 +41839,17 @@
       "fingerprint": "07277353a91627eb4d206b8e467564a91b9d22b0fa7776597468ea9327e43dba",
       "first_seen": "2026-11-18T10:32:00.123666+00:00",
       "delivered": true
+    },
+    "b35f620c3ce22e4bf4bc56d32e7f6d0a251358dcffeb5c6bd38e5afd66de6662": {
+      "website_id": "pnb",
+      "org_name": "Punjab National Bank (PNB)",
+      "title": "SUMMARY OF FX SERVICES FOR CUSTOMERS",
+      "url": "https://www.pnbindia.in/downloadprocess.aspx?fid=ERhFBAE8lspVikznGy18IQ==",
+      "published_date": null,
+      "fingerprint": "b35f620c3ce22e4bf4bc56d32e7f6d0a251358dcffeb5c6bd38e5afd66de6662",
+      "first_seen": "2026-11-18T10:41:23.286848+00:00",
+      "delivered": true,
+      "content": "<SUMMARY OF FX SERVICES FOR CUSTOMERS"
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
