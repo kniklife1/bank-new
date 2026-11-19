@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-19T11:43:52.053368+00:00",
+  "last_run_timestamp": "2026-11-19T12:13:31.672117+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4190,
-    "last_run_new_notices": 1,
+    "total_recorded_notices": 4191,
+    "last_run_new_notices": 0,
     "last_run_errors": 4,
     "last_run_extraction_ok": 19,
     "last_run_fetched_ok": 19
@@ -41934,6 +41934,16 @@
       "first_seen": "2026-11-19T11:41:12.568112+00:00",
       "delivered": true,
       "content": "DEPUTY CTO (ENTERPRISE ARCHITECTURE)- INTERVIEW SCHEDULE (NEW)"
+    },
+    "796a9f2c208fa54e1434decc8be55f59680db74252910880578c81d00a2780d8": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Finances of Panchayati Raj Institutions",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=64002",
+      "published_date": "Nov 19, 2026",
+      "fingerprint": "796a9f2c208fa54e1434decc8be55f59680db74252910880578c81d00a2780d8",
+      "first_seen": "2026-11-19T12:11:14.157967+00:00",
+      "delivered": true
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
