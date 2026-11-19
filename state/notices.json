@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-18T16:14:06.813471+00:00",
+  "last_run_timestamp": "2026-11-19T06:43:52.697269+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4187,
+    "total_recorded_notices": 4188,
     "last_run_new_notices": 1,
-    "last_run_errors": 3,
-    "last_run_extraction_ok": 20,
-    "last_run_fetched_ok": 20
+    "last_run_errors": 4,
+    "last_run_extraction_ok": 19,
+    "last_run_fetched_ok": 19
   },
   "notices": {
     "9da63338791ba82966aef072b71411ccd5f4d258c0187d5f28ba2c5f889934c3": {
@@ -41902,6 +41902,17 @@
       "first_seen": "2026-11-18T16:11:24.303086+00:00",
       "delivered": true,
       "content": "DOWNLOAD MAINS EXAMINATION CALL LETTER (NEW)"
+    },
+    "0b2765d76585bb3a786e75d14e32ac3090b1bbd721a947ae79cb0c4c5c6159aa": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "APPLY ONLINE (19.11.2026 TO 03.12.2026)",
+      "url": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-36/apply",
+      "published_date": "19.11.2026",
+      "fingerprint": "0b2765d76585bb3a786e75d14e32ac3090b1bbd721a947ae79cb0c4c5c6159aa",
+      "first_seen": "2026-11-19T06:41:08.490695+00:00",
+      "delivered": true,
+      "content": "APPLY ONLINE (19.11.2026 TO 03.12.2026)(NEW)"
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
