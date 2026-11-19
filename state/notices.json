@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-19T11:23:57.854250+00:00",
+  "last_run_timestamp": "2026-11-19T11:43:52.053368+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4189,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4190,
+    "last_run_new_notices": 1,
     "last_run_errors": 4,
     "last_run_extraction_ok": 19,
     "last_run_fetched_ok": 19
@@ -41923,6 +41923,17 @@
       "fingerprint": "fabbff1da6bd236daf815decec0acf5b3745a0924d035d22708b12b0bb22ae5e",
       "first_seen": "2026-11-19T11:21:14.005067+00:00",
       "delivered": true
+    },
+    "63e9268798ef3a6cdc3e9034555b9ed2832d6854916266659366134a1a5282d9": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "DEPUTY CTO (ENTERPRISE ARCHITECTURE)- INTERVIEW SCHEDULE",
+      "url": "https://sbi.co.in/documents/77530/57941334/19112026_SCO_13_INT_SCH_DYCTO.pdf/5d43a3b4-4527-ba83-9b47-37e0925fdcc0?t=1795087239884",
+      "published_date": "19-11-2026",
+      "fingerprint": "63e9268798ef3a6cdc3e9034555b9ed2832d6854916266659366134a1a5282d9",
+      "first_seen": "2026-11-19T11:41:12.568112+00:00",
+      "delivered": true,
+      "content": "DEPUTY CTO (ENTERPRISE ARCHITECTURE)- INTERVIEW SCHEDULE (NEW)"
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
