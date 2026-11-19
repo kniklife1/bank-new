@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-19T06:43:52.697269+00:00",
+  "last_run_timestamp": "2026-11-19T11:23:57.854250+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4188,
-    "last_run_new_notices": 1,
+    "total_recorded_notices": 4189,
+    "last_run_new_notices": 0,
     "last_run_errors": 4,
     "last_run_extraction_ok": 19,
     "last_run_fetched_ok": 19
@@ -41913,6 +41913,16 @@
       "first_seen": "2026-11-19T06:41:08.490695+00:00",
       "delivered": true,
       "content": "APPLY ONLINE (19.11.2026 TO 03.12.2026)(NEW)"
+    },
+    "fabbff1da6bd236daf815decec0acf5b3745a0924d035d22708b12b0bb22ae5e": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Overseas Direct Investment for October 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=64001",
+      "published_date": "Nov 19, 2026",
+      "fingerprint": "fabbff1da6bd236daf815decec0acf5b3745a0924d035d22708b12b0bb22ae5e",
+      "first_seen": "2026-11-19T11:21:14.005067+00:00",
+      "delivered": true
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
