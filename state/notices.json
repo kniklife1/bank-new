@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-20T12:13:42.286344+00:00",
+  "last_run_timestamp": "2026-11-20T12:53:52.441212+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4196,
-    "last_run_new_notices": 1,
+    "total_recorded_notices": 4199,
+    "last_run_new_notices": 0,
     "last_run_errors": 4,
     "last_run_extraction_ok": 19,
     "last_run_fetched_ok": 19
@@ -41994,6 +41994,36 @@
       "published_date": "Nov 20, 2026",
       "fingerprint": "bf9347c9ba9f60f8968fd545e89e4195bd44f11b9f8c6959768189c8224da8d0",
       "first_seen": "2026-11-20T12:11:09.954918+00:00",
+      "delivered": true
+    },
+    "17a9cdb9b5c11972995d2a6c8fc4c6c0ebc7da45d2b0385572d27f45d3216904": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "सूचना प्रणाली सुरक्षा विभाग (आईएसएसडी) हेतु संविदागत आधार पर एआई-साइबर सुरक्षा विशेषज्ञ अधधकाररर्ों का चयन – 2026",
+      "url": "https://indianbank.in/documents/20117/34414/सूचना प्रणाली सुरक्षा विभाग (आईएसएसडी) हेतु संविदागत आधार पर एआई-साइबर सुरक्षा विशेषज्ञ अधधकाररर का चयन – 2026.2026_11_20_12_47_36.pdf/ee43f603-1832-0dd6-adc1-49645f482bf8",
+      "published_date": "2026-11-20",
+      "fingerprint": "17a9cdb9b5c11972995d2a6c8fc4c6c0ebc7da45d2b0385572d27f45d3216904",
+      "first_seen": "2026-11-20T12:51:30.601297+00:00",
+      "delivered": true
+    },
+    "c640754577e1df21f9c26a38ad0c9dcc40053bbe0c257013323f519c5170e5d6": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "एआई सेल के ललए संविदागत आधार पर एआई विशेषज्ञ अधधकाररयों का चयन – 2026",
+      "url": "https://indianbank.in/documents/20117/34414/एआई सेल के ललए संविदागत आधार पर एआई विशेषज्ञ अधधकाररयों का चयन – 20262026_11_20_12_46_42.pdf/18d603cd-e508-c39a-cfea-1a4d24767ac3",
+      "published_date": null,
+      "fingerprint": "c640754577e1df21f9c26a38ad0c9dcc40053bbe0c257013323f519c5170e5d6",
+      "first_seen": "2026-11-20T12:51:30.601644+00:00",
+      "delivered": true
+    },
+    "85b095c2694605ab1b6d993915560a72bb8c273681e9e32baf41cec337497c5d": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "सूचना प्रौद्योगिकी विभाि हेतु संविदाित आधार पर परामर्शदाता का चयन – 2026.",
+      "url": "https://indianbank.in/documents/20117/34414/Hindi Career – 20262026_11_20_12_45_28.pdf/ed1987fe-dd02-298d-9d7d-2bf30877fbf7",
+      "published_date": null,
+      "fingerprint": "85b095c2694605ab1b6d993915560a72bb8c273681e9e32baf41cec337497c5d",
+      "first_seen": "2026-11-20T12:51:30.601963+00:00",
       "delivered": true
     }
   },
