@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-20T12:53:52.441212+00:00",
+  "last_run_timestamp": "2026-11-20T13:14:11.030570+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4199,
+    "total_recorded_notices": 4200,
     "last_run_new_notices": 0,
     "last_run_errors": 4,
     "last_run_extraction_ok": 19,
@@ -42024,6 +42024,16 @@
       "published_date": null,
       "fingerprint": "85b095c2694605ab1b6d993915560a72bb8c273681e9e32baf41cec337497c5d",
       "first_seen": "2026-11-20T12:51:30.601963+00:00",
+      "delivered": true
+    },
+    "7de9dadf0e57aee9c8d2a716ca1146a04226a1955d68fcecbd15bf424b506ee3": {
+      "website_id": "indian-bank",
+      "org_name": "Indian Bank",
+      "title": "सूचना प्रणाली सुरक्षा विभाग (आईएसएसडी) हेतु संविदागत आधार पर एआई-साइबर सुरक्षा विशेषज्ञ अधधकाररयों का चयन – 2026",
+      "url": "https://indianbank.in/documents/20117/34414/Hindi 32026_11_20_12_58_53.pdf/9461252a-7dc3-b4d1-5379-3d7560a54962",
+      "published_date": null,
+      "fingerprint": "7de9dadf0e57aee9c8d2a716ca1146a04226a1955d68fcecbd15bf424b506ee3",
+      "first_seen": "2026-11-20T13:11:47.325399+00:00",
       "delivered": true
     }
   },
