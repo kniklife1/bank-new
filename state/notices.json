@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-20T12:05:11.100338+00:00",
+  "last_run_timestamp": "2026-11-20T12:13:42.286344+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4194,
+    "total_recorded_notices": 4196,
     "last_run_new_notices": 1,
     "last_run_errors": 4,
     "last_run_extraction_ok": 19,
@@ -41974,6 +41974,26 @@
       "published_date": null,
       "fingerprint": "171b4a64b48405f82ca3c462e0aab54284dd123a104fac2d78d74efd1e723a3a",
       "first_seen": "2026-11-20T12:03:15.903104+00:00",
+      "delivered": true
+    },
+    "dc64cbafdda9c724b368567463f55fc8b34e0e66564f46f523120585d99c5c65": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "RBI imposes monetary penalty on Fusion Finance Limited",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=64015",
+      "published_date": "Nov 20, 2026",
+      "fingerprint": "dc64cbafdda9c724b368567463f55fc8b34e0e66564f46f523120585d99c5c65",
+      "first_seen": "2026-11-20T12:11:07.901470+00:00",
+      "delivered": true
+    },
+    "bf9347c9ba9f60f8968fd545e89e4195bd44f11b9f8c6959768189c8224da8d0": {
+      "website_id": "rbi-opportunities",
+      "org_name": "RBI Opportunities",
+      "title": "Recruitment for the Post of Assistant – PY 2025: Display of Roll Number of Finally Selected Candidates for Appointment in the Bank’s Hyderabad Office",
+      "url": "https://opportunities.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=5218",
+      "published_date": "Nov 20, 2026",
+      "fingerprint": "bf9347c9ba9f60f8968fd545e89e4195bd44f11b9f8c6959768189c8224da8d0",
+      "first_seen": "2026-11-20T12:11:09.954918+00:00",
       "delivered": true
     }
   },
