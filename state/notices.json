@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-20T08:53:58.698290+00:00",
+  "last_run_timestamp": "2026-11-20T12:05:11.100338+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4193,
+    "total_recorded_notices": 4194,
     "last_run_new_notices": 1,
-    "last_run_errors": 3,
-    "last_run_extraction_ok": 20,
-    "last_run_fetched_ok": 20
+    "last_run_errors": 4,
+    "last_run_extraction_ok": 19,
+    "last_run_fetched_ok": 19
   },
   "notices": {
     "9da63338791ba82966aef072b71411ccd5f4d258c0187d5f28ba2c5f889934c3": {
@@ -41965,6 +41965,16 @@
       "first_seen": "2026-11-20T08:51:10.362382+00:00",
       "delivered": true,
       "content": "APPLY ONLINE (20.11.2026 TO 10.12.2026)(NEW)"
+    },
+    "171b4a64b48405f82ca3c462e0aab54284dd123a104fac2d78d74efd1e723a3a": {
+      "website_id": "exim-bank",
+      "org_name": "EXIM Bank",
+      "title": "ADDENDUM TO ADVERTISEMENT NO. HRM/MT/M/2026-27/05",
+      "url": "https://www.eximbankindia.in/sites/default/files/2026-11/Addendum%20-%20Final_0.pdf",
+      "published_date": null,
+      "fingerprint": "171b4a64b48405f82ca3c462e0aab54284dd123a104fac2d78d74efd1e723a3a",
+      "first_seen": "2026-11-20T12:03:15.903104+00:00",
+      "delivered": true
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
