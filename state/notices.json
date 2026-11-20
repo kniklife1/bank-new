@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-20T00:34:00.712809+00:00",
+  "last_run_timestamp": "2026-11-20T08:53:58.698290+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4192,
+    "total_recorded_notices": 4193,
     "last_run_new_notices": 1,
-    "last_run_errors": 4,
-    "last_run_extraction_ok": 19,
-    "last_run_fetched_ok": 19
+    "last_run_errors": 3,
+    "last_run_extraction_ok": 20,
+    "last_run_fetched_ok": 20
   },
   "notices": {
     "9da63338791ba82966aef072b71411ccd5f4d258c0187d5f28ba2c5f889934c3": {
@@ -41954,6 +41954,17 @@
       "fingerprint": "cc7d46ccfd3b6c144950182e1f8b6bc3ca53d776346df61f57bc22f957255557",
       "first_seen": "2026-11-20T00:31:57.712370+00:00",
       "delivered": true
+    },
+    "253d55d490ae27ff291814d7414484b2e6f7588981b4a2b36efc2eb0b1d2104e": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "APPLY ONLINE (20.11.2026 TO 10.12.2026)",
+      "url": "https://ibpsreg.ibps.in/sbifteoct26/",
+      "published_date": "20.11.2026",
+      "fingerprint": "253d55d490ae27ff291814d7414484b2e6f7588981b4a2b36efc2eb0b1d2104e",
+      "first_seen": "2026-11-20T08:51:10.362382+00:00",
+      "delivered": true,
+      "content": "APPLY ONLINE (20.11.2026 TO 10.12.2026)(NEW)"
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
