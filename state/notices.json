@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-19T12:13:31.672117+00:00",
+  "last_run_timestamp": "2026-11-20T00:34:00.712809+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4191,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4192,
+    "last_run_new_notices": 1,
     "last_run_errors": 4,
     "last_run_extraction_ok": 19,
     "last_run_fetched_ok": 19
@@ -41943,6 +41943,16 @@
       "published_date": "Nov 19, 2026",
       "fingerprint": "796a9f2c208fa54e1434decc8be55f59680db74252910880578c81d00a2780d8",
       "first_seen": "2026-11-19T12:11:14.157967+00:00",
+      "delivered": true
+    },
+    "cc7d46ccfd3b6c144950182e1f8b6bc3ca53d776346df61f57bc22f957255557": {
+      "website_id": "idbi-bank",
+      "org_name": "IDBI Bank",
+      "title": "Invitation for Expression of Interest (EOI) for Appointment of Statutory Auditors",
+      "url": "https://www.idbi.bank.in/pdf/INVITATION-FOR-EXPRESSION-OF-INTEREST-FOR-APPOINTMENT-OF-STATUTORY-AUDITORS.pdf",
+      "published_date": null,
+      "fingerprint": "cc7d46ccfd3b6c144950182e1f8b6bc3ca53d776346df61f57bc22f957255557",
+      "first_seen": "2026-11-20T00:31:57.712370+00:00",
       "delivered": true
     }
   },
