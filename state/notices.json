@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-20T13:14:11.030570+00:00",
+  "last_run_timestamp": "2026-11-21T08:22:27.379872+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4200,
+    "total_recorded_notices": 4201,
     "last_run_new_notices": 0,
-    "last_run_errors": 4,
-    "last_run_extraction_ok": 19,
-    "last_run_fetched_ok": 19
+    "last_run_errors": 3,
+    "last_run_extraction_ok": 20,
+    "last_run_fetched_ok": 20
   },
   "notices": {
     "9da63338791ba82966aef072b71411ccd5f4d258c0187d5f28ba2c5f889934c3": {
@@ -42035,6 +42035,17 @@
       "fingerprint": "7de9dadf0e57aee9c8d2a716ca1146a04226a1955d68fcecbd15bf424b506ee3",
       "first_seen": "2026-11-20T13:11:47.325399+00:00",
       "delivered": true
+    },
+    "255feeaab5727d816907ce6c30d01a1de4937212cf64a97350b218307d9d56f7": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "BIODATA FORM",
+      "url": "https://sbi.co.in/webfiles/uploads/files_2627/11/Biodata_Form_for_PO.pdf",
+      "published_date": null,
+      "fingerprint": "255feeaab5727d816907ce6c30d01a1de4937212cf64a97350b218307d9d56f7",
+      "first_seen": "2026-11-21T08:21:01.036481+00:00",
+      "delivered": true,
+      "content": "BIODATA FORM(NEW)"
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
