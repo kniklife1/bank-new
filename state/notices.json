@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-21T08:22:27.379872+00:00",
+  "last_run_timestamp": "2026-11-21T11:22:34.376444+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4201,
+    "total_recorded_notices": 4202,
     "last_run_new_notices": 0,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
@@ -42046,6 +42046,16 @@
       "first_seen": "2026-11-21T08:21:01.036481+00:00",
       "delivered": true,
       "content": "BIODATA FORM(NEW)"
+    },
+    "44e84edf8be8ab42e1a0eec98fb5fbb039af841cb8649cfad44889b15755afec": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "FX Services",
+      "url": "https://punjabandsind.bank.in/system/uploads/document/2150_2026112116423347057.pdf",
+      "published_date": "2026-11-21",
+      "fingerprint": "44e84edf8be8ab42e1a0eec98fb5fbb039af841cb8649cfad44889b15755afec",
+      "first_seen": "2026-11-21T11:21:41.423943+00:00",
+      "delivered": true
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
