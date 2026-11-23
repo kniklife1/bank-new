@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-23T06:53:10.932340+00:00",
+  "last_run_timestamp": "2026-11-23T07:52:31.937303+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4205,
-    "last_run_new_notices": 1,
+    "total_recorded_notices": 4207,
+    "last_run_new_notices": 2,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
     "last_run_fetched_ok": 20
@@ -42086,6 +42086,27 @@
       "published_date": "Nov 23, 2026",
       "fingerprint": "b253fef54e78d951f2e58f74c36ba7fec434ab6de65bfa10d7adcbdf549f1fc9",
       "first_seen": "2026-11-23T06:51:07.867181+00:00",
+      "delivered": true
+    },
+    "153fccb3564417e9a4a98832b33bda3de4f37f5421b76a9227f3dd9545ffc60d": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "Hindi (493 KB))",
+      "url": "https://sbi.co.in/documents/77530/57941334/HN+SECURITY+SBI+-+CRPD-SCO-2026-27_28+-+Hindi+%281%29.pdf/0badfcb4-7a93-b311-cd9f-6da105468b10?t=1795418535751",
+      "published_date": null,
+      "fingerprint": "153fccb3564417e9a4a98832b33bda3de4f37f5421b76a9227f3dd9545ffc60d",
+      "first_seen": "2026-11-23T07:51:01.285323+00:00",
+      "delivered": true,
+      "content": "DOWNLOAD ADVERTISEMENT(Hindi (493 KB))/(English (864 KB))(NEW)"
+    },
+    "789d24c7f29a9795b4947ead667cd7a91984c76d9ed40537e7604d3c2d39fc1d": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "LIST OF CANDIDATES PROVISIONALLY SELECTED - VICE PRESIDENT (ENTERPRISE AND TECHNOLOGY ARCHITECT)",
+      "url": "https://sbi.co.in/documents/77530/57941334/SCO_13_Select+List_VP.pdf/60627ca4-d4f7-2c65-c159-01edef3ba67f?t=1795416585312",
+      "published_date": null,
+      "fingerprint": "789d24c7f29a9795b4947ead667cd7a91984c76d9ed40537e7604d3c2d39fc1d",
+      "first_seen": "2026-11-23T07:51:01.290937+00:00",
       "delivered": true
     }
   },
