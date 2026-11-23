@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-23T07:52:31.937303+00:00",
+  "last_run_timestamp": "2026-11-23T11:03:04.672166+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4207,
-    "last_run_new_notices": 2,
+    "total_recorded_notices": 4208,
+    "last_run_new_notices": 0,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
     "last_run_fetched_ok": 20
@@ -42107,6 +42107,16 @@
       "published_date": null,
       "fingerprint": "789d24c7f29a9795b4947ead667cd7a91984c76d9ed40537e7604d3c2d39fc1d",
       "first_seen": "2026-11-23T07:51:01.290937+00:00",
+      "delivered": true
+    },
+    "392547db82f4854fb759348c3b273511341688979bb6d0492d67866ad710c46a": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "RBI releases 2026 list of Domestic Systemically Important Banks (D-SIBs)",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=64025",
+      "published_date": "Nov 23, 2026",
+      "fingerprint": "392547db82f4854fb759348c3b273511341688979bb6d0492d67866ad710c46a",
+      "first_seen": "2026-11-23T11:01:39.179296+00:00",
       "delivered": true
     }
   },
