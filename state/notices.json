@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-23T11:52:20.691558+00:00",
+  "last_run_timestamp": "2026-11-23T12:02:51.486610+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4212,
+    "total_recorded_notices": 4213,
     "last_run_new_notices": 0,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
@@ -42157,6 +42157,16 @@
       "published_date": null,
       "fingerprint": "9ce715711e97fe7f0bf992a2e34ac1194bba3421fe5b5402d1af8a3d6a89fce3",
       "first_seen": "2026-11-23T11:51:08.540580+00:00",
+      "delivered": true
+    },
+    "aab0a81343dfe8a0343ca5fc6fa171f2db84e70b509f0d6ca3faebea0aac1dc5": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Reserve Bank of India (Small Finance Banks - Securitisation Transactions) Amendment Directions, 2026",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13754&Mode=0",
+      "published_date": "Nov 23, 2026",
+      "fingerprint": "aab0a81343dfe8a0343ca5fc6fa171f2db84e70b509f0d6ca3faebea0aac1dc5",
+      "first_seen": "2026-11-23T12:01:39.083404+00:00",
       "delivered": true
     }
   },
