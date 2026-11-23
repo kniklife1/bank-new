@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-23T12:32:48.134432+00:00",
+  "last_run_timestamp": "2026-11-23T14:02:53.067683+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4214,
+    "total_recorded_notices": 4216,
     "last_run_new_notices": 0,
-    "last_run_errors": 4,
-    "last_run_extraction_ok": 19,
-    "last_run_fetched_ok": 19
+    "last_run_errors": 3,
+    "last_run_extraction_ok": 20,
+    "last_run_fetched_ok": 20
   },
   "notices": {
     "9da63338791ba82966aef072b71411ccd5f4d258c0187d5f28ba2c5f889934c3": {
@@ -42177,6 +42177,26 @@
       "published_date": "Nov 23, 2026",
       "fingerprint": "8d18dd5d1e42198d5bf329f79d75b5cfcc609e6f353f37ccd3ddb089e64fba5c",
       "first_seen": "2026-11-23T12:31:25.093032+00:00",
+      "delivered": true
+    },
+    "d5fb605204c6bbf856e2dda1871d1d5aaf93dbeec2bc6ac2671cee3b4d14ef2b": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Governor, Reserve Bank of India meets Managing Directors & Chief Executive Officers of select NBFCs, HFCs and Industry Representatives in Mumbai on November 23, 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=64032",
+      "published_date": "November 23, 2026",
+      "fingerprint": "d5fb605204c6bbf856e2dda1871d1d5aaf93dbeec2bc6ac2671cee3b4d14ef2b",
+      "first_seen": "2026-11-23T14:01:38.797344+00:00",
+      "delivered": true
+    },
+    "bca93c045ffdf6a59f87965a64bb115ba274aa0df55bf23c533419ec916864b2": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Governor, Reserve Bank of India meets Chairpersons and Managing Directors & Chief Executive Officers of select UCBs and Industry Representatives in Mumbai on November 23, 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=64031",
+      "published_date": "November 23, 2026",
+      "fingerprint": "bca93c045ffdf6a59f87965a64bb115ba274aa0df55bf23c533419ec916864b2",
+      "first_seen": "2026-11-23T14:01:38.797584+00:00",
       "delivered": true
     }
   },
