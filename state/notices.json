@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-23T05:22:32.041365+00:00",
+  "last_run_timestamp": "2026-11-23T06:53:10.932340+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4203,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4205,
+    "last_run_new_notices": 1,
     "last_run_errors": 3,
-    "last_run_extraction_ok": 19,
+    "last_run_extraction_ok": 20,
     "last_run_fetched_ok": 20
   },
   "notices": {
@@ -42067,6 +42067,26 @@
       "first_seen": "2026-11-23T05:21:00.788878+00:00",
       "delivered": true,
       "content": "NOTICE(NEW)"
+    },
+    "481f37d3bc60a0647ad928b601d1dac6014d7209c00b032b63fbff68db58a5a5": {
+      "website_id": "gic-re",
+      "org_name": "General Insurance Corporation (GIC Re)",
+      "title": "RFP for Fire Escape Staircase at Suraksha (GIC-HO/OSD/Fire_Staircase/448/2026-27)",
+      "url": "https://www.gicre.in/en/images/2026/RFP_for_Fire_Escape_Staircase_at_Suraksha.pdf",
+      "published_date": null,
+      "fingerprint": "481f37d3bc60a0647ad928b601d1dac6014d7209c00b032b63fbff68db58a5a5",
+      "first_seen": "2026-11-23T06:53:05.953492+00:00",
+      "delivered": true
+    },
+    "b253fef54e78d951f2e58f74c36ba7fec434ab6de65bfa10d7adcbdf549f1fc9": {
+      "website_id": "rbi-opportunities",
+      "org_name": "RBI Opportunities",
+      "title": "Recruitment for the Post of Assistant – 2025: Display of Roll Numbers of Finally Selected Candidates for Appointment in the Bank’s Thiruvananthapuram Office",
+      "url": "https://opportunities.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=5220",
+      "published_date": "Nov 23, 2026",
+      "fingerprint": "b253fef54e78d951f2e58f74c36ba7fec434ab6de65bfa10d7adcbdf549f1fc9",
+      "first_seen": "2026-11-23T06:51:07.867181+00:00",
+      "delivered": true
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
