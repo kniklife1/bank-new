@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-23T11:03:04.672166+00:00",
+  "last_run_timestamp": "2026-11-23T11:12:57.102395+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4208,
+    "total_recorded_notices": 4209,
     "last_run_new_notices": 0,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
@@ -42117,6 +42117,16 @@
       "published_date": "Nov 23, 2026",
       "fingerprint": "392547db82f4854fb759348c3b273511341688979bb6d0492d67866ad710c46a",
       "first_seen": "2026-11-23T11:01:39.179296+00:00",
+      "delivered": true
+    },
+    "6e734da47fef015722f38ee0f44b07719709a8ccf93b2140ae7d686b61cafb33": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "RBI issues Draft Amendment Directions for ‘Preventive Safeguards for Electronic Banking Transactions (EBTs)’",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=64026",
+      "published_date": "Nov 23, 2026",
+      "fingerprint": "6e734da47fef015722f38ee0f44b07719709a8ccf93b2140ae7d686b61cafb33",
+      "first_seen": "2026-11-23T11:11:15.938481+00:00",
       "delivered": true
     }
   },
