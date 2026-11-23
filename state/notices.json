@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-23T11:33:33.671816+00:00",
+  "last_run_timestamp": "2026-11-23T11:42:40.153194+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4210,
+    "total_recorded_notices": 4211,
     "last_run_new_notices": 0,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
@@ -42137,6 +42137,16 @@
       "published_date": "Nov 23, 2026",
       "fingerprint": "4cead4778d42f998bb4053ab5649ed1274b6f22ff12bc3ba7d15db7d856659d6",
       "first_seen": "2026-11-23T11:31:30.995398+00:00",
+      "delivered": true
+    },
+    "2d5db880686ec828b3a06e084e1cf512d37e431eceb51001d5fc5e9eb95a3508": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Reserve Bank of India (Non-Banking Financial Companies - Securitisation Transactions) Amendment Directions, 2026",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13755&Mode=0",
+      "published_date": "Nov 23, 2026",
+      "fingerprint": "2d5db880686ec828b3a06e084e1cf512d37e431eceb51001d5fc5e9eb95a3508",
+      "first_seen": "2026-11-23T11:41:10.453732+00:00",
       "delivered": true
     }
   },
