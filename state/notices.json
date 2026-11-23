@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-21T11:22:34.376444+00:00",
+  "last_run_timestamp": "2026-11-23T05:22:32.041365+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4202,
+    "total_recorded_notices": 4203,
     "last_run_new_notices": 0,
     "last_run_errors": 3,
-    "last_run_extraction_ok": 20,
+    "last_run_extraction_ok": 19,
     "last_run_fetched_ok": 20
   },
   "notices": {
@@ -42056,6 +42056,17 @@
       "fingerprint": "44e84edf8be8ab42e1a0eec98fb5fbb039af841cb8649cfad44889b15755afec",
       "first_seen": "2026-11-21T11:21:41.423943+00:00",
       "delivered": true
+    },
+    "025894fa08b08b217ba9404d8858287745e3a163b206ea8f0baf0f142067373d": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "NOTICE",
+      "url": "https://sbi.co.in/webfiles/uploads/files_2627/11/Notice_for_Psychometric_Test.pdf",
+      "published_date": null,
+      "fingerprint": "025894fa08b08b217ba9404d8858287745e3a163b206ea8f0baf0f142067373d",
+      "first_seen": "2026-11-23T05:21:00.788878+00:00",
+      "delivered": true,
+      "content": "NOTICE(NEW)"
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
