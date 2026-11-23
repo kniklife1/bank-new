@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-23T12:02:51.486610+00:00",
+  "last_run_timestamp": "2026-11-23T12:32:48.134432+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4213,
+    "total_recorded_notices": 4214,
     "last_run_new_notices": 0,
-    "last_run_errors": 3,
-    "last_run_extraction_ok": 20,
-    "last_run_fetched_ok": 20
+    "last_run_errors": 4,
+    "last_run_extraction_ok": 19,
+    "last_run_fetched_ok": 19
   },
   "notices": {
     "9da63338791ba82966aef072b71411ccd5f4d258c0187d5f28ba2c5f889934c3": {
@@ -42167,6 +42167,16 @@
       "published_date": "Nov 23, 2026",
       "fingerprint": "aab0a81343dfe8a0343ca5fc6fa171f2db84e70b509f0d6ca3faebea0aac1dc5",
       "first_seen": "2026-11-23T12:01:39.083404+00:00",
+      "delivered": true
+    },
+    "8d18dd5d1e42198d5bf329f79d75b5cfcc609e6f353f37ccd3ddb089e64fba5c": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Reserve Bank of India (All India Financial Institutions - Securitisation Transactions) Amendment Directions, 2026",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13756&Mode=0",
+      "published_date": "Nov 23, 2026",
+      "fingerprint": "8d18dd5d1e42198d5bf329f79d75b5cfcc609e6f353f37ccd3ddb089e64fba5c",
+      "first_seen": "2026-11-23T12:31:25.093032+00:00",
       "delivered": true
     }
   },
