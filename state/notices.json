@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-24T14:42:30.828405+00:00",
+  "last_run_timestamp": "2026-11-25T12:33:05.647233+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4217,
+    "total_recorded_notices": 4218,
     "last_run_new_notices": 0,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
@@ -42209,6 +42209,16 @@
       "first_seen": "2026-11-24T14:41:02.940123+00:00",
       "delivered": true,
       "content": "Sitemap | Disclaimer and Website Policies"
+    },
+    "d3d852ee42bc38bbcd5f6a0a442d85c2bc115ff11e44a0695abc09d7547632b0": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "RBI Bulletin – November 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=64041",
+      "published_date": "Nov 25, 2026",
+      "fingerprint": "d3d852ee42bc38bbcd5f6a0a442d85c2bc115ff11e44a0695abc09d7547632b0",
+      "first_seen": "2026-11-25T12:31:29.902746+00:00",
+      "delivered": true
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
