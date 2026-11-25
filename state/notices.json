@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-25T12:42:41.416819+00:00",
+  "last_run_timestamp": "2026-11-25T14:12:25.123414+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4219,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4222,
+    "last_run_new_notices": 3,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
     "last_run_fetched_ok": 20
@@ -42229,6 +42229,39 @@
       "fingerprint": "ef6a83265d13fd5b27dd7579744b5b5506102a02cb9e9823ad585bd246843d9e",
       "first_seen": "2026-11-25T12:41:03.084379+00:00",
       "delivered": true
+    },
+    "8585941320e350fc1ac62ef7a1d44e6732bb3f1804cc9f186deba3437872725c": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "APPLY ONLINE (Online Registration Extended till 02.12.2026)",
+      "url": "https://ibpsreg.ibps.in/sbiameoct26/",
+      "published_date": null,
+      "fingerprint": "8585941320e350fc1ac62ef7a1d44e6732bb3f1804cc9f186deba3437872725c",
+      "first_seen": "2026-11-25T14:11:08.522224+00:00",
+      "delivered": true,
+      "content": "APPLY ONLINE (Online Registration Extended till 02.12.2026)(NEW)"
+    },
+    "a9b60edf3a2b66ed652c7fb41b245840dc0da8b43612da882197c688786fc08b": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "Assistant Manager (Law) - LIST OF CANDIDATES PROVISIONALLY SELECTED",
+      "url": "https://sbi.co.in/documents/77530/57941334/SCO_02_AM-RESULT-5+FORMAT.pdf/5373b748-f632-5496-a222-b555fb48c77b?t=1795613150591",
+      "published_date": null,
+      "fingerprint": "a9b60edf3a2b66ed652c7fb41b245840dc0da8b43612da882197c688786fc08b",
+      "first_seen": "2026-11-25T14:11:08.533863+00:00",
+      "delivered": true,
+      "content": "Assistant Manager (Law) - LIST OF CANDIDATES PROVISIONALLY SELECTED (NEW)"
+    },
+    "f955a1dd001575b1c56837902e1030ded377778b904923f8ba5f3ea59cc48508": {
+      "website_id": "sbi",
+      "org_name": "State Bank of India (SBI)",
+      "title": "Deputy Manager (Law) - LIST OF CANDIDATES PROVISIONALLY SELECTED",
+      "url": "https://sbi.co.in/documents/77530/57941334/SCO_02_DM-RESULT-5+FORMAT.pdf/b5b3191f-7370-5341-3c17-c11a81868a7d?t=1795613169183",
+      "published_date": null,
+      "fingerprint": "f955a1dd001575b1c56837902e1030ded377778b904923f8ba5f3ea59cc48508",
+      "first_seen": "2026-11-25T14:11:08.534068+00:00",
+      "delivered": true,
+      "content": "Deputy Manager (Law) - LIST OF CANDIDATES PROVISIONALLY SELECTED (NEW)"
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
