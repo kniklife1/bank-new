@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-25T12:33:05.647233+00:00",
+  "last_run_timestamp": "2026-11-25T12:42:41.416819+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4218,
+    "total_recorded_notices": 4219,
     "last_run_new_notices": 0,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
@@ -42218,6 +42218,16 @@
       "published_date": "Nov 25, 2026",
       "fingerprint": "d3d852ee42bc38bbcd5f6a0a442d85c2bc115ff11e44a0695abc09d7547632b0",
       "first_seen": "2026-11-25T12:31:29.902746+00:00",
+      "delivered": true
+    },
+    "ef6a83265d13fd5b27dd7579744b5b5506102a02cb9e9823ad585bd246843d9e": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "47th Half-Yearly Report on Management of Foreign Exchange Reserves: April – September 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=64042",
+      "published_date": "Nov 25, 2026",
+      "fingerprint": "ef6a83265d13fd5b27dd7579744b5b5506102a02cb9e9823ad585bd246843d9e",
+      "first_seen": "2026-11-25T12:41:03.084379+00:00",
       "delivered": true
     }
   },
