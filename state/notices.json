@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-26T11:45:09.454540+00:00",
+  "last_run_timestamp": "2026-11-26T12:35:25.862007+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4232,
-    "last_run_new_notices": 4,
-    "last_run_errors": 4,
-    "last_run_extraction_ok": 19,
-    "last_run_fetched_ok": 19
+    "total_recorded_notices": 4234,
+    "last_run_new_notices": 1,
+    "last_run_errors": 5,
+    "last_run_extraction_ok": 18,
+    "last_run_fetched_ok": 18
   },
   "notices": {
     "9da63338791ba82966aef072b71411ccd5f4d258c0187d5f28ba2c5f889934c3": {
@@ -42361,6 +42361,26 @@
       "published_date": null,
       "fingerprint": "0ca71b8e92324c5e57c03caf674df0b168ef57f914a631442816b81f5f2d8c08",
       "first_seen": "2026-11-26T11:42:19.395693+00:00",
+      "delivered": true
+    },
+    "d46f24bb82912c5ad2bbf0f67e84929fb66c568ba3a137faa6c63b257022bef9": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Reserve Money and Money Supply for the fortnight ended on November 15, 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=64050",
+      "published_date": "November 15, 2026",
+      "fingerprint": "d46f24bb82912c5ad2bbf0f67e84929fb66c568ba3a137faa6c63b257022bef9",
+      "first_seen": "2026-11-26T12:31:23.514112+00:00",
+      "delivered": true
+    },
+    "9962f55a81df7085dc9a46f2dfcb6cb157753894cc09c93db685eb2b97e74c64": {
+      "website_id": "rbi-opportunities",
+      "org_name": "RBI Opportunities",
+      "title": "Recruitment for the Post of Assistant - Panel Year 2025 in Reserve Bank of India Display of Roll Numbers of Provisionally Shortlisted Candidates from Kanpur and Lucknow Recruiting Unit",
+      "url": "https://opportunities.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=5228",
+      "published_date": "Nov 26, 2026",
+      "fingerprint": "9962f55a81df7085dc9a46f2dfcb6cb157753894cc09c93db685eb2b97e74c64",
+      "first_seen": "2026-11-26T12:31:25.672519+00:00",
       "delivered": true
     }
   },
