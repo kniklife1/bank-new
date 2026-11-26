@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-26T06:12:35.455041+00:00",
+  "last_run_timestamp": "2026-11-26T11:23:52.809009+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4224,
+    "total_recorded_notices": 4225,
     "last_run_new_notices": 0,
-    "last_run_errors": 3,
-    "last_run_extraction_ok": 20,
-    "last_run_fetched_ok": 20
+    "last_run_errors": 4,
+    "last_run_extraction_ok": 19,
+    "last_run_fetched_ok": 19
   },
   "notices": {
     "9da63338791ba82966aef072b71411ccd5f4d258c0187d5f28ba2c5f889934c3": {
@@ -42281,6 +42281,16 @@
       "published_date": "Nov 26, 2026",
       "fingerprint": "48a1606a563d0f60e0f5a15bade8974d1ec1e21d766e10365e0e8d7d9db9af5f",
       "first_seen": "2026-11-26T06:11:05.079109+00:00",
+      "delivered": true
+    },
+    "faaca66b6d5d7d5119dc929342f17cdd22b1dc66a5da356d92c4d8b7c234ca06": {
+      "website_id": "uco-bank",
+      "org_name": "UCO Bank",
+      "title": "Apply for Cheque Book",
+      "url": "https://www.uco.bank.in/en/web/guest/cheque-book",
+      "published_date": null,
+      "fingerprint": "faaca66b6d5d7d5119dc929342f17cdd22b1dc66a5da356d92c4d8b7c234ca06",
+      "first_seen": "2026-11-26T11:21:30.446135+00:00",
       "delivered": true
     }
   },
