@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-25T14:12:25.123414+00:00",
+  "last_run_timestamp": "2026-11-26T06:03:30.701508+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4222,
-    "last_run_new_notices": 3,
+    "total_recorded_notices": 4223,
+    "last_run_new_notices": 0,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
     "last_run_fetched_ok": 20
@@ -42262,6 +42262,16 @@
       "first_seen": "2026-11-25T14:11:08.534068+00:00",
       "delivered": true,
       "content": "Deputy Manager (Law) - LIST OF CANDIDATES PROVISIONALLY SELECTED (NEW)"
+    },
+    "72acd05a2c843398d5e389abc09f82939520fb44fd6077c369537c99d587a363": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Implementation of Section 51A of UAPA, 1967: Updates to UNSC’s 1267/ 1989 ISIL (Da'esh) & Al-Qaida Sanctions List: Amendment of 81 entries",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13757&Mode=0",
+      "published_date": "Nov 26, 2026",
+      "fingerprint": "72acd05a2c843398d5e389abc09f82939520fb44fd6077c369537c99d587a363",
+      "first_seen": "2026-11-26T06:01:33.524232+00:00",
+      "delivered": true
     }
   },
   "baseline_timestamp": "2026-10-18T00:00:00+00:00",
