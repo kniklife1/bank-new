@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-26T11:23:52.809009+00:00",
+  "last_run_timestamp": "2026-11-26T11:45:09.454540+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4225,
-    "last_run_new_notices": 0,
+    "total_recorded_notices": 4232,
+    "last_run_new_notices": 4,
     "last_run_errors": 4,
     "last_run_extraction_ok": 19,
     "last_run_fetched_ok": 19
@@ -42291,6 +42291,76 @@
       "published_date": null,
       "fingerprint": "faaca66b6d5d7d5119dc929342f17cdd22b1dc66a5da356d92c4d8b7c234ca06",
       "first_seen": "2026-11-26T11:21:30.446135+00:00",
+      "delivered": true
+    },
+    "960f01bf002f1873543eb7546e2303fee892d05926cda40695300914b1aacec4": {
+      "website_id": "bank-of-maharashtra",
+      "org_name": "Bank of Maharashtra",
+      "title": "Dear Customer, In continuation to the increase in Repo rate by RBI, BOM has revised its Repo Linked Lending Rate (RLLR) w.e.f 07.12.2022. As a result, EMI for the Loan sanctioned under floating rate of interest is deemed to be revised. Please contact your home branch for more information regarding your revised EMI & latest applicable Rate of Interest. Regards, Mahabank",
+      "url": "https://bankofmaharashtra.bank.in/advances",
+      "published_date": "07.12.2022",
+      "fingerprint": "960f01bf002f1873543eb7546e2303fee892d05926cda40695300914b1aacec4",
+      "first_seen": "2026-11-26T11:42:19.394637+00:00",
+      "delivered": true
+    },
+    "e957a50204643dd6590dcf668aa2a5cfa5c06fc5c113b19c4920cac408c1dfeb": {
+      "website_id": "bank-of-maharashtra",
+      "org_name": "Bank of Maharashtra",
+      "title": "As per GOI Guidelines, Bank of Maharashtra has been migrated from OLTAS e-Payment of Direct Taxes facility of e-Filling portal to new TIN 2.0. Users are advised to navigate to e-pay Tax on https://www.incometax.gov.in to make Direct Tax payments",
+      "url": "https://www.incometax.gov.in",
+      "published_date": null,
+      "fingerprint": "e957a50204643dd6590dcf668aa2a5cfa5c06fc5c113b19c4920cac408c1dfeb",
+      "first_seen": "2026-11-26T11:42:19.395051+00:00",
+      "delivered": true
+    },
+    "a7557a1325938171c9f2c8000da15b1fb9553f9535b349942a3dfa2473499596": {
+      "website_id": "bank-of-maharashtra",
+      "org_name": "Bank of Maharashtra",
+      "title": "Lodge Cyber Crime Complaint (NCCRP)",
+      "url": "https://cybercrime.gov.in",
+      "published_date": null,
+      "fingerprint": "a7557a1325938171c9f2c8000da15b1fb9553f9535b349942a3dfa2473499596",
+      "first_seen": "2026-11-26T11:42:19.398483+00:00",
+      "delivered": true
+    },
+    "e62973ebdcbdba6550e461e134cfd59bfb01adf7a2565a1844ac3cb7dc251420": {
+      "website_id": "bank-of-maharashtra",
+      "org_name": "Bank of Maharashtra",
+      "title": "Recruitment of Assistant Managers and Managers in Indian Bank's Association (IBA)",
+      "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/9cee7c3f-3a77-4c13-bba9-cf270b5ec18d.pdf",
+      "published_date": null,
+      "fingerprint": "e62973ebdcbdba6550e461e134cfd59bfb01adf7a2565a1844ac3cb7dc251420",
+      "first_seen": "2026-11-26T11:42:19.391194+00:00",
+      "delivered": true
+    },
+    "dba12ae3459d298ce197c8deac1ef33dceb8e76551ef1131f8518257494ea6d0": {
+      "website_id": "bank-of-maharashtra",
+      "org_name": "Bank of Maharashtra",
+      "title": "IMPORTANT NOTIFICATION FOR EMI BASED PERSONAL LOAN BORROWERS (INCLUDING HOUSING, VEHICLE, EDUCATION LOAN ETC.) : Click Here",
+      "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/a38c3ed9-77ad-4759-976a-abcb25929364.pdf",
+      "published_date": null,
+      "fingerprint": "dba12ae3459d298ce197c8deac1ef33dceb8e76551ef1131f8518257494ea6d0",
+      "first_seen": "2026-11-26T11:42:19.392015+00:00",
+      "delivered": true
+    },
+    "c2937291ed960d6bb695c599d1577e2cb44c501fd106664fc82e9135914e7196": {
+      "website_id": "bank-of-maharashtra",
+      "org_name": "Bank of Maharashtra",
+      "title": "No need to issue cheques by investors while subscribing to IPO. Just write the bank account number and sign in the application form to authorise your bank to make payment in case of allotment. No worries for refund as the money remains in investor's account",
+      "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/c28a4dc3-373b-473e-85b7-76cd9223f372.pdf",
+      "published_date": null,
+      "fingerprint": "c2937291ed960d6bb695c599d1577e2cb44c501fd106664fc82e9135914e7196",
+      "first_seen": "2026-11-26T11:42:19.392526+00:00",
+      "delivered": true
+    },
+    "0ca71b8e92324c5e57c03caf674df0b168ef57f914a631442816b81f5f2d8c08": {
+      "website_id": "bank-of-maharashtra",
+      "org_name": "Bank of Maharashtra",
+      "title": "Notification for Enhancing Security of Debit Card Transactions",
+      "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/4bf754d2-6a72-4aaa-85b7-d2f6584e500e.pdf",
+      "published_date": null,
+      "fingerprint": "0ca71b8e92324c5e57c03caf674df0b168ef57f914a631442816b81f5f2d8c08",
+      "first_seen": "2026-11-26T11:42:19.395693+00:00",
       "delivered": true
     }
   },
