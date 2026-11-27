@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-27T13:03:30.704816+00:00",
+  "last_run_timestamp": "2026-11-27T15:23:23.747636+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4238,
+    "total_recorded_notices": 4239,
     "last_run_new_notices": 0,
-    "last_run_errors": 3,
-    "last_run_extraction_ok": 20,
-    "last_run_fetched_ok": 20
+    "last_run_errors": 4,
+    "last_run_extraction_ok": 19,
+    "last_run_fetched_ok": 19
   },
   "notices": {
     "9da63338791ba82966aef072b71411ccd5f4d258c0187d5f28ba2c5f889934c3": {
@@ -42421,6 +42421,16 @@
       "published_date": "November 27, 2026",
       "fingerprint": "fc676e849a021b07143f703f648ffd161ad2eaa44c1f1e7919878d8f6d51ddb3",
       "first_seen": "2026-11-27T13:01:35.503739+00:00",
+      "delivered": true
+    },
+    "fc4168ef7cb65c7bca597d67ca28313ad6f3be612335245c1f72f25bf19d2ba5": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "RBI Issues Amendment Directions on ‘Suspected Money Mule Accounts to Prevent Cyber-enabled Financial Frauds’",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=64062",
+      "published_date": "Nov 27, 2026",
+      "fingerprint": "fc4168ef7cb65c7bca597d67ca28313ad6f3be612335245c1f72f25bf19d2ba5",
+      "first_seen": "2026-11-27T15:21:03.955363+00:00",
       "delivered": true
     }
   },
