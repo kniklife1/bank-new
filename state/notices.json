@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-27T07:02:44.658523+00:00",
+  "last_run_timestamp": "2026-11-27T13:03:30.704816+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4237,
+    "total_recorded_notices": 4238,
     "last_run_new_notices": 0,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
@@ -42411,6 +42411,16 @@
       "published_date": null,
       "fingerprint": "9fc93e1bfa7bc1fe103fd2550224ae3c8767695fb5974e7d1a64404ae585aa35",
       "first_seen": "2026-11-27T07:02:06.400159+00:00",
+      "delivered": true
+    },
+    "fc676e849a021b07143f703f648ffd161ad2eaa44c1f1e7919878d8f6d51ddb3": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Thirty First Meeting of the Standing Advisory Committee (SAC) to Review the Flow of Credit to the MSME Sector in Kolkata on November 27, 2026",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=64059",
+      "published_date": "November 27, 2026",
+      "fingerprint": "fc676e849a021b07143f703f648ffd161ad2eaa44c1f1e7919878d8f6d51ddb3",
+      "first_seen": "2026-11-27T13:01:35.503739+00:00",
       "delivered": true
     }
   },
