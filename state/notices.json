@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-27T06:52:19.741069+00:00",
+  "last_run_timestamp": "2026-11-27T07:02:44.658523+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4236,
+    "total_recorded_notices": 4237,
     "last_run_new_notices": 0,
     "last_run_errors": 3,
     "last_run_extraction_ok": 20,
@@ -42401,6 +42401,16 @@
       "published_date": null,
       "fingerprint": "8b9a8f906ecb6eea296668ba530bf2fed0ff83afe5fd96158a5223b634f364f9",
       "first_seen": "2026-11-27T06:51:39.247349+00:00",
+      "delivered": true
+    },
+    "9fc93e1bfa7bc1fe103fd2550224ae3c8767695fb5974e7d1a64404ae585aa35": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "Corporate Mobile Banking",
+      "url": "https://punjabandsind.bank.in/content/corporate-mobile-banking",
+      "published_date": null,
+      "fingerprint": "9fc93e1bfa7bc1fe103fd2550224ae3c8767695fb5974e7d1a64404ae585aa35",
+      "first_seen": "2026-11-27T07:02:06.400159+00:00",
       "delivered": true
     }
   },
