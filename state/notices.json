@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-26T16:34:41.844991+00:00",
+  "last_run_timestamp": "2026-11-27T06:52:19.741069+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4235,
-    "last_run_new_notices": 1,
-    "last_run_errors": 4,
-    "last_run_extraction_ok": 19,
-    "last_run_fetched_ok": 19
+    "total_recorded_notices": 4236,
+    "last_run_new_notices": 0,
+    "last_run_errors": 3,
+    "last_run_extraction_ok": 20,
+    "last_run_fetched_ok": 20
   },
   "notices": {
     "9da63338791ba82966aef072b71411ccd5f4d258c0187d5f28ba2c5f889934c3": {
@@ -42391,6 +42391,16 @@
       "published_date": null,
       "fingerprint": "7f8a5e092323c7ae73691e3fe7cf8edb6ae509bc7d5e2ec2d1e05dc68e62d931",
       "first_seen": "2026-11-26T16:33:44.758255+00:00",
+      "delivered": true
+    },
+    "8b9a8f906ecb6eea296668ba530bf2fed0ff83afe5fd96158a5223b634f364f9": {
+      "website_id": "punjab-and-sind-bank",
+      "org_name": "Punjab & Sind Bank",
+      "title": "Retail Mobile Banking",
+      "url": "https://punjabandsind.bank.in/content/retail-mobile-banking",
+      "published_date": null,
+      "fingerprint": "8b9a8f906ecb6eea296668ba530bf2fed0ff83afe5fd96158a5223b634f364f9",
+      "first_seen": "2026-11-27T06:51:39.247349+00:00",
       "delivered": true
     }
   },
