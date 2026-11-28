@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-28T08:43:24.820057+00:00",
+  "last_run_timestamp": "2026-11-28T09:53:31.839884+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4244,
+    "total_recorded_notices": 4245,
     "last_run_new_notices": 0,
     "last_run_errors": 4,
     "last_run_extraction_ok": 19,
@@ -42481,6 +42481,16 @@
       "published_date": "Nov 27, 2026",
       "fingerprint": "0c08563b08c612143c62a223e5312d7d97007b7de68cc3d7366a0f19e37c6d35",
       "first_seen": "2026-11-28T08:41:06.221820+00:00",
+      "delivered": true
+    },
+    "90c0a655594bb48529399855ed16a250df27360b85672c23a99339945fced09a": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Reserve Bank of India (Small Finance Banks - Know Your Customer) Second Amendment Directions, 2026",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13764&Mode=0",
+      "published_date": null,
+      "fingerprint": "90c0a655594bb48529399855ed16a250df27360b85672c23a99339945fced09a",
+      "first_seen": "2026-11-28T09:51:07.276290+00:00",
       "delivered": true
     }
   },
