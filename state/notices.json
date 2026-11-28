@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-28T09:53:31.839884+00:00",
+  "last_run_timestamp": "2026-11-28T10:03:45.708455+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4245,
+    "total_recorded_notices": 4246,
     "last_run_new_notices": 0,
     "last_run_errors": 4,
     "last_run_extraction_ok": 19,
@@ -42491,6 +42491,16 @@
       "published_date": null,
       "fingerprint": "90c0a655594bb48529399855ed16a250df27360b85672c23a99339945fced09a",
       "first_seen": "2026-11-28T09:51:07.276290+00:00",
+      "delivered": true
+    },
+    "e2d4adbece83721de4453c718b0c2c8b4c468347978f524f97522fe5644defde": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Reserve Bank of India (Urban Co-operative Banks - Know Your Customer) Second Amendment Directions, 2026",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13767&Mode=0",
+      "published_date": "Nov 27, 2026",
+      "fingerprint": "e2d4adbece83721de4453c718b0c2c8b4c468347978f524f97522fe5644defde",
+      "first_seen": "2026-11-28T10:01:34.875234+00:00",
       "delivered": true
     }
   },
