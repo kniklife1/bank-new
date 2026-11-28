@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-28T10:42:25.725931+00:00",
+  "last_run_timestamp": "2026-11-28T11:53:28.099096+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4247,
+    "total_recorded_notices": 4248,
     "last_run_new_notices": 0,
-    "last_run_errors": 3,
-    "last_run_extraction_ok": 20,
-    "last_run_fetched_ok": 20
+    "last_run_errors": 4,
+    "last_run_extraction_ok": 19,
+    "last_run_fetched_ok": 19
   },
   "notices": {
     "9da63338791ba82966aef072b71411ccd5f4d258c0187d5f28ba2c5f889934c3": {
@@ -42511,6 +42511,16 @@
       "published_date": null,
       "fingerprint": "c2511a84175b49a3261433c54786a8fb85df5001b8756c25bb5cbc7229507739",
       "first_seen": "2026-11-28T10:41:12.965446+00:00",
+      "delivered": true
+    },
+    "fd39e4d78131fe792b06e8159e5442240548bc374751acb9142d72482c041f6c": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Reserve Bank of India (Digital Payments – Card-based transaction) Directions, 2026",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13760&Mode=0",
+      "published_date": null,
+      "fingerprint": "fd39e4d78131fe792b06e8159e5442240548bc374751acb9142d72482c041f6c",
+      "first_seen": "2026-11-28T11:51:09.201417+00:00",
       "delivered": true
     }
   },
