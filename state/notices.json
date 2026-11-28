@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-27T15:42:34.588629+00:00",
+  "last_run_timestamp": "2026-11-28T08:04:04.009786+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4240,
-    "last_run_new_notices": 1,
-    "last_run_errors": 3,
-    "last_run_extraction_ok": 20,
-    "last_run_fetched_ok": 20
+    "total_recorded_notices": 4241,
+    "last_run_new_notices": 0,
+    "last_run_errors": 4,
+    "last_run_extraction_ok": 19,
+    "last_run_fetched_ok": 19
   },
   "notices": {
     "9da63338791ba82966aef072b71411ccd5f4d258c0187d5f28ba2c5f889934c3": {
@@ -42441,6 +42441,16 @@
       "published_date": "2026-11-27",
       "fingerprint": "9d61e15aa0c5a002e36d5bd559cefb280c3c84fe34e6643abfe2f8cf1ece903a",
       "first_seen": "2026-11-27T15:41:44.355451+00:00",
+      "delivered": true
+    },
+    "19ff4f1842f71a5e8874478c14fda3dc2c38e95a2c407b686dca510f953b3dbf": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Reserve Bank of India (Commercial Banks - Know Your Customer) Second Amendment Directions, 2026",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13763&Mode=0",
+      "published_date": null,
+      "fingerprint": "19ff4f1842f71a5e8874478c14fda3dc2c38e95a2c407b686dca510f953b3dbf",
+      "first_seen": "2026-11-28T08:01:35.496971+00:00",
       "delivered": true
     }
   },
