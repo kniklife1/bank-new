@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "last_run_timestamp": "2026-11-28T08:13:46.421253+00:00",
+  "last_run_timestamp": "2026-11-28T08:33:26.556776+00:00",
   "baseline_completed": true,
   "stats": {
-    "total_recorded_notices": 4242,
+    "total_recorded_notices": 4243,
     "last_run_new_notices": 0,
     "last_run_errors": 4,
     "last_run_extraction_ok": 19,
@@ -42461,6 +42461,16 @@
       "published_date": null,
       "fingerprint": "f4e0642b17a6550d2d82b8ff2c0cb0b3d4860fb4e00fd3031c8814fdc5d0e8f1",
       "first_seen": "2026-11-28T08:11:03.540390+00:00",
+      "delivered": true
+    },
+    "1baef2586c4e76dfb4a34e6c85a5c921e94064d91ef2cd1b27b473f19147e00e": {
+      "website_id": "rbi",
+      "org_name": "Reserve Bank of India (RBI)",
+      "title": "Reserve Bank of India (Payment Banks - Know Your Customer) Amendment Directions, 2026",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13768&Mode=0",
+      "published_date": "Nov 27, 2026",
+      "fingerprint": "1baef2586c4e76dfb4a34e6c85a5c921e94064d91ef2cd1b27b473f19147e00e",
+      "first_seen": "2026-11-28T08:31:21.043361+00:00",
       "delivered": true
     }
   },
